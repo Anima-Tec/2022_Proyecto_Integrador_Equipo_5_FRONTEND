@@ -1,15 +1,14 @@
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
 import DrawerMenu from '../components/DrawerMenu';
-// import { ROUTES } from '../constants/routes';
 
-function Home() {
+function QuienesSomos() {
   return (
     <>
       <DrawerMenu />
-      <Heading>Somos EFECT</Heading>
+      <Heading>Quienes Somos</Heading>
     </>
   );
 }
 
-export default Home;
+export default QuienesSomos;

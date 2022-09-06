@@ -1,15 +1,14 @@
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
 import DrawerMenu from '../components/DrawerMenu';
-// import { ROUTES } from '../constants/routes';
 
-function Home() {
+function Apoyanos() {
   return (
     <>
       <DrawerMenu />
-      <Heading>Somos EFECT</Heading>
+      <Heading>Apoyanos</Heading>
     </>
   );
 }
 
-export default Home;
+export default Apoyanos;
