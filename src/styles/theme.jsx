@@ -7,6 +7,7 @@ const theme = extendTheme({
     secondary: '#E39774',
     secondaryDark: '#BE7858',
     bgColor: '#18181B',
+    greyHard: '#666666',
   },
   fonts: {
     heading: '\'Raleway\', sans-serif',
@@ -19,6 +20,8 @@ const theme = extendTheme({
         color: 'white',
         font: 'body',
         m: 3,
+        // display: 'flex',
+        // flexDirection: 'column',
       },
     }),
   },

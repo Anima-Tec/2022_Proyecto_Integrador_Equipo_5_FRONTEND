@@ -10,6 +10,7 @@ import {
   useDisclosure,
   Flex,
   Center,
+  Box,
 } from '@chakra-ui/react';
 import { ReactComponent as IconMenu } from '../assets/icon-drawer.svg';
 import { ReactComponent as IconHome } from '../assets/icon-home.svg';
@@ -32,7 +33,9 @@ function DrawerMenu() {
 
   return (
     <>
-      <IconMenu onClick={onOpen} />
+      <Box my={4}>
+        <IconMenu onClick={onOpen} />
+      </Box>
       <Drawer
         isOpen={isOpen}
         placement="left"
@@ -40,7 +43,9 @@ function DrawerMenu() {
       >
         <DrawerOverlay />
         <DrawerContent bg="bgColor">
+
           <DrawerCloseButton m="2" />
+
           <DrawerBody mt={6}>
 
             <NavLink to="/">

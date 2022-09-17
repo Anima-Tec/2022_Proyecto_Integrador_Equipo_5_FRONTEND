@@ -1,13 +1,14 @@
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
-import DrawerMenu from '../components/DrawerMenu';
-// import { ROUTES } from '../constants/routes';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 
 function Home() {
   return (
     <>
-      <DrawerMenu />
-      <Heading>Somos EFECT</Heading>
+      <Header />
+      <Heading>{process.env.REACT_APP_VARIABLE}</Heading>
+      <Footer />
     </>
   );
 }
