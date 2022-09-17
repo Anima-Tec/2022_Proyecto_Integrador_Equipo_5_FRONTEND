@@ -4,7 +4,7 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-import { ROUTES } from './constants/routes';
+import ROUTES from './routes/routes';
 import Home from './pages/Home';
 import NuestraPropuesta from './pages/NuestraPropuesta';
 import Practicantes from './pages/Practicantes';
@@ -26,6 +26,7 @@ export default function App() {
         <Route path={ROUTES.quienesomos} element={<QuienesSomos />} />
         <Route path={ROUTES.apoyanos} element={<Apoyanos />} />
         <Route path={ROUTES.login} element={<Login />} />
+        <Route path={ROUTES.register} element={<Register />} />
         <Route path={ROUTES.register} element={<Register />} />
       </Routes>
     </BrowserRouter>

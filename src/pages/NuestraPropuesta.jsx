@@ -1,12 +1,14 @@
 import React from 'react';
 import { Heading } from '@chakra-ui/react';
-import DrawerMenu from '../components/DrawerMenu';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 
 function NuestraPropuesta() {
   return (
     <>
-      <DrawerMenu />
+      <Header />
       <Heading>Nuestra Propuesta</Heading>
+      <Footer />
     </>
   );
 }

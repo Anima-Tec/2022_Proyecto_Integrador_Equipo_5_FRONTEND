@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const ROUTES = {
+const ROUTES = {
   home: '/',
   nuestrapropuesta: '/nuestra-propuesta',
   practicantes: '/practicantes',
@@ -9,3 +8,5 @@ export const ROUTES = {
   login: '/login',
   register: '/register',
 };
+
+export default ROUTES;

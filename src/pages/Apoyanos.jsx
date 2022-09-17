@@ -1,12 +1,18 @@
 import React from 'react';
-import { Heading } from '@chakra-ui/react';
-import DrawerMenu from '../components/DrawerMenu';
+import { Center, Heading } from '@chakra-ui/react';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 
 function Apoyanos() {
   return (
     <>
-      <DrawerMenu />
-      <Heading>Apoyanos</Heading>
+      <Header />
+      <Heading>
+        <Center>
+          <h1>Home</h1>
+        </Center>
+      </Heading>
+      <Footer />
     </>
   );
 }
