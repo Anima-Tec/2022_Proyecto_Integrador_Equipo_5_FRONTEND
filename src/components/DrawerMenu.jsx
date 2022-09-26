@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-
+import { useNavigate, NavLink, useLocation } from 'react-router-dom';
 import {
   Drawer,
   DrawerOverlay,
@@ -12,6 +11,9 @@ import {
   Center,
   Box,
 } from '@chakra-ui/react';
+
+import ROUTES from '../routers/config/routes';
+
 import { ReactComponent as IconMenu } from '../assets/icon-drawer.svg';
 import { ReactComponent as IconHome } from '../assets/icon-home.svg';
 import { ReactComponent as IconPropuesta } from '../assets/icon-propuesta.svg';
@@ -26,10 +28,12 @@ import { ReactComponent as IconPracticantesSelected } from '../assets/icon-pract
 import { ReactComponent as IconEmpresasSelected } from '../assets/icon-empresas-selected.svg';
 import { ReactComponent as IconQuienesSomosSelected } from '../assets/icon-quienessomos-selected.svg';
 import { ReactComponent as IconApoyanosSelected } from '../assets/icon-apoyanos-selected.svg';
+import PrimaryButton from '../common/PrimaryButton';
 
 function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -48,59 +52,62 @@ function DrawerMenu() {
 
           <DrawerBody mt={6}>
 
-            <NavLink to="/">
+            <NavLink to={ROUTES.home}>
               <Flex>
-                <Center color={((location.pathname === '/') ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === '/') ? <IconHomeSelected /> : <IconHome />)}
-                  Home
+                <Center color={((location.pathname === `${ROUTES.home}`) ? 'primary' : null)} gap={3} mb={5}>
+                  {((location.pathname === `${ROUTES.home}`) ? <IconHomeSelected /> : <IconHome />)}
+                  Inicio
                 </Center>
               </Flex>
             </NavLink>
 
-            <NavLink to="/nuestra-propuesta">
+            <NavLink to={ROUTES.nuestrapropuesta}>
               <Flex>
-                <Center color={((location.pathname === '/nuestra-propuesta') ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === '/nuestra-propuesta') ? <IconPropuestaSelected /> : <IconPropuesta />)}
+                <Center color={((location.pathname === `${ROUTES.nuestrapropuesta}`) ? 'primary' : null)} gap={3} mb={5}>
+                  {((location.pathname === `${ROUTES.nuestrapropuesta}`) ? <IconPropuestaSelected /> : <IconPropuesta />)}
                   Nuestra propuesta
                 </Center>
               </Flex>
             </NavLink>
 
-            <NavLink to="/practicantes">
+            <NavLink to={ROUTES.practicantes}>
               <Flex>
-                <Center color={((location.pathname === '/practicantes') ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === '/practicantes') ? <IconPracticantesSelected /> : <IconPracticantes />)}
+                <Center color={((location.pathname === `${ROUTES.practicantes}`) ? 'primary' : null)} gap={3} mb={5}>
+                  {((location.pathname === `${ROUTES.practicantes}`) ? <IconPracticantesSelected /> : <IconPracticantes />)}
                   Practicantes
                 </Center>
               </Flex>
             </NavLink>
 
-            <NavLink to="/empresas">
+            <NavLink to={ROUTES.empresas}>
               <Flex>
-                <Center color={((location.pathname === '/empresas') ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === '/empresas') ? <IconEmpresasSelected /> : <IconEmpresas />)}
+                <Center color={((location.pathname === `${ROUTES.empresas}`) ? 'primary' : null)} gap={3} mb={5}>
+                  {((location.pathname === `${ROUTES.empresas}`) ? <IconEmpresasSelected /> : <IconEmpresas />)}
                   Empresas
                 </Center>
               </Flex>
             </NavLink>
 
-            <NavLink to="/quienes-somos">
+            <NavLink to={ROUTES.quienesomos}>
               <Flex>
-                <Center color={((location.pathname === '/quienes-somos') ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === '/quienes-somos') ? <IconQuienesSomosSelected /> : <IconQuienesSomos />)}
+                <Center color={((location.pathname === `${ROUTES.quienesomos}`) ? 'primary' : null)} gap={3} mb={5}>
+                  {((location.pathname === `${ROUTES.quienesomos}`) ? <IconQuienesSomosSelected /> : <IconQuienesSomos />)}
                   ¿Quiénes somos?
                 </Center>
               </Flex>
             </NavLink>
 
-            <NavLink to="/apoyanos">
+            <NavLink to={ROUTES.apoyanos}>
               <Flex>
-                <Center color={((location.pathname === '/apoyanos') ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === '/apoyanos') ? <IconApoyanosSelected /> : <IconApoyanos />)}
+                <Center color={((location.pathname === `${ROUTES.apoyanos}`) ? 'primary' : null)} gap={3} mb={5}>
+                  {((location.pathname === `${ROUTES.apoyanos}`) ? <IconApoyanosSelected /> : <IconApoyanos />)}
                   Apoya la Propuesta
                 </Center>
               </Flex>
             </NavLink>
+
+            <PrimaryButton my="40" onClick={() => navigate(ROUTES.login)}>Iniciar sesión</PrimaryButton>
+
           </DrawerBody>
         </DrawerContent>
       </Drawer>

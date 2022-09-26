@@ -7,7 +7,6 @@ import Footer from '../common/Footer';
 function NotFound() {
   return (
     <>
-      <Header />
       <Heading>Not Found</Heading>
       <Footer />
     </>

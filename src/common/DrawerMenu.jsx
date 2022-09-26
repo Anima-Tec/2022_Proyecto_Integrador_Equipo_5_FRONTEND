@@ -12,7 +12,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 
-import ROUTES from '../routes/routes';
+import ROUTES from '../routers/config/routes';
 
 import { ReactComponent as IconMenu } from '../assets/icon-drawer.svg';
 import { ReactComponent as IconHome } from '../assets/icon-home.svg';
