@@ -1,6 +1,6 @@
 import React from 'react';
 import { Center, Flex } from '@chakra-ui/react';
-import DrawerMenu from '../DrawerMenu';
+import DrawerMenu from './DrawerMenu/DrawerMenu';
 import { ReactComponent as LogoEfect } from '../../assets/logo-efect.svg';
 
 function Header() {

@@ -19,7 +19,7 @@ const theme = extendTheme({
       'html, body': {
         bg: 'bgColor',
         color: 'white',
-        m: 3,
+        m: '24px',
         // display: 'flex',
         // flexDirection: 'column',
       },

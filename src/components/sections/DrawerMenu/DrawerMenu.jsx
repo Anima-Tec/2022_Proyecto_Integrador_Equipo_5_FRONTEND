@@ -12,23 +12,11 @@ import {
   Box,
 } from '@chakra-ui/react';
 
-import ROUTES from '../routers/config/routes';
+import ROUTES from '../../../routers/config/routes';
 
-import { ReactComponent as IconMenu } from '../assets/icon-drawer.svg';
-import { ReactComponent as IconHome } from '../assets/icon-home.svg';
-import { ReactComponent as IconPropuesta } from '../assets/icon-propuesta.svg';
-import { ReactComponent as IconPracticantes } from '../assets/icon-practicantes.svg';
-import { ReactComponent as IconEmpresas } from '../assets/icon-empresas.svg';
-import { ReactComponent as IconQuienesSomos } from '../assets/icon-quienessomos.svg';
-import { ReactComponent as IconApoyanos } from '../assets/icon-apoyanos.svg';
+import * as Logo from '../../../assets/index';
 
-import { ReactComponent as IconHomeSelected } from '../assets/icon-home-selected.svg';
-import { ReactComponent as IconPropuestaSelected } from '../assets/icon-propuesta-selected.svg';
-import { ReactComponent as IconPracticantesSelected } from '../assets/icon-practicantes-selected.svg';
-import { ReactComponent as IconEmpresasSelected } from '../assets/icon-empresas-selected.svg';
-import { ReactComponent as IconQuienesSomosSelected } from '../assets/icon-quienessomos-selected.svg';
-import { ReactComponent as IconApoyanosSelected } from '../assets/icon-apoyanos-selected.svg';
-import PrimaryButton from './PrimaryButton';
+import PrimaryButton from '../../PrimaryButton';
 
 function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -38,7 +26,7 @@ function DrawerMenu() {
   return (
     <>
       <Box my={4}>
-        <IconMenu onClick={onOpen} />
+        <Logo.IconDrawer onClick={onOpen} />
       </Box>
       <Drawer
         isOpen={isOpen}
@@ -55,7 +43,7 @@ function DrawerMenu() {
             <NavLink to={ROUTES.home}>
               <Flex>
                 <Center color={((location.pathname === `${ROUTES.home}`) ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === `${ROUTES.home}`) ? <IconHomeSelected /> : <IconHome />)}
+                  {((location.pathname === `${ROUTES.home}`) ? <Logo.IconHome /> : <Logo.IconHome />)}
                   Inicio
                 </Center>
               </Flex>
@@ -64,7 +52,7 @@ function DrawerMenu() {
             <NavLink to={ROUTES.nuestrapropuesta}>
               <Flex>
                 <Center color={((location.pathname === `${ROUTES.nuestrapropuesta}`) ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === `${ROUTES.nuestrapropuesta}`) ? <IconPropuestaSelected /> : <IconPropuesta />)}
+                  {((location.pathname === `${ROUTES.nuestrapropuesta}`) ? <Logo.IconPropuestaSelected /> : <Logo.IconPropuesta />)}
                   Nuestra propuesta
                 </Center>
               </Flex>
@@ -73,7 +61,7 @@ function DrawerMenu() {
             <NavLink to={ROUTES.practicantes}>
               <Flex>
                 <Center color={((location.pathname === `${ROUTES.practicantes}`) ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === `${ROUTES.practicantes}`) ? <IconPracticantesSelected /> : <IconPracticantes />)}
+                  {((location.pathname === `${ROUTES.practicantes}`) ? <Logo.IconPracticantesSelected /> : <Logo.IconPracticantes />)}
                   Practicantes
                 </Center>
               </Flex>
@@ -82,7 +70,7 @@ function DrawerMenu() {
             <NavLink to={ROUTES.empresas}>
               <Flex>
                 <Center color={((location.pathname === `${ROUTES.empresas}`) ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === `${ROUTES.empresas}`) ? <IconEmpresasSelected /> : <IconEmpresas />)}
+                  {((location.pathname === `${ROUTES.empresas}`) ? <Logo.IconEmpresasSelected /> : <Logo.IconEmpresas />)}
                   Empresas
                 </Center>
               </Flex>
@@ -91,7 +79,7 @@ function DrawerMenu() {
             <NavLink to={ROUTES.quienesomos}>
               <Flex>
                 <Center color={((location.pathname === `${ROUTES.quienesomos}`) ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === `${ROUTES.quienesomos}`) ? <IconQuienesSomosSelected /> : <IconQuienesSomos />)}
+                  {((location.pathname === `${ROUTES.quienesomos}`) ? <Logo.IconQuienesSomosSelected /> : <Logo.IconQuienesSomos />)}
                   ¿Quiénes somos?
                 </Center>
               </Flex>
@@ -100,7 +88,7 @@ function DrawerMenu() {
             <NavLink to={ROUTES.apoyanos}>
               <Flex>
                 <Center color={((location.pathname === `${ROUTES.apoyanos}`) ? 'primary' : null)} gap={3} mb={5}>
-                  {((location.pathname === `${ROUTES.apoyanos}`) ? <IconApoyanosSelected /> : <IconApoyanos />)}
+                  {((location.pathname === `${ROUTES.apoyanos}`) ? <Logo.IconApoyanosSelected /> : <Logo.IconApoyanos />)}
                   Apoya la Propuesta
                 </Center>
               </Flex>

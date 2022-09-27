@@ -9,7 +9,7 @@ import {
   Input,
   VStack,
 } from '@chakra-ui/react';
-import Header from '../common/Header';
+import Header from '../../components/sections/Header';
 
 function Login() {
   const [email, setEmail] = useState('');

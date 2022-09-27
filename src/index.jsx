@@ -6,6 +6,9 @@ import { BrowserRouter } from 'react-router-dom';
 import theme from './theme/index';
 import App from './App';
 
+import '@fontsource/raleway/400.css';
+import '@fontsource/poppins/700.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
