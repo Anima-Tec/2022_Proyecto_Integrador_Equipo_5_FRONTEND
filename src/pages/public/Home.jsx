@@ -2,6 +2,7 @@ import React from 'react';
 import { Center, Heading } from '@chakra-ui/react';
 
 function Home() {
+  // const navigate = useNavigate();
   return (
     <Heading>
       <Center>

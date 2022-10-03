@@ -9,7 +9,6 @@ import {
   Input,
   VStack,
 } from '@chakra-ui/react';
-import Header from '../../components/sections/Header';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -57,9 +56,10 @@ function Login() {
 
   return (
     <>
-      <Header />
       <Heading>
-        <Center>Iniciar sesión</Center>
+        <Center>
+          <h1>Inicio de sesión</h1>
+        </Center>
       </Heading>
 
       <VStack mt="30px">

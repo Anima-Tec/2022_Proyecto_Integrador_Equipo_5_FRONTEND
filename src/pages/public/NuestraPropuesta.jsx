@@ -1,14 +1,14 @@
 import React from 'react';
 import { Center, Heading } from '@chakra-ui/react';
 
-function Register() {
+function NuestraPropuesta() {
   return (
     <Heading>
       <Center>
-        <h1>Registro</h1>
+        <h1>Nuestra Propuesta</h1>
       </Center>
     </Heading>
   );
 }
 
-export default Register;
+export default NuestraPropuesta;

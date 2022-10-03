@@ -1,22 +1,24 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
-import { Center, Flex } from '@chakra-ui/react';
+import { Box, Center, Flex } from '@chakra-ui/react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 function ItemDrawerMenu({
-  name, route, icon, iconSelected,
+  name, route, icon, iconSelected, onClick,
 }) {
   const location = useLocation();
 
   return (
-    <NavLink to="/">
-      <Flex>
-        <Center color={((location.pathname === route) ? 'primary' : null)} gap={3} mb={5}>
-          {((location.pathname === route) ? iconSelected : icon)}
-          {name}
-        </Center>
-      </Flex>
-    </NavLink>
+    <Box mb={5} onClick={onClick}>
+      <NavLink to={route}>
+        <Flex>
+          <Center color={((location.pathname === route) ? 'primary' : null)} gap={3}>
+            {((location.pathname === route) ? iconSelected : icon)}
+            {name}
+          </Center>
+        </Flex>
+      </NavLink>
+    </Box>
   );
 }
 
@@ -25,6 +27,11 @@ ItemDrawerMenu.propTypes = {
   route: ProtoTypes.string.isRequired,
   icon: ProtoTypes.element.isRequired,
   iconSelected: ProtoTypes.element.isRequired,
+  onClick: ProtoTypes.func,
+};
+
+ItemDrawerMenu.defaultProps = {
+  onClick: () => {},
 };
 
 export default ItemDrawerMenu;

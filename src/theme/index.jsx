@@ -7,9 +7,103 @@ const config = {
   useSystemColorMode: false,
 };
 
+const breakpoints = {
+  sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+};
+const fontSizes = {
+  xs: '0.75rem',
+  sm: '0.875rem',
+  md: '1rem',
+  lg: '1.125rem',
+  xl: '1.25rem',
+  '2xl': '1.5rem',
+  '3xl': '1.875rem',
+  '4xl': '2.25rem',
+  '5xl': '3rem',
+  '6xl': '4rem',
+};
+const fontWeights = {
+  normal: 400,
+  medium: 500,
+  bold: 700,
+  extraBold: 900,
+};
+const lineHeights = {
+  normal: 'normal',
+  none: '1',
+  shorter: '1.25',
+  short: '1.375',
+  base: '1.5',
+  tall: '1.625',
+  taller: '2',
+};
+const letterSpacings = {
+  tighter: '-0.05em',
+  tight: '-0.025em',
+  normal: '0',
+  wide: '0.025em',
+  wider: '0.05em',
+  widest: '0.1em',
+};
+const shadows = {
+  sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+  md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+  lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+  xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+  '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+  inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+  outline: '0 0 0 3px rgba(66, 153, 225, 0.6)',
+  none: 'none',
+};
+const sizes = {
+  '3xs': '14rem',
+  '2xs': '16rem',
+  xs: '20rem',
+  sm: '24rem',
+  md: '28rem',
+  lg: '32rem',
+  xl: '36rem',
+  '2xl': '42rem',
+  '3xl': '48rem',
+  '4xl': '56rem',
+  '5xl': '64rem',
+  '6xl': '72rem',
+  '7xl': '80rem',
+  full: '100%',
+  screenHeight: '100vh',
+  screenWidth: '100vw',
+};
+const zIndices = {
+  hide: -1,
+  auto: 'auto',
+  base: 0,
+  docked: 10,
+  dropdown: 1000,
+  sticky: 1100,
+  banner: 1200,
+  overlay: 1300,
+  modal: 1400,
+  popover: 1500,
+  skipLink: 1600,
+  toast: 1700,
+  tooltip: 1800,
+};
+
 const theme = extendTheme({
   ...colors,
   config,
+  breakpoints,
+  fontSizes,
+  fontWeights,
+  lineHeights,
+  letterSpacings,
+  shadows,
+  sizes,
+  zIndices,
   fonts: {
     heading: '\'Raleway\', sans-serif',
     body: '\'Poppins\', sans-serif',
@@ -17,15 +111,16 @@ const theme = extendTheme({
   styles: {
     global: () => ({
       'html, body': {
+        fontFamily: 'Poppins',
         bg: 'bgColor',
         color: 'white',
         m: '24px',
-        // display: 'flex',
-        // flexDirection: 'column',
-      },
-      h1: {
-        fontSize: 40,
-        color: 'white',
+        h1: {
+          fontSize: '4xl',
+          fontWeight: 'extraBold',
+          lineHeight: 'shorter',
+          letterSpacing: 'tight',
+        },
       },
       FormLabel: {
         color: 'white',

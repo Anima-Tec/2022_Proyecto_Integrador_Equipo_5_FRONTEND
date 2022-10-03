@@ -1,10 +1,14 @@
 // not found page
 import React from 'react';
-import { Heading } from '@chakra-ui/react';
+import { Center, Heading } from '@chakra-ui/react';
 
 function NotFound() {
   return (
-    <Heading>Not Found</Heading>
+    <Heading>
+      <Center>
+        <h1>Page Not found</h1>
+      </Center>
+    </Heading>
   );
 }
 
