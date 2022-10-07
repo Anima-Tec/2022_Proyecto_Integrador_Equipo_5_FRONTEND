@@ -21,6 +21,7 @@ import OfertasTrabajo from '../pages/student/OfertasTrabajo';
 import MisPostulaciones from '../pages/student/MisPostulaciones';
 import Empresas from '../pages/student/Empresas';
 import Recursos from '../pages/student/Recursos';
+import PerfilEmpresa from '../pages/student/PerfilEmpresa';
 
 export default function AppRoutes() {
   return (
@@ -48,6 +49,8 @@ export default function AppRoutes() {
       <Route path={ROUTES.empresas} element={<Empresas />} />
       <Route path={ROUTES.practicasPracticantes} element={<PracticasPracticantes />} />
       <Route path={ROUTES.recursos} element={<Recursos />} />
+
+      <Route path={ROUTES.perfilEmpresa} element={<PerfilEmpresa />} />
 
       {/* company pages */}
       <Route path={ROUTES.misOfertas} element={<MisOfertas />} />

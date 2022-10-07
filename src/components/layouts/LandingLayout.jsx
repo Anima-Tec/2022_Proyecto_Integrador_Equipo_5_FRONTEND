@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box } from '@chakra-ui/react';
-import Header from '../sections/Header';
-import Footer from '../sections/Footer';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 export default function LandingLayout({ children }) {
   return (

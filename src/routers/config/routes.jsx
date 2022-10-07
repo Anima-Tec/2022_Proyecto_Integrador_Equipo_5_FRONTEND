@@ -24,6 +24,8 @@ const ROUTES = {
   practicasPracticantes: '/practicas-practicantes',
   recursos: '/recursos',
 
+  perfilEmpresa: '/empresa/:id',
+
   // company pages
   misOfertas: '/mis-ofertas',
   practicantes: '/practicantes',

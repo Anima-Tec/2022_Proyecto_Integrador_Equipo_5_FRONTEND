@@ -15,12 +15,12 @@ import {
   Divider,
 } from '@chakra-ui/react';
 
-import ROUTES from '../../../routers/config/routes';
+import ROUTES from '../../routers/config/routes';
 
-import * as Logo from '../../../assets/index';
+import * as Logo from '../../assets/index';
 
-import PrimaryButton from '../../Buttons/PrimaryButton';
-import SecondaryButton from '../../Buttons/SecondaryButton';
+import PrimaryButton from '../buttons/PrimaryButton';
+import SecondaryButton from '../buttons/SecondaryButton';
 import ItemDrawerMenu from './ItemDrawerMenu';
 
 function DrawerMenu() {
@@ -28,8 +28,8 @@ function DrawerMenu() {
   const navigate = useNavigate();
 
   // const userRole = 'guest';
-  // const userRole = 'student';
-  const userRole = 'company';
+  const userRole = 'student';
+  // const userRole = 'company';
 
   const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';
@@ -60,7 +60,7 @@ function DrawerMenu() {
                 <ItemDrawerMenu onClick={onClose} name="Prácticas" route={ROUTES.infoPracticas} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Practicantes" route={ROUTES.infoPracticantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Empresas" route={ROUTES.infoEmpresas} icon={<Logo.Empresas />} iconSelected={<Logo.EmpresasSelected />} />
-                <ItemDrawerMenu onClick={onClose} name="¿Quiénes somos?" route={ROUTES.quienesomos} icon={<Logo.QuienesSomos />} iconSelected={<Logo.QuienesSomosSelected />} />
+                <ItemDrawerMenu onClick={onClose} name="¿Quiénes somos?" route={ROUTES.quienesomos} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
                 <Box position="fixed" bottom="24px" left="24px" right="24px">
                   <PrimaryButton onClick={() => [navigate(ROUTES.register), onClose()]}>Registrarse</PrimaryButton>
@@ -75,7 +75,7 @@ function DrawerMenu() {
                 <Flex>
                   <Center gap={3} mt={6}>
                     <Image src={studentPhoto} alt={studentName} borderRadius="full" boxSize="40px" />
-                    {studentName}
+                    <h4>{studentName}</h4>
                   </Center>
                 </Flex>
 
@@ -99,7 +99,7 @@ function DrawerMenu() {
                 <Flex>
                   <Center gap={3} mt={6}>
                     <Image src={companyPhoto} alt={companyName} borderRadius="full" boxSize="40px" />
-                    {companyName}
+                    <h4>{companyName}</h4>
                   </Center>
                 </Flex>
 
@@ -121,7 +121,7 @@ function DrawerMenu() {
                 <ItemDrawerMenu name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
                 <ItemDrawerMenu name="Practicantes" route={ROUTES.practicantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu name="Empresas" route={ROUTES.empresas} icon={<Logo.Empresas />} iconSelected={<Logo.EmpresasSelected />} />
-                <ItemDrawerMenu name="¿Quiénes somos?" route={ROUTES.quienesomos} icon={<Logo.QuienesSomos />} iconSelected={<Logo.QuienesSomosSelected />} />
+                <ItemDrawerMenu name="¿Quiénes somos?" route={ROUTES.quienesomos} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
                 <ItemDrawerMenu name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
                 <PrimaryButton my="40" onClick={() => navigate(ROUTES.login)}>Iniciar sesión</PrimaryButton>
               </DrawerBody>

@@ -49,16 +49,6 @@ const letterSpacings = {
   wider: '0.05em',
   widest: '0.1em',
 };
-const shadows = {
-  sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-  md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-  lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-  xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-  '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-  inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
-  outline: '0 0 0 3px rgba(66, 153, 225, 0.6)',
-  none: 'none',
-};
 const sizes = {
   '3xs': '14rem',
   '2xs': '16rem',
@@ -101,7 +91,6 @@ const theme = extendTheme({
   fontWeights,
   lineHeights,
   letterSpacings,
-  shadows,
   sizes,
   zIndices,
   fonts: {
@@ -116,10 +105,44 @@ const theme = extendTheme({
         color: 'white',
         m: '24px',
         h1: {
+          fontFamily: 'Raleway',
           fontSize: '4xl',
           fontWeight: 'extraBold',
           lineHeight: 'shorter',
-          letterSpacing: 'tight',
+          letterSpacing: 'wide',
+          textAlign: 'center',
+        },
+        h2: {
+          fontFamily: 'Raleway',
+          fontSize: '2xl',
+          fontWeight: 'bold',
+          lineHeight: 'shorter',
+          letterSpacing: 'wide',
+          textAlign: 'left',
+        },
+        h3: {
+          fontFamily: 'Poppins',
+          fontSize: 'xl',
+          fontWeight: 'bold',
+          lineHeight: 'shorter',
+          letterSpacing: 'wider',
+          textAlign: 'left',
+        },
+        h4: {
+          fontFamily: 'Poppins',
+          fontSize: 'md',
+          fontWeight: 'bold',
+          lineHeight: 'shorter',
+          letterSpacing: 'wider',
+          textAlign: 'left',
+        },
+        p: {
+          fontFamily: 'Poppins',
+          fontSize: 'sm',
+          fontWeight: 'normal',
+          lineHeight: 'normal',
+          letterSpacing: 'wider',
+          textAlign: 'left',
         },
       },
       FormLabel: {

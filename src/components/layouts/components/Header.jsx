@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Box } from '@chakra-ui/react';
-import DrawerMenu from './DrawerMenu/DrawerMenu';
-import { ReactComponent as LogoEfect } from '../../assets/logo-efect.svg';
+import DrawerMenu from '../../DrawerMenu/DrawerMenu';
+import { ReactComponent as LogoEfect } from '../../../assets/logo-efect.svg';
 
 function Header() {
   return (
