@@ -14,7 +14,7 @@ function ItemDrawerMenu({
         <Flex>
           <Center color={((location.pathname === route) ? 'primary' : null)} gap={3}>
             {((location.pathname === route) ? iconSelected : icon)}
-            <h4>{name}</h4>
+            <p>{name}</p>
           </Center>
         </Flex>
       </NavLink>

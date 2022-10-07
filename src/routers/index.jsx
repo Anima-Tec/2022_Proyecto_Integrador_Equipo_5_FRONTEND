@@ -23,6 +23,8 @@ import Empresas from '../pages/student/Empresas';
 import Recursos from '../pages/student/Recursos';
 import PerfilEmpresa from '../pages/student/PerfilEmpresa';
 
+import Perfil from '../pages/private/Perfil';
+
 export default function AppRoutes() {
   return (
     <Routes>
@@ -40,7 +42,7 @@ export default function AppRoutes() {
       <Route path={ROUTES.apoyanos} element={<Apoyanos />} />
 
       {/* private pages */}
-      <Route path={ROUTES.perfil} element={<Apoyanos />} />
+      <Route path={ROUTES.perfil} element={<Perfil />} />
 
       {/* student pages */}
       <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />

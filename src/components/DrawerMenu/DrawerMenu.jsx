@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import {
   Drawer,
   DrawerOverlay,
@@ -26,6 +26,7 @@ import ItemDrawerMenu from './ItemDrawerMenu';
 function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
+  const location = useLocation();
 
   // const userRole = 'guest';
   const userRole = 'student';
@@ -72,12 +73,14 @@ function DrawerMenu() {
           {
             userRole === 'student' && (
               <DrawerBody mt={6} onClick={onClose}>
-                <Flex>
-                  <Center gap={3} mt={6}>
-                    <Image src={studentPhoto} alt={studentName} borderRadius="full" boxSize="40px" />
-                    <h4>{studentName}</h4>
-                  </Center>
-                </Flex>
+                <NavLink to={ROUTES.perfil}>
+                  <Flex>
+                    <Center color={((location.pathname === ROUTES.perfil) ? 'primary' : null)} gap={3}>
+                      <Image src={studentPhoto} borderRadius="full" boxSize="40px" />
+                      {studentName}
+                    </Center>
+                  </Flex>
+                </NavLink>
 
                 <Divider my="20px" borderColor="grey" />
 
@@ -96,12 +99,14 @@ function DrawerMenu() {
           {
             userRole === 'company' && (
               <DrawerBody mt={6} onClick={onClose}>
-                <Flex>
-                  <Center gap={3} mt={6}>
-                    <Image src={companyPhoto} alt={companyName} borderRadius="full" boxSize="40px" />
-                    <h4>{companyName}</h4>
-                  </Center>
-                </Flex>
+                <NavLink to={ROUTES.perfil}>
+                  <Flex>
+                    <Center color={((location.pathname === ROUTES.perfil) ? 'primary' : null)} gap={3}>
+                      <Image src={companyPhoto} borderRadius="full" boxSize="40px" />
+                      {companyName}
+                    </Center>
+                  </Flex>
+                </NavLink>
 
                 <Divider my="20px" borderColor="grey" />
 
