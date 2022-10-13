@@ -12,7 +12,7 @@ function ItemCompany({
 }) {
   return (
     <a href={ROUTES.perfilEmpresa}>
-      <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="grey" padding="14px" boxShadow="md" p="6" h="100%" href={ROUTES.perfilEmpresa}>
+      <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p="6" h="100%">
 
         <Flex>
           <Center gap={3} justifyContent="space-between" w="100%" alignItems="flex-start">

@@ -65,7 +65,7 @@ function Login() {
       <VStack mt="30px">
         <Center flexDirection="column">
           <FormControl id="email" mx="auto">
-            <FormLabel color="grey" w="70vw">
+            <FormLabel color="gray" w="70vw">
               Correo
             </FormLabel>
             <Input
@@ -82,7 +82,7 @@ function Login() {
             </FormHelperText>
           </FormControl>
           <FormControl id="password" my="30px">
-            <FormLabel color="grey" w="70vw">
+            <FormLabel color="gray" w="70vw">
               Contraseña
             </FormLabel>
             <Input

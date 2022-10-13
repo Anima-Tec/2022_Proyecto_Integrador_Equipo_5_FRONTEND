@@ -82,7 +82,7 @@ function DrawerMenu() {
                   </Flex>
                 </NavLink>
 
-                <Divider my="20px" borderColor="grey" />
+                <Divider my="20px" borderColor="gray" />
 
                 <ItemDrawerMenu name="Estado de Inscripción" route={ROUTES.estadoInscripcion} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu name="Mis Postulaciones" route={ROUTES.misPostulaciones} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
@@ -108,7 +108,7 @@ function DrawerMenu() {
                   </Flex>
                 </NavLink>
 
-                <Divider my="20px" borderColor="grey" />
+                <Divider my="20px" borderColor="gray" />
 
                 <ItemDrawerMenu name="Mis ofertas" route={ROUTES.misOfertas} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu name="Practicantes" route={ROUTES.practicantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />

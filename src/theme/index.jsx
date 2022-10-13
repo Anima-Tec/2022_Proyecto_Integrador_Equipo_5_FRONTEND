@@ -110,7 +110,6 @@ const theme = extendTheme({
           fontWeight: 'extraBold',
           lineHeight: 'shorter',
           letterSpacing: 'wide',
-          textAlign: 'center',
         },
         h2: {
           fontFamily: 'Raleway',
@@ -135,6 +134,15 @@ const theme = extendTheme({
           lineHeight: 'shorter',
           letterSpacing: 'wider',
           textAlign: 'left',
+        },
+        h5: {
+          fontFamily: 'Poppins',
+          fontSize: 'sm',
+          fontWeight: 'bold',
+          lineHeight: 'shorter',
+          letterSpacing: 'wider',
+          textAlign: 'left',
+          color: 'gray',
         },
         p: {
           fontFamily: 'Poppins',
