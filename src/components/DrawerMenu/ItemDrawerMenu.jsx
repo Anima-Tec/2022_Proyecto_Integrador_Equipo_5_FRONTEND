@@ -1,6 +1,6 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
-import { Box, Center, Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 function ItemDrawerMenu({
@@ -11,12 +11,11 @@ function ItemDrawerMenu({
   return (
     <Box mb={5} onClick={onClick}>
       <NavLink to={route}>
-        <Flex>
-          <Center color={((location.pathname === route) ? 'primary' : null)} gap={3}>
-            {((location.pathname === route) ? iconSelected : icon)}
-            <p>{name}</p>
-          </Center>
+        <Flex color={((location.pathname === route) ? 'primary' : null)} gap={3} alignItems="flex-end">
+          {((location.pathname === route) ? iconSelected : icon)}
+          <h4>{name}</h4>
         </Flex>
+
       </NavLink>
     </Box>
   );

@@ -4,7 +4,7 @@
 
 import React from 'react';
 import {
-  Box, Center, Divider, Heading, SimpleGrid,
+  Box, Center, Heading, SimpleGrid,
 } from '@chakra-ui/react';
 import ItemCompany from '../../components/ItemCompany';
 
@@ -57,12 +57,10 @@ function Empresas() {
       </Heading>
       <Box>
         <Box margin="32px auto 24px auto">
-          <Center>
-            <h2>Según tus intereses</h2>
-          </Center>
+          <h2>Según tus intereses</h2>
         </Box>
 
-        <SimpleGrid spacing={8} columns={2} minChildWidth="240px">
+        <SimpleGrid spacing={8} minChildWidth="240px">
 
           {company.map((companys) => (
             <ItemCompany
@@ -77,13 +75,9 @@ function Empresas() {
         </SimpleGrid>
       </Box>
 
-      <Divider marginTop={8} />
-
       <Box>
-        <Box marginY={8}>
-          <Center>
-            <h2>Otras Empresas</h2>
-          </Center>
+        <Box margin="40px auto 24px auto">
+          <h2>Otras Empresas</h2>
         </Box>
 
         <SimpleGrid spacing={8} columns={2} minChildWidth="240px">

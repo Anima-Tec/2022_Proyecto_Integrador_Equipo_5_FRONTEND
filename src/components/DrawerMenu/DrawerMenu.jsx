@@ -77,7 +77,7 @@ function DrawerMenu() {
                   <Flex>
                     <Center color={((location.pathname === ROUTES.perfil) ? 'primary' : null)} gap={3}>
                       <Image src={studentPhoto} borderRadius="full" boxSize="40px" />
-                      {studentName}
+                      <h4>{studentName}</h4>
                     </Center>
                   </Flex>
                 </NavLink>
