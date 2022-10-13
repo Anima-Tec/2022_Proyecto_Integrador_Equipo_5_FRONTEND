@@ -110,6 +110,7 @@ const theme = extendTheme({
           fontWeight: 'extraBold',
           lineHeight: 'shorter',
           letterSpacing: 'wide',
+          textAlign: 'center',
         },
         h2: {
           fontFamily: 'Raleway',

@@ -6,11 +6,19 @@ import Header from './components/Header';
 
 export default function LandingLayout({ children }) {
   return (
-    <Box width="100%" height="100vh">
-      <Header />
-      {children}
+    <>
+      <Box
+        width={{
+          base: '100%', md: '100%', lg: '85%',
+        }}
+        height="100vh"
+        margin="auto"
+      >
+        <Header />
+        {children}
+      </Box>
       <Footer />
-    </Box>
+    </>
   );
 }
 
