@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import {
   Drawer,
   DrawerOverlay,
@@ -26,11 +26,10 @@ import ItemDrawerMenu from './ItemDrawerMenu';
 function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
-  const location = useLocation();
 
   // const userRole = 'guest';
-  const userRole = 'student';
-  // const userRole = 'company';
+  // const userRole = 'student';
+  const userRole = 'company';
 
   const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';
@@ -75,23 +74,23 @@ function DrawerMenu() {
               <DrawerBody mt={6} onClick={onClose}>
                 <NavLink to={ROUTES.perfil}>
                   <Flex>
-                    <Center color={((location.pathname === ROUTES.perfil) ? 'primary' : null)} gap={3}>
+                    <Center gap={3}>
                       <Image src={studentPhoto} borderRadius="full" boxSize="40px" />
-                      <h4>{studentName}</h4>
+                      <h3>{studentName}</h3>
                     </Center>
                   </Flex>
                 </NavLink>
 
                 <Divider my="20px" borderColor="gray" />
 
-                <ItemDrawerMenu name="Estado de Inscripción" route={ROUTES.estadoInscripcion} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
-                <ItemDrawerMenu name="Mis Postulaciones" route={ROUTES.misPostulaciones} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
-                <ItemDrawerMenu name="Ofertas de Trabajo" route={ROUTES.ofertasTrabajo} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
+                <ItemDrawerMenu name="Estado de Inscripción" route={ROUTES.estadoInscripcion} icon={<Logo.EstadoInscripcion />} iconSelected={<Logo.EstadoInscripcionSelected />} />
+                <ItemDrawerMenu name="Mis Postulaciones" route={ROUTES.misPostulaciones} icon={<Logo.MisPostulaciones />} iconSelected={<Logo.MisPostulacionesSelected />} />
+                <ItemDrawerMenu name="Ofertas de Trabajo" route={ROUTES.ofertasTrabajo} icon={<Logo.OfertasTrabajo />} iconSelected={<Logo.OfertasTrabajoSelected />} />
                 <ItemDrawerMenu name="Empresas" route={ROUTES.empresas} icon={<Logo.Empresas />} iconSelected={<Logo.EmpresasSelected />} />
                 <ItemDrawerMenu name="Prácticas" route={ROUTES.practicasPracticantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
-                <ItemDrawerMenu name="Recursos" route={ROUTES.recursos} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
+                <ItemDrawerMenu name="Recursos" route={ROUTES.recursos} icon={<Logo.Recursos />} iconSelected={<Logo.RecursosSelected />} />
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">
-                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px">Cerrar sesión</SecondaryButton>
+                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><h4>Cerrar sesión</h4></SecondaryButton>
                 </Flex>
               </DrawerBody>
             )
@@ -101,20 +100,20 @@ function DrawerMenu() {
               <DrawerBody mt={6} onClick={onClose}>
                 <NavLink to={ROUTES.perfil}>
                   <Flex>
-                    <Center color={((location.pathname === ROUTES.perfil) ? 'primary' : null)} gap={3}>
+                    <Center gap={3}>
                       <Image src={companyPhoto} borderRadius="full" boxSize="40px" />
-                      {companyName}
+                      <h3>{companyName}</h3>
                     </Center>
                   </Flex>
                 </NavLink>
 
                 <Divider my="20px" borderColor="gray" />
 
-                <ItemDrawerMenu name="Mis ofertas" route={ROUTES.misOfertas} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
+                <ItemDrawerMenu name="Mis Ofertas de Trabajo" route={ROUTES.misOfertas} icon={<Logo.OfertasTrabajo />} iconSelected={<Logo.OfertasTrabajoSelected />} />
                 <ItemDrawerMenu name="Practicantes" route={ROUTES.practicantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu name="Prácticas" route={ROUTES.practicasEmpresas} icon={<Logo.Empresas />} iconSelected={<Logo.HomeSelected />} />
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">
-                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px">Cerrar sesión</SecondaryButton>
+                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><h4>Cerrar sesión</h4></SecondaryButton>
                 </Flex>
               </DrawerBody>
             )

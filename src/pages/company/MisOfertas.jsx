@@ -8,7 +8,7 @@ function MisOfertas() {
   return (
     <Heading>
       <Center>
-        <h1>Mis ofertas</h1>
+        <h1>Mis Ofertas de Trabajo</h1>
       </Center>
     </Heading>
   );
