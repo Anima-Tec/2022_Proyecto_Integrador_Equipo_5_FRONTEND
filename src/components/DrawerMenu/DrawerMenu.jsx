@@ -19,8 +19,8 @@ import ROUTES from '../../routers/config/routes';
 
 import * as Logo from '../../assets/index';
 
-import PrimaryButton from '../buttons/PrimaryButton';
-import SecondaryButton from '../buttons/SecondaryButton';
+import PrimaryButton from '../Buttons/PrimaryButton';
+import SecondaryButton from '../Buttons/SecondaryButton';
 import ItemDrawerMenu from './ItemDrawerMenu';
 
 function DrawerMenu() {
