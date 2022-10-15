@@ -8,7 +8,7 @@ function PracticasPracticantes() {
   return (
     <Heading>
       <Center>
-        <h1>Prácticas como Practicante</h1>
+        <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Prácticas como Practicante </Heading>
       </Center>
     </Heading>
   );

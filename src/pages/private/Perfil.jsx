@@ -1,13 +1,11 @@
 import React from 'react';
-import { Center, Heading } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 
 function EstadoInscripcion() {
   return (
-    <Heading>
-      <Center>
-        <h1>Mi Perfil</h1>
-      </Center>
-    </Heading>
+
+    <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Mi Perfil </Heading>
+
   );
 }
 

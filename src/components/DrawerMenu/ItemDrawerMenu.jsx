@@ -1,6 +1,6 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 function ItemDrawerMenu({
@@ -13,7 +13,7 @@ function ItemDrawerMenu({
       <NavLink to={route}>
         <Flex color={((location.pathname === route) ? 'primary' : null)} gap={3} alignItems="flex-end">
           {((location.pathname === route) ? iconSelected : icon)}
-          <h4>{name}</h4>
+          <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">{name}</Heading>
         </Flex>
 
       </NavLink>

@@ -2,7 +2,7 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
 import {
-  Badge, Box, Center, Flex, Image,
+  Badge, Box, Center, Flex, Heading, Image,
 } from '@chakra-ui/react';
 import * as Logo from '../../assets/index';
 import ROUTES from '../../routers/config/routes';
@@ -21,7 +21,7 @@ function CardCompany({
               <Flex>
                 <Center gap={3} maxWidth="180px" wordBreak="break-word">
                   <Image src={photo} borderRadius="full" boxSize={10} />
-                  <h3>{name}</h3>
+                  <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{name}</Heading>
                 </Center>
               </Flex>
 

@@ -4,7 +4,7 @@
 
 import React from 'react';
 import {
-  Badge, Box, Center, Divider, Flex, Image, SimpleGrid,
+  Badge, Box, Center, Divider, Flex, Heading, Image, SimpleGrid,
 } from '@chakra-ui/react';
 import * as Logo from '../../assets/index';
 import CardJobOffer from '../../components/Cards/CardJobOffer';
@@ -57,7 +57,9 @@ function PerfilEmpresa() {
       <Flex>
         <Center gap={3}>
           <Image src={company[0].photo} borderRadius="full" boxSize="60px" />
-          <h1>{company[0].name}</h1>
+          <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">
+            {company[0].name}
+          </Heading>
         </Center>
       </Flex>
 
@@ -96,7 +98,7 @@ function PerfilEmpresa() {
 
       <Box marginTop={4}>
         <Box marginBottom={2}>
-          <h5>Descripción</h5>
+          <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold">Descripción</Heading>
         </Box>
         <p>{company[0].description}</p>
       </Box>
@@ -104,11 +106,11 @@ function PerfilEmpresa() {
       <Divider h="3px" marginTop={5} color="gray" opacity="0.2" />
 
       <Box margin="32px auto 24px auto">
-        <h2>
+        <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">
           Ofertas de Trabajo de
           {' '}
           {company[0].name}
-        </h2>
+        </Heading>
 
         <SimpleGrid marginTop={5} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
 

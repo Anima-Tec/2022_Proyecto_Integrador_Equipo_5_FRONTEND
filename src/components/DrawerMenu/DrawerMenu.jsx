@@ -13,6 +13,7 @@ import {
   Center,
   Image,
   Divider,
+  Heading,
 } from '@chakra-ui/react';
 
 import ROUTES from '../../routers/config/routes';
@@ -76,7 +77,7 @@ function DrawerMenu() {
                   <Flex>
                     <Center gap={3}>
                       <Image src={studentPhoto} borderRadius="full" boxSize="40px" />
-                      <h3>{studentName}</h3>
+                      <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{studentName}</Heading>
                     </Center>
                   </Flex>
                 </NavLink>
@@ -90,7 +91,7 @@ function DrawerMenu() {
                 <ItemDrawerMenu name="Prácticas" route={ROUTES.practicasPracticantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu name="Recursos" route={ROUTES.recursos} icon={<Logo.Recursos />} iconSelected={<Logo.RecursosSelected />} />
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">
-                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><h4>Cerrar sesión</h4></SecondaryButton>
+                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">Cerrar sesión</Heading></SecondaryButton>
                 </Flex>
               </DrawerBody>
             )
@@ -102,7 +103,7 @@ function DrawerMenu() {
                   <Flex>
                     <Center gap={3}>
                       <Image src={companyPhoto} borderRadius="full" boxSize="40px" />
-                      <h3>{companyName}</h3>
+                      <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{companyName}</Heading>
                     </Center>
                   </Flex>
                 </NavLink>
@@ -113,7 +114,7 @@ function DrawerMenu() {
                 <ItemDrawerMenu name="Practicantes" route={ROUTES.practicantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu name="Prácticas" route={ROUTES.practicasEmpresas} icon={<Logo.Empresas />} iconSelected={<Logo.HomeSelected />} />
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">
-                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><h4>Cerrar sesión</h4></SecondaryButton>
+                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">Cerrar sesión</Heading></SecondaryButton>
                 </Flex>
               </DrawerBody>
             )

@@ -48,14 +48,14 @@ function OfertasTrabajo() {
     <>
       <Heading>
         <Center>
-          <h1>Ofertas de Trabajo</h1>
+          <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Ofertas de Trabajo</Heading>
         </Center>
       </Heading>
 
       <Box>
 
         <Box margin="32px auto 24px auto">
-          <h2>Según tus intereses</h2>
+          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">Según tus intereses</Heading>
         </Box>
 
         <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>

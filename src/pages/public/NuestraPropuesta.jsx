@@ -1,13 +1,11 @@
 import React from 'react';
-import { Center, Heading } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 
 function NuestraPropuesta() {
   return (
-    <Heading>
-      <Center>
-        <h1>Nuestra Propuesta</h1>
-      </Center>
-    </Heading>
+
+    <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Nuestra Propuesta </Heading>
+
   );
 }
 

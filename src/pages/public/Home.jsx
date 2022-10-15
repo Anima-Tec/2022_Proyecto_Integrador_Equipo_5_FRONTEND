@@ -1,14 +1,11 @@
 import React from 'react';
-import { Center, Heading } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 
 function Home() {
-  // const navigate = useNavigate();
   return (
-    <Heading>
-      <Center>
-        <h1>Home</h1>
-      </Center>
-    </Heading>
+
+    <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Home </Heading>
+
   );
 }
 

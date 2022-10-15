@@ -8,7 +8,7 @@ function Recursos() {
   return (
     <Heading>
       <Center>
-        <h1>Recursos</h1>
+        <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Recursos </Heading>
       </Center>
     </Heading>
   );

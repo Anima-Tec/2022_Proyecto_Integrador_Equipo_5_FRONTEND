@@ -4,7 +4,7 @@
 
 import React from 'react';
 import {
-  Box, Center, Heading, SimpleGrid,
+  Box, Heading, SimpleGrid,
 } from '@chakra-ui/react';
 import CardCompany from '../../components/Buttons/CardCompany';
 
@@ -50,40 +50,17 @@ function Empresas() {
 
   return (
     <>
-      <Heading>
-        <Center>
-          <h1>Empresas</h1>
-        </Center>
-      </Heading>
+      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Empresas</Heading>
       <Box>
         <Box margin="32px auto 24px auto">
-          <h2>Según tus intereses</h2>
+          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">Según tus intereses</Heading>
         </Box>
 
         <SimpleGrid spacing={8} minChildWidth="240px">
 
           {company.map((companys) => (
             <CardCompany
-              name={companys.name_company}
-              photo={companys.photo}
-              employees={companys.employees}
-              year_foundation={companys.year_foundation}
-              name_work_area={companys.name_work_area}
-            />
-          ))}
-
-        </SimpleGrid>
-      </Box>
-
-      <Box>
-        <Box margin="40px auto 24px auto">
-          <h2>Otras Empresas</h2>
-        </Box>
-
-        <SimpleGrid spacing={8} columns={2} minChildWidth="240px">
-
-          {company.map((companys) => (
-            <CardCompany
+              key={companys.name_company}
               name={companys.name_company}
               photo={companys.photo}
               employees={companys.employees}

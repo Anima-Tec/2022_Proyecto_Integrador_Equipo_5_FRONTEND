@@ -3,7 +3,7 @@ import { Button } from '@chakra-ui/react';
 import PropTypes from 'prop-types'; // ES6
 
 function SecondaryButton({
-  childrenn, onClick, bg, fontColor,
+  children, onClick, bg, fontColor,
 }) {
   return (
     <Button
@@ -19,7 +19,7 @@ function SecondaryButton({
       w="100%"
       onClick={onClick}
     >
-      {childrenn}
+      {children}
     </Button>
   );
 }
@@ -27,14 +27,15 @@ function SecondaryButton({
 export default SecondaryButton;
 
 SecondaryButton.propTypes = {
-  childrenn: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node]).isRequired,
   onClick: PropTypes.func,
   bg: PropTypes.string,
   fontColor: PropTypes.string,
 };
 
 SecondaryButton.defaultProps = {
-  childrenn: '',
   onClick: () => {},
   bg: 'secondaryDark',
   fontColor: 'white',

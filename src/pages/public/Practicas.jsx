@@ -5,7 +5,7 @@ function Practicas() {
   return (
     <Heading>
       <Center>
-        <h1>Prácticas</h1>
+         <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Prácticas </Heading>
       </Center>
     </Heading>
   );

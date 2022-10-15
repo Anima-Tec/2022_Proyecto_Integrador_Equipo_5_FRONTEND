@@ -56,11 +56,8 @@ function Login() {
 
   return (
     <>
-      <Heading>
-        <Center>
-          <h1>Inicio de sesión</h1>
-        </Center>
-      </Heading>
+
+      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Inicio de sesión </Heading>
 
       <VStack mt="30px">
         <Center flexDirection="column">

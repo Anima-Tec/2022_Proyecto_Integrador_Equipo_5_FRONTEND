@@ -27,14 +27,15 @@ function PrimaryButton({
 export default PrimaryButton;
 
 PrimaryButton.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node]).isRequired,
   onClick: PropTypes.func,
   bg: PropTypes.string,
   fontColor: PropTypes.string,
 };
 
 PrimaryButton.defaultProps = {
-  children: '',
   onClick: () => {},
   bg: 'primaryDark',
   fontColor: 'white',
