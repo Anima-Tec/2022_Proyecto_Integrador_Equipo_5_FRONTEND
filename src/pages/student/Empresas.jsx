@@ -6,7 +6,7 @@ import React from 'react';
 import {
   Box, Center, Heading, SimpleGrid,
 } from '@chakra-ui/react';
-import ItemCompany from '../../components/ItemCompany';
+import CardCompany from '../../components/Buttons/CardCompany';
 
 function Empresas() {
   const company = [
@@ -29,8 +29,8 @@ function Empresas() {
       name_work_area: ['Tecnología', 'Cubos de rubik'],
     },
     {
-      name_company: 'Coca Cola',
-      photo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEqNk6wgflnZw/company-logo_200_200/0/1633538025560?e=2147483647&v=beta&t=WXbQkyAe0rEzOjJoqlpGPyUm68qVs7PcDiDy1DdO_A0',
+      name_company: 'Nescafé',
+      photo: 'https://brandemia.org/sites/default/files/sites/default/files/nescafe-redvolution-new-logo.jpg',
       employees: 100,
       // dir_street: 'Av. Carrasco',
       // dir_number: '268',
@@ -39,7 +39,7 @@ function Empresas() {
     },
     {
       name_company: 'Coca Cola',
-      photo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEqNk6wgflnZw/company-logo_200_200/0/1633538025560?e=2147483647&v=beta&t=WXbQkyAe0rEzOjJoqlpGPyUm68qVs7PcDiDy1DdO_A0',
+      photo: 'https://tentulogo.com/wp-content/uploads/2017/06/cocacola-logo.jpg',
       employees: 100,
       // dir_street: 'Av. Carrasco',
       // dir_number: '268',
@@ -63,7 +63,7 @@ function Empresas() {
         <SimpleGrid spacing={8} minChildWidth="240px">
 
           {company.map((companys) => (
-            <ItemCompany
+            <CardCompany
               name={companys.name_company}
               photo={companys.photo}
               employees={companys.employees}
@@ -83,7 +83,7 @@ function Empresas() {
         <SimpleGrid spacing={8} columns={2} minChildWidth="240px">
 
           {company.map((companys) => (
-            <ItemCompany
+            <CardCompany
               name={companys.name_company}
               photo={companys.photo}
               employees={companys.employees}

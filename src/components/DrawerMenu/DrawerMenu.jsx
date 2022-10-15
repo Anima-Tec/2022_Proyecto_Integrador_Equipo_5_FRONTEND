@@ -28,8 +28,8 @@ function DrawerMenu() {
   const navigate = useNavigate();
 
   // const userRole = 'guest';
-  // const userRole = 'student';
-  const userRole = 'company';
+  const userRole = 'student';
+  // const userRole = 'company';
 
   const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';

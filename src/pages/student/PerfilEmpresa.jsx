@@ -66,7 +66,7 @@ function PerfilEmpresa() {
 
       <Box marginTop={4}>
         <Box marginBottom={2}>
-          <h5>Description</h5>
+          <h5>Descripción</h5>
         </Box>
         <p>{company[0].description}</p>
       </Box>
