@@ -13,7 +13,7 @@ function CardCompany({
   return (
     <Box maxWidth="550px">
       <a href={ROUTES.perfilEmpresa}>
-        <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p="6" h="100%">
+        <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p="18px" h="100%">
 
           <Flex>
             <Center gap={3} justifyContent="space-between" w="100%" alignItems="flex-start">

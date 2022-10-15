@@ -4,9 +4,10 @@
 
 import React from 'react';
 import {
-  Badge, Box, Center, Divider, Flex, Image,
+  Badge, Box, Center, Divider, Flex, Image, SimpleGrid,
 } from '@chakra-ui/react';
 import * as Logo from '../../assets/index';
+import CardJobOffer from '../../components/Cards/CardJobOffer';
 
 function PerfilEmpresa() {
   const company = [
@@ -19,8 +20,37 @@ function PerfilEmpresa() {
       dir_number: '742',
       year_foundation: 2010,
       name_work_area: ['Administración', 'Tecnología'],
+      jobOffer: [
+        {
+          name_jobOffer: 'Programación',
+          description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
+          modality: 'Mixta',
+          quotas: 2,
+          workarea: 'Tecnología',
+        },
+      ],
+    },
+    {
+      name: 'Light-it',
+      description: 'Light-it es una empresa de desarrollo de software. Nuestros experimentados equipos de desarrollo elaboran soluciones de software de alta calidad que se adhieren a los principales estándares de calidad.',
+      photo: 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O',
+      employees: 20,
+      dir_street: 'Av. Siempre Viva',
+      dir_number: '742',
+      year_foundation: 2010,
+      name_work_area: ['Administración', 'Tecnología'],
+      jobOffer: [
+        {
+          name_jobOffer: 'Diseño',
+          description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
+          modality: 'Mixta',
+          quotas: 2,
+          workarea: 'Tecnología',
+        },
+      ],
     },
   ];
+
   return (
     <>
 
@@ -79,6 +109,21 @@ function PerfilEmpresa() {
           {' '}
           {company[0].name}
         </h2>
+
+        <SimpleGrid marginTop={5} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
+
+          {company.map((companyData) => (
+            <CardJobOffer
+              key={companyData.jobOffer[0].name_jobOffer}
+              name_jobOffer={companyData.jobOffer[0].name_jobOffer}
+              description={companyData.jobOffer[0].description}
+              modality={companyData.jobOffer[0].modality}
+              quotas={companyData.jobOffer[0].quotas}
+              workarea={companyData.jobOffer[0].workarea}
+            />
+          ))}
+
+        </SimpleGrid>
       </Box>
 
     </>

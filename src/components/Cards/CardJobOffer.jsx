@@ -14,18 +14,20 @@ function CardJobOffer({
     // minChildWidth="400px" display={{ base: 'none', lg: 'grid' }}
     <Box>
       <a href={ROUTES.perfilEmpresa}>
-        <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p={{ base: 4, md: 6 }} h="100%">
+        <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p={{ base: 4, md: '18px' }} h="100%">
 
           <Flex display={{ base: 'block', lg: 'flex' }}>
-            <Center gap="10px" justifyContent="space-between" w="100%" alignItems="flex-end">
+            <Center gap="10px" justifyContent="space-between" w="100%" alignItems="center">
 
               <Box>
+                {(name_company && photo) && (
                 <Flex marginBottom={2}>
                   <Center gap={3}>
                     <Image src={photo} borderRadius="full" boxSize={8} />
                     <h4>{name_company}</h4>
                   </Center>
                 </Flex>
+                )}
 
                 <h3>{name_jobOffer}</h3>
               </Box>
@@ -90,8 +92,13 @@ CardJobOffer.propTypes = {
   modality: ProtoTypes.string.isRequired,
   quotas: ProtoTypes.number.isRequired,
   workarea: ProtoTypes.string.isRequired,
-  name_company: ProtoTypes.string.isRequired,
-  photo: ProtoTypes.string.isRequired,
+  name_company: ProtoTypes.string,
+  photo: ProtoTypes.string,
+};
+
+CardJobOffer.defaultProps = {
+  name_company: '',
+  photo: '',
 };
 
 export default CardJobOffer;

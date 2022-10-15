@@ -75,25 +75,6 @@ function OfertasTrabajo() {
         </SimpleGrid>
 
       </Box>
-      {/* <Box>
-        <Box margin="40px auto 24px auto">
-          <h2>Otras Empresas</h2>
-        </Box>
-
-        <SimpleGrid spacing={8} columns={2} minChildWidth="240px">
-
-          {company.map((companys) => (
-            <CardJobOffer
-              name={companys.name_company}
-              photo={companys.photo}
-              employees={companys.employees}
-              year_foundation={companys.year_foundation}
-              name_work_area={companys.name_work_area}
-            />
-          ))}
-
-        </SimpleGrid>
-      </Box> */}
     </>
   );
 }
