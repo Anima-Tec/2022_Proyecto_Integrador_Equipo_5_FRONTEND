@@ -7,13 +7,13 @@ import {
 import * as Logo from '../../assets/index';
 import ROUTES from '../../routers/config/routes';
 
-function CardJobOffer({
+function CardOportunity({
   name_jobOffer, description, modality, quotas, workarea, name_company, photo,
 }) {
   return (
     // minChildWidth="400px" display={{ base: 'none', lg: 'grid' }}
     <Box>
-      <a href={ROUTES.perfilEmpresa}>
+      <a href={ROUTES.oportunidadPractica}>
         <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p={{ base: 4, md: '18px' }} h="100%">
 
           <Flex display={{ base: 'block', lg: 'flex' }}>
@@ -35,7 +35,7 @@ function CardJobOffer({
               <Flex flexDirection="column" alignItems="flex-end">
                 <Flex>
                   <Center gap={1}>
-                    <p>{quotas}</p>
+                    <Text>{quotas}</Text>
                     <Logo.People width="15px" />
                   </Center>
                 </Flex>
@@ -43,7 +43,7 @@ function CardJobOffer({
                 {modality === 'Virtual' && (
                   <Flex>
                     <Center gap={1}>
-                      <p>{modality}</p>
+                      <Text>{modality}</Text>
                       <Logo.Computer width="17px" />
                     </Center>
                   </Flex>
@@ -52,7 +52,7 @@ function CardJobOffer({
                 {modality === 'Presencial' && (
                 <Flex>
                   <Center gap={1}>
-                    <p>{modality}</p>
+                    <Text>{modality}</Text>
                     <Logo.Empresas width="15px" />
                   </Center>
                 </Flex>
@@ -61,7 +61,7 @@ function CardJobOffer({
                 {modality === 'Mixta' && (
                   <Flex>
                     <Center gap={1}>
-                      <p>Mixta</p>
+                      <Text>Mixta</Text>
 
                       <Logo.Computer width="12px" height="12px" />
                       <Logo.Empresas width="10px" height="10px" />
@@ -72,7 +72,7 @@ function CardJobOffer({
               </Flex>
             </Center>
           </Flex>
-          <Text fontSize={12} marginTop={3}>{description}</Text>
+          <Text fontSize={12} marginTop={3} noOfLines={2}>{description}</Text>
 
           <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap">
             <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" key={workarea} display="flex" alignContent="center" justifyContent="center">
@@ -86,7 +86,7 @@ function CardJobOffer({
   );
 }
 
-CardJobOffer.propTypes = {
+CardOportunity.propTypes = {
   name_jobOffer: ProtoTypes.string.isRequired,
   description: ProtoTypes.string.isRequired,
   modality: ProtoTypes.string.isRequired,
@@ -96,9 +96,9 @@ CardJobOffer.propTypes = {
   photo: ProtoTypes.string,
 };
 
-CardJobOffer.defaultProps = {
+CardOportunity.defaultProps = {
   name_company: '',
   photo: '',
 };
 
-export default CardJobOffer;
+export default CardOportunity;

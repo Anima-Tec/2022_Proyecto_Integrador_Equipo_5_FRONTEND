@@ -13,17 +13,18 @@ import InfoPracticantes from '../pages/public/InfoPracticantes';
 import QuienesSomos from '../pages/public/QuienesSomos';
 import PracticasEmpresas from '../pages/company/PracticasEmpresas';
 import Practicantes from '../pages/company/Practicantes';
-import MisOfertas from '../pages/company/MisOfertas';
+import MisPublicaciones from '../pages/company/MisPublicaciones';
 
 import EstadoInscripcion from '../pages/student/EstadoInscripcion';
 import PracticasPracticantes from '../pages/student/PracticasPracticantes';
-import OfertasTrabajo from '../pages/student/OfertasTrabajo';
+import OportunidadesPracticas from '../pages/student/OportunidadesPracticas';
+import OportunidadPracticaPage from '../pages/student/OportunidadPracticaPage';
 import MisPostulaciones from '../pages/student/MisPostulaciones';
 import Empresas from '../pages/student/Empresas';
 import Recursos from '../pages/student/Recursos';
-import PerfilEmpresa from '../pages/student/PerfilEmpresa';
+import EmpresaPage from '../pages/student/EmpresaPage';
 
-import Perfil from '../pages/private/Perfil';
+import Perfil from '../pages/Perfil';
 
 export default function AppRoutes() {
   return (
@@ -47,15 +48,16 @@ export default function AppRoutes() {
       {/* student pages */}
       <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />
       <Route path={ROUTES.misPostulaciones} element={<MisPostulaciones />} />
-      <Route path={ROUTES.ofertasTrabajo} element={<OfertasTrabajo />} />
+      <Route path={ROUTES.oportunidadesPracticas} element={<OportunidadesPracticas />} />
+      <Route path={ROUTES.oportunidadPractica} element={<OportunidadPracticaPage />} />
       <Route path={ROUTES.empresas} element={<Empresas />} />
       <Route path={ROUTES.practicasPracticantes} element={<PracticasPracticantes />} />
       <Route path={ROUTES.recursos} element={<Recursos />} />
 
-      <Route path={ROUTES.perfilEmpresa} element={<PerfilEmpresa />} />
+      <Route path={ROUTES.empresaPage} element={<EmpresaPage />} />
 
       {/* company pages */}
-      <Route path={ROUTES.misOfertas} element={<MisOfertas />} />
+      <Route path={ROUTES.misPublicaciones} element={<MisPublicaciones />} />
       <Route path={ROUTES.practicantes} element={<Practicantes />} />
       <Route path={ROUTES.practicasEmpresas} element={<PracticasEmpresas />} />
 

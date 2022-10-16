@@ -24,8 +24,8 @@ export { ReactComponent as EstadoInscripcionSelected } from './icon-inscription-
 export { ReactComponent as MisPostulaciones } from './icon-employee.svg';
 export { ReactComponent as MisPostulacionesSelected } from './icon-employee-selected.svg';
 
-export { ReactComponent as OfertasTrabajo } from './icon-work.svg';
-export { ReactComponent as OfertasTrabajoSelected } from './icon-work-selected.svg';
+export { ReactComponent as OportunidadesPracticas } from './icon-work.svg';
+export { ReactComponent as OportunidadesPracticasSelected } from './icon-work-selected.svg';
 
 export { ReactComponent as Recursos } from './icon-book.svg';
 export { ReactComponent as RecursosSelected } from './icon-book-selected.svg';

@@ -86,7 +86,7 @@ function DrawerMenu() {
 
                 <ItemDrawerMenu name="Estado de Inscripción" route={ROUTES.estadoInscripcion} icon={<Logo.EstadoInscripcion />} iconSelected={<Logo.EstadoInscripcionSelected />} />
                 <ItemDrawerMenu name="Mis Postulaciones" route={ROUTES.misPostulaciones} icon={<Logo.MisPostulaciones />} iconSelected={<Logo.MisPostulacionesSelected />} />
-                <ItemDrawerMenu name="Ofertas de Trabajo" route={ROUTES.ofertasTrabajo} icon={<Logo.OfertasTrabajo />} iconSelected={<Logo.OfertasTrabajoSelected />} />
+                <ItemDrawerMenu name="Oportunidades" route={ROUTES.oportunidadesPracticas} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
                 <ItemDrawerMenu name="Empresas" route={ROUTES.empresas} icon={<Logo.Empresas />} iconSelected={<Logo.EmpresasSelected />} />
                 <ItemDrawerMenu name="Prácticas" route={ROUTES.practicasPracticantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu name="Recursos" route={ROUTES.recursos} icon={<Logo.Recursos />} iconSelected={<Logo.RecursosSelected />} />
@@ -110,7 +110,7 @@ function DrawerMenu() {
 
                 <Divider my="20px" borderColor="gray" />
 
-                <ItemDrawerMenu name="Mis Ofertas de Trabajo" route={ROUTES.misOfertas} icon={<Logo.OfertasTrabajo />} iconSelected={<Logo.OfertasTrabajoSelected />} />
+                <ItemDrawerMenu name="Mis Publicaciones" route={ROUTES.misPublicaciones} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
                 <ItemDrawerMenu name="Practicantes" route={ROUTES.practicantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu name="Prácticas" route={ROUTES.practicasEmpresas} icon={<Logo.Empresas />} iconSelected={<Logo.HomeSelected />} />
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">

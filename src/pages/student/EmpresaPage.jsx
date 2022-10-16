@@ -4,12 +4,12 @@
 
 import React from 'react';
 import {
-  Badge, Box, Center, Divider, Flex, Heading, Image, SimpleGrid,
+  Badge, Box, Center, Divider, Flex, Heading, Image, SimpleGrid, Text,
 } from '@chakra-ui/react';
 import * as Logo from '../../assets/index';
-import CardJobOffer from '../../components/Cards/CardJobOffer';
+import CardJobOffer from '../../components/Cards/CardOportunity';
 
-function PerfilEmpresa() {
+function EmpresaPage() {
   const company = [
     {
       name: 'Light IT',
@@ -77,21 +77,21 @@ function PerfilEmpresa() {
         <Flex>
           <Center gap={1}>
             <Logo.People width="15px" />
-            <p>
+            <Text>
               {company[0].employees}
               {' '}
               empleados
-            </p>
+            </Text>
           </Center>
         </Flex>
         <Flex>
           <Center gap={1}>
             <Logo.Date width="15px" />
-            <p>
-              Año de fundación
+            <Text>
+              Desde
               {' '}
               {company[0].year_foundation}
-            </p>
+            </Text>
           </Center>
         </Flex>
       </Flex>
@@ -100,14 +100,14 @@ function PerfilEmpresa() {
         <Box marginBottom={2}>
           <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold">Descripción</Heading>
         </Box>
-        <p>{company[0].description}</p>
+        <Text maxWidth="900px">{company[0].description}</Text>
       </Box>
 
       <Divider h="3px" marginTop={5} color="gray" opacity="0.2" />
 
       <Box margin="32px auto 24px auto">
         <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">
-          Ofertas de Trabajo de
+          Oportunidades de Práctica en
           {' '}
           {company[0].name}
         </Heading>
@@ -132,4 +132,4 @@ function PerfilEmpresa() {
   );
 }
 
-export default PerfilEmpresa;
+export default EmpresaPage;

@@ -3,18 +3,13 @@ import { Button } from '@chakra-ui/react';
 import PropTypes from 'prop-types'; // ES6
 
 function SecondaryButton({
-  children, onClick, bg, fontColor,
+  children, onClick, bg, fontColor, hover,
 }) {
   return (
     <Button
       bg={bg}
       color={fontColor}
-      _hover={{
-        bg: { bg },
-      }}
-      _active={{
-        bg: { bg },
-      }}
+      _hover={{ bg: hover }}
       h="48px"
       w="100%"
       onClick={onClick}
@@ -33,10 +28,12 @@ SecondaryButton.propTypes = {
   onClick: PropTypes.func,
   bg: PropTypes.string,
   fontColor: PropTypes.string,
+  hover: PropTypes.string,
 };
 
 SecondaryButton.defaultProps = {
   onClick: () => {},
-  bg: 'secondaryDark',
+  bg: 'secondary',
   fontColor: 'white',
+  hover: 'secondaryDark',
 };

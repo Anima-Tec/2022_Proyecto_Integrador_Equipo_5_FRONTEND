@@ -2,7 +2,7 @@
 import React from 'react';
 import ProtoTypes from 'prop-types';
 import {
-  Badge, Box, Center, Flex, Heading, Image,
+  Badge, Box, Center, Flex, Heading, Image, Text,
 } from '@chakra-ui/react';
 import * as Logo from '../../assets/index';
 import ROUTES from '../../routers/config/routes';
@@ -12,7 +12,7 @@ function CardCompany({
 }) {
   return (
     <Box maxWidth="550px">
-      <a href={ROUTES.perfilEmpresa}>
+      <a href={ROUTES.empresaPage}>
         <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p="18px" h="100%">
 
           <Flex>
@@ -28,13 +28,13 @@ function CardCompany({
               <Flex marginY="auto" flexDirection="column" alignItems="flex-end">
                 <Flex>
                   <Center gap={1}>
-                    <p>{employees}</p>
+                    <Text>{employees}</Text>
                     <Logo.People width="15px" />
                   </Center>
                 </Flex>
                 <Flex>
                   <Center gap={1}>
-                    <p>{year_foundation}</p>
+                    <Text>{year_foundation}</Text>
                     <Logo.Date width="15px" />
                   </Center>
                 </Flex>

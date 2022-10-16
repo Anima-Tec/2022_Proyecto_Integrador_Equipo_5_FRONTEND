@@ -1,4 +1,4 @@
-// ofertas de trabajo a las que se postuló el estudiante
+// oportunidades de practica a las que se postuló el estudiante
 // el estado de cada una y link al perfil de la empresa
 // -------------------------------------------------------------------------------------------------
 

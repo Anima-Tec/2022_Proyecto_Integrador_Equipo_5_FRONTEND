@@ -2,15 +2,13 @@
 // -------------------------------------------------------------------------------------------------
 
 import React from 'react';
-import { Center, Heading } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 
 function Recursos() {
   return (
-    <Heading>
-      <Center>
-        <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Recursos </Heading>
-      </Center>
-    </Heading>
+
+    <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Recursos </Heading>
+
   );
 }
 

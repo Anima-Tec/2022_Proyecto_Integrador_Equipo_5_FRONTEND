@@ -19,15 +19,16 @@ const ROUTES = {
   // student pages
   estadoInscripcion: '/estado-inscripcion',
   misPostulaciones: '/mis-postulaciones',
-  ofertasTrabajo: '/ofertas-trabajo',
+  oportunidadesPracticas: '/oportunidades-practicas',
+  oportunidadPractica: '/oportunidad-practica/:id',
   empresas: '/empresas',
   practicasPracticantes: '/practicas-practicantes',
   recursos: '/recursos',
 
-  perfilEmpresa: '/empresa/:id',
+  empresaPage: '/empresa/:id',
 
   // company pages
-  misOfertas: '/mis-ofertas',
+  misPublicaciones: '/mis-publicaciones',
   practicantes: '/practicantes',
   practicasEmpresas: '/practicas-empresas',
 };

@@ -6,7 +6,7 @@ import React from 'react';
 import {
   Box, Heading, SimpleGrid,
 } from '@chakra-ui/react';
-import CardCompany from '../../components/Buttons/CardCompany';
+import CardCompany from '../../components/Cards/CardCompany';
 
 function Empresas() {
   const company = [

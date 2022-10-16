@@ -3,21 +3,17 @@ import { Button } from '@chakra-ui/react';
 import PropTypes from 'prop-types'; // ES6
 
 function PrimaryButton({
-  children, onClick, bg, fontColor,
+  children, onClick, bg, fontColor, hover, cursor,
 }) {
   return (
     <Button
       bg={bg}
       color={fontColor}
-      _hover={{
-        bg: { bg },
-      }}
-      _active={{
-        bg: { bg },
-      }}
+      _hover={{ bg: hover }}
       h="48px"
       w="100%"
       onClick={onClick}
+      cursor={cursor}
     >
       {children}
     </Button>
@@ -33,10 +29,14 @@ PrimaryButton.propTypes = {
   onClick: PropTypes.func,
   bg: PropTypes.string,
   fontColor: PropTypes.string,
+  hover: PropTypes.string,
+  cursor: PropTypes.string,
 };
 
 PrimaryButton.defaultProps = {
   onClick: () => {},
-  bg: 'primaryDark',
+  bg: 'primary',
   fontColor: 'white',
+  hover: 'primaryDark',
+  cursor: 'pointer',
 };

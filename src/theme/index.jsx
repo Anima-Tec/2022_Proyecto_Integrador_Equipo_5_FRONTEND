@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { extendTheme } from '@chakra-ui/react';
 import FormInput from './components/FormInput';
 import colors from './foundations/colors';
@@ -105,6 +106,7 @@ const theme = extendTheme({
         color: 'white',
         m: '24px',
         h1: {
+          // <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">TEXTO</Heading>
           // fontFamily: 'Raleway',
           // fontSize: '4xl',
           // fontWeight: 'extraBold',
@@ -113,6 +115,7 @@ const theme = extendTheme({
           textAlign: 'center',
         },
         h2: {
+          // <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">TEXTO</Heading>
           // fontFamily: 'Raleway',
           // fontSize: '2xl',
           // fontWeight: 'bold',
@@ -121,6 +124,7 @@ const theme = extendTheme({
           textAlign: 'left',
         },
         h3: {
+          // <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">TEXTO</Heading>
           // fontFamily: 'Poppins',
           // fontSize: 'xl',
           // fontWeight: 'bold',
@@ -129,6 +133,7 @@ const theme = extendTheme({
           textAlign: 'left',
         },
         h4: {
+          // <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">TEXTO</Heading>
           // fontFamily: 'Poppins',
           // fontSize: 'lg',
           // fontWeight: 'bold',
@@ -137,6 +142,7 @@ const theme = extendTheme({
           textAlign: 'left',
         },
         h5: {
+          // <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold">TEXTO</Heading>
           // fontFamily: 'Poppins',
           // fontSize: 'md',
           // fontWeight: 'bold',

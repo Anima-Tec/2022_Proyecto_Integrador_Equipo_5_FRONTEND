@@ -1,13 +1,13 @@
-// listado de todas las ofertas de trabajo que corresponden a los intereses del estudiante
+// listado de todas las oportunidades de practica que corresponden a los intereses del estudiante
 // -------------------------------------------------------------------------------------------------
 
 import React from 'react';
 import {
-  Box, Center, Heading, SimpleGrid,
+  Box, Heading, SimpleGrid,
 } from '@chakra-ui/react';
-import CardJobOffer from '../../components/Cards/CardJobOffer';
+import CardJobOffer from '../../components/Cards/CardOportunity';
 
-function OfertasTrabajo() {
+function OportunidadesPracticas() {
   const jobOfferData = [
     {
       name_jobOffer: 'Programación',
@@ -46,11 +46,7 @@ function OfertasTrabajo() {
 
   return (
     <>
-      <Heading>
-        <Center>
-          <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Ofertas de Trabajo</Heading>
-        </Center>
-      </Heading>
+      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Oportunidades de Práctica</Heading>
 
       <Box>
 
@@ -79,4 +75,4 @@ function OfertasTrabajo() {
   );
 }
 
-export default OfertasTrabajo;
+export default OportunidadesPracticas;
