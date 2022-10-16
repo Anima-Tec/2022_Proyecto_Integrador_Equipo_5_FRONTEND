@@ -11,7 +11,6 @@ export default function LandingLayout({ children }) {
         width={{
           base: '100%', md: '100%', lg: '85%',
         }}
-        height="100vh"
         margin="auto"
       >
         <Header />

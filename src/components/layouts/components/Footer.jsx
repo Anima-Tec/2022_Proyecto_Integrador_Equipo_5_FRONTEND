@@ -4,7 +4,7 @@ import { Divider, Flex, Text } from '@chakra-ui/react';
 function Footer() {
   return (
     <>
-      <Divider h="3px" marginTop="50px" color="gray" opacity="0.2" />
+      <Divider h="3px" marginTop="80px" color="gray" opacity="0.2" />
       <Flex alignItems="end" marginTop="30px" justifyContent="center" paddingBottom="20px">
         <Text fontSize="xs" color="gray" align="center">
           Providing job opportunities since 2022
