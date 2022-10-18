@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import ProtoTypes from 'prop-types';
 import {
@@ -8,7 +7,7 @@ import * as Logo from '../../assets/index';
 import ROUTES from '../../routers/config/routes';
 
 function CardCompany({
-  name, photo, employees, year_foundation, name_work_area,
+  name, photo, employees, yearFoundation, nameWorkArea,
 }) {
   return (
     <Box maxWidth="550px">
@@ -34,7 +33,7 @@ function CardCompany({
                 </Flex>
                 <Flex>
                   <Center gap={1}>
-                    <Text>{year_foundation}</Text>
+                    <Text>{yearFoundation}</Text>
                     <Logo.Date width="15px" />
                   </Center>
                 </Flex>
@@ -45,7 +44,7 @@ function CardCompany({
 
           <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap">
 
-            {name_work_area.map((interest) => (
+            {nameWorkArea.map((interest) => (
               <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" key={interest} display="flex" alignContent="center" justifyContent="center">
                 {interest}
               </Badge>
@@ -63,8 +62,8 @@ CardCompany.propTypes = {
   name: ProtoTypes.string.isRequired,
   photo: ProtoTypes.string.isRequired,
   employees: ProtoTypes.number.isRequired,
-  year_foundation: ProtoTypes.number.isRequired,
-  name_work_area: ProtoTypes.arrayOf(ProtoTypes.string).isRequired,
+  yearFoundation: ProtoTypes.number.isRequired,
+  nameWorkArea: ProtoTypes.arrayOf(ProtoTypes.string).isRequired,
 };
 
 export default CardCompany;

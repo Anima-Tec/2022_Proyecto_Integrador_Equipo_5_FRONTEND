@@ -58,12 +58,12 @@ function OportunidadesPracticas() {
 
           {jobOfferData.map((jobOffer) => (
             <CardJobOffer
-              name_jobOffer={jobOffer.name_jobOffer}
+              nameJobOffer={jobOffer.name_jobOffer}
               description={jobOffer.description}
               modality={jobOffer.modality}
               quotas={jobOffer.quotas}
               workarea={jobOffer.workarea}
-              name_company={jobOffer.company.name_company}
+              nameCompany={jobOffer.company.name_company}
               photo={jobOffer.company.photo}
             />
           ))}

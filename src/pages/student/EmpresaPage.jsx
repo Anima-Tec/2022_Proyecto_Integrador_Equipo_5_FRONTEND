@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // información sobre cada empresa
 // -------------------------------------------------------------------------------------------------
 
@@ -117,11 +116,11 @@ function EmpresaPage() {
           {company.map((companyData) => (
             <CardJobOffer
               key={companyData.jobOffer[0].name_jobOffer}
-              name_jobOffer={companyData.jobOffer[0].name_jobOffer}
+              nameJobOffer={companyData.jobOffer[0].name_jobOffer}
               description={companyData.jobOffer[0].description}
               modality={companyData.jobOffer[0].modality}
               quotas={companyData.jobOffer[0].quotas}
-              workarea={companyData.jobOffer[0].workarea}
+              workArea={companyData.jobOffer[0].workarea}
             />
           ))}
 

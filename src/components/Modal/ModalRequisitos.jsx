@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import { UnorderedList, ListItem } from '@chakra-ui/react';
 import PrimaryModal from './ModalBase';

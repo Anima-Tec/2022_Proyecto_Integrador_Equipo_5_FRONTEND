@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // información sobre el estado de inscripción del practicante
 // -------------------------------------------------------------------------------------------------
 

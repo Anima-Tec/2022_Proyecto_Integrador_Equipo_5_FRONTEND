@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 // información sobre cada oportunidad de practica
 // -------------------------------------------------------------------------------------------------
 

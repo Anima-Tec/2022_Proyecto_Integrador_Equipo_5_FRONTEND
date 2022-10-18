@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import ProtoTypes from 'prop-types';
 import {
@@ -8,7 +7,7 @@ import * as Logo from '../../assets/index';
 import ROUTES from '../../routers/config/routes';
 
 function CardOportunity({
-  name_jobOffer, description, modality, quotas, workarea, name_company, photo,
+  nameJobOffer, description, modality, quotas, workArea, nameCompany, photo,
 }) {
   return (
     // minChildWidth="400px" display={{ base: 'none', lg: 'grid' }}
@@ -20,16 +19,16 @@ function CardOportunity({
             <Center gap="10px" justifyContent="space-between" w="100%" alignItems="center">
 
               <Box>
-                {(name_company && photo) && (
+                {(nameCompany && photo) && (
                 <Flex marginBottom={2}>
                   <Center gap={3}>
                     <Image src={photo} borderRadius="full" boxSize={8} />
-                    <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">{name_company}</Heading>
+                    <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">{nameCompany}</Heading>
                   </Center>
                 </Flex>
                 )}
 
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{name_jobOffer}</Heading>
+                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{nameJobOffer}</Heading>
               </Box>
 
               <Flex flexDirection="column" alignItems="flex-end">
@@ -75,8 +74,8 @@ function CardOportunity({
           <Text fontSize={12} marginTop={3} noOfLines={2}>{description}</Text>
 
           <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap">
-            <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" key={workarea} display="flex" alignContent="center" justifyContent="center">
-              {workarea}
+            <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" key={workArea} display="flex" alignContent="center" justifyContent="center">
+              {workArea}
             </Badge>
           </Flex>
 
@@ -87,17 +86,17 @@ function CardOportunity({
 }
 
 CardOportunity.propTypes = {
-  name_jobOffer: ProtoTypes.string.isRequired,
+  nameJobOffer: ProtoTypes.string.isRequired,
   description: ProtoTypes.string.isRequired,
   modality: ProtoTypes.string.isRequired,
   quotas: ProtoTypes.number.isRequired,
-  workarea: ProtoTypes.string.isRequired,
-  name_company: ProtoTypes.string,
+  workArea: ProtoTypes.string.isRequired,
+  nameCompany: ProtoTypes.string,
   photo: ProtoTypes.string,
 };
 
 CardOportunity.defaultProps = {
-  name_company: '',
+  nameCompany: '',
   photo: '',
 };
 

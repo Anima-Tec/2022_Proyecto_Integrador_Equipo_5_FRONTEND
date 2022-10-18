@@ -11,7 +11,6 @@ export default {
             ...activeLabelStyles,
           },
         },
-        // eslint-disable-next-line max-len, max-len
         'input:not(:placeholder-shown) + label, .chakra-select__wrapper + label, textarea:not(:placeholder-shown) ~ label': {
           ...activeLabelStyles,
         },

@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 // listado de todas las empresas que coindicen empresa.rubro = practicante.intereses
 // -------------------------------------------------------------------------------------------------
 
@@ -64,8 +63,8 @@ function Empresas() {
               name={companys.name_company}
               photo={companys.photo}
               employees={companys.employees}
-              year_foundation={companys.year_foundation}
-              name_work_area={companys.name_work_area}
+              yearFoundation={companys.year_foundation}
+              nameWorkArea={companys.name_work_area}
             />
           ))}
 

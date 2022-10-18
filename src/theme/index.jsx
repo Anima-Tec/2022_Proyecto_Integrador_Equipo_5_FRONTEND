@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { extendTheme } from '@chakra-ui/react';
 import FormInput from './components/FormInput';
 import colors from './foundations/colors';

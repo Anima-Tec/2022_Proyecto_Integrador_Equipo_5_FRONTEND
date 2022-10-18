@@ -33,7 +33,9 @@
       "airbnb"
     ],
     "rules": {
-      "linebreak-style": "off"
+      "linebreak-style": "off",
+      "max-len": "off",
+      "react/jsx-one-expression-per-line": "off"
     }
   },
   "browserslist": {

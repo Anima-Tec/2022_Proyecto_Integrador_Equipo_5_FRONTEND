@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
