@@ -22,8 +22,8 @@ function EstadoInscripcion() {
   return (
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Estado de Inscripción </Heading>
-      <Flex>
-        <Center flexDirection="column" justifyContent="center">
+      <Flex justifyContent="center">
+        <Center flexDirection="column">
           <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
             {student.status === 'rejected' && (
               <Highlight query="rechazada" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
