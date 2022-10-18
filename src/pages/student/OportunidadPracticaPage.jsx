@@ -15,7 +15,7 @@ function OportunidadPracticaPage() {
     description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
     modality: 'Mixta',
     quotas: 2,
-    workarea: 'Tecnología',
+    workArea: 'Tecnología',
     company: {
       name_company: 'Light IT',
       photo: 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O',
@@ -32,7 +32,7 @@ function OportunidadPracticaPage() {
 
         <Flex alignItems="center" marginBottom={3} gap={1.5} flexWrap="wrap">
           <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" display="flex" alignContent="center" justifyContent="center">
-            {oportunity.workarea}
+            {oportunity.workArea}
           </Badge>
         </Flex>
 

@@ -25,7 +25,7 @@ function EmpresaPage() {
           description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
           modality: 'Mixta',
           quotas: 2,
-          workarea: 'Tecnología',
+          workArea: 'Tecnología',
         },
       ],
     },
@@ -44,7 +44,7 @@ function EmpresaPage() {
           description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
           modality: 'Mixta',
           quotas: 2,
-          workarea: 'Tecnología',
+          workArea: 'Tecnología',
         },
       ],
     },
@@ -120,7 +120,7 @@ function EmpresaPage() {
               description={companyData.jobOffer[0].description}
               modality={companyData.jobOffer[0].modality}
               quotas={companyData.jobOffer[0].quotas}
-              workArea={companyData.jobOffer[0].workarea}
+              workArea={companyData.jobOffer[0].workArea}
             />
           ))}
 

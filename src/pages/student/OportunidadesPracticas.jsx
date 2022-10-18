@@ -14,7 +14,7 @@ function OportunidadesPracticas() {
       description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
       modality: 'Mixta',
       quotas: 2,
-      workarea: 'Tecnología',
+      workArea: 'Tecnología',
       company: {
         name_company: 'Light IT',
         photo: 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O',
@@ -25,7 +25,7 @@ function OportunidadesPracticas() {
       description: 'Buscamos estudiantes con interés en diseñar aplicaciones web',
       modality: 'Virtual',
       quotas: 2,
-      workarea: 'Diseño',
+      workArea: 'Diseño',
       company: {
         name_company: 'Broken Rubik',
         photo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEqNk6wgflnZw/company-logo_200_200/0/1633538025560?e=2147483647&v=beta&t=WXbQkyAe0rEzOjJoqlpGPyUm68qVs7PcDiDy1DdO_A0',
@@ -36,7 +36,7 @@ function OportunidadesPracticas() {
       description: 'Buscamos estudiantes con interés en desarrollar campañas de publicidad',
       modality: 'Presencial',
       quotas: 2,
-      workarea: 'Gastronomía',
+      workArea: 'Gastronomía',
       company: {
         name_company: 'Coca Cola',
         photo: 'https://tentulogo.com/wp-content/uploads/2017/06/cocacola-logo.jpg',
@@ -62,7 +62,7 @@ function OportunidadesPracticas() {
               description={jobOffer.description}
               modality={jobOffer.modality}
               quotas={jobOffer.quotas}
-              workarea={jobOffer.workarea}
+              workArea={jobOffer.workArea}
               nameCompany={jobOffer.company.name_company}
               photo={jobOffer.company.photo}
             />

@@ -27,12 +27,12 @@ function EstadoInscripcion() {
           <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
             {student.status === 'rejected' && (
               <Highlight query="rechazada" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
-                Su cuenta fue rechazada.
+                Su cuenta fue rechazada
               </Highlight>
             )}
             {student.status === 'pending' && (
               <Highlight query="pendiente" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
-                Su cuenta está pendiente de aprobación.
+                Su cuenta está pendiente de aprobación
               </Highlight>
             )}
             {student.status === 'onboarding' && (
