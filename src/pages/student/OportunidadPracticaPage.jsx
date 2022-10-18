@@ -27,7 +27,7 @@ function OportunidadPracticaPage() {
 
   return (
 
-    <Box display={{ base: 'block', md: 'flex' }}>
+    <Box>
 
       <Box>
 
@@ -105,14 +105,14 @@ function OportunidadPracticaPage() {
           <Box marginBottom={2}>
             <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold">Descripción</Heading>
           </Box>
-          <Text>{oportunity.description}</Text>
+          <Text maxWidth="900px">{oportunity.description}</Text>
         </Box>
 
       </Box>
 
-      <Box w="0.5px" bg="gray" margin="0 80px" />
+      {/* <Box w="0.5px" bg="gray" margin="0 80px" /> */}
 
-      <Box marginTop={{ base: '40px', md: '0' }}>
+      <Box marginTop="40px" w={{ base: '100%', md: '25%' }}>
         {apply === 'false' && (
           <PrimaryButton>
             Postularme

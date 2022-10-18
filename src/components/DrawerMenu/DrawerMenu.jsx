@@ -55,7 +55,7 @@ function DrawerMenu() {
 
           {
             userRole === 'guest' && (
-              <DrawerBody mt={6}>
+              <DrawerBody mt={12}>
                 <ItemDrawerMenu onClick={onClose} name="Inicio" route={ROUTES.home} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Prácticas" route={ROUTES.infoPracticas} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
@@ -65,7 +65,7 @@ function DrawerMenu() {
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
                 <Box position="fixed" bottom="24px" left="24px" right="24px">
                   <PrimaryButton onClick={() => [navigate(ROUTES.register), onClose()]}>Registrarse</PrimaryButton>
-                  <PrimaryButton onClick={() => [navigate(ROUTES.login), onClose()]} bg="transparent" fontColor="primary">¿Ya tienes cuenta?</PrimaryButton>
+                  <PrimaryButton onClick={() => [navigate(ROUTES.login), onClose()]} bg="transparent" fontColor="primary" hover="bg-none">¿Ya tienes cuenta?</PrimaryButton>
                 </Box>
               </DrawerBody>
             )
