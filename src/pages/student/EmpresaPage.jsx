@@ -99,7 +99,7 @@ function EmpresaPage() {
         <Box marginBottom={2}>
           <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold">Descripción</Heading>
         </Box>
-        <Text maxWidth="900px">{company[0].description}</Text>
+        <Text maxWidth="800px">{company[0].description}</Text>
       </Box>
 
       <Divider h="3px" marginTop={5} color="gray" opacity="0.2" />

@@ -51,7 +51,7 @@ function OportunidadesPracticas() {
       <Box>
 
         <Box margin="32px auto 24px auto">
-          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">Según tus intereses</Heading>
+          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" marginX="auto" textAlign="center">Según tus intereses</Heading>
         </Box>
 
         <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>

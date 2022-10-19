@@ -104,7 +104,7 @@ function OportunidadPracticaPage() {
           <Box marginBottom={2}>
             <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold">Descripción</Heading>
           </Box>
-          <Text maxWidth="900px">{oportunity.description}</Text>
+          <Text maxWidth="800px">{oportunity.description}</Text>
         </Box>
 
       </Box>

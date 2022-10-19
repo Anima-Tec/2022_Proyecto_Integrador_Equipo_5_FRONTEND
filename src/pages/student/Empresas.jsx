@@ -52,7 +52,7 @@ function Empresas() {
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Empresas</Heading>
       <Box>
         <Box margin="32px auto 24px auto">
-          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">Según tus intereses</Heading>
+          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" marginX="auto" textAlign="center">Según tus intereses</Heading>
         </Box>
 
         <SimpleGrid spacing={8} minChildWidth="240px">
