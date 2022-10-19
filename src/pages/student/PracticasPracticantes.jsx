@@ -23,27 +23,27 @@ function PracticasPracticantes() {
             Las prácticas son una oportunidad para estudiantes con un promedio de 7 o más de cualquier centro educativo que tengan entre 15 y 25 años y no hayan tenido experiencia laboral previa, puedan aplicar los conocimientos que tienen dentro del mundo del trabajo o también aprender sobre el área de su interes.
           </Text>
         </Box>
-        <Flex gap={8} display={{ base: 'block', md: 'flex' }}>
+        <Flex gap={8} display={{ base: 'block', md: 'flex' }} justifyContent="center">
           <Box marginBottom={{ base: '32px', lg: '0px' }}>
             <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" textAlign="center" color="secondary" marginBottom={3}>
               Beneficios
             </Heading>
-            <Flex flexDirection="column" gap={3}>
-              <Text textAlign="center" p={2} borderWidth="1px" borderRadius="xl" borderColor="gray">Obtener la experiencia laboral previa que necesitas para tu futuro.</Text>
-              <Text textAlign="center" p={2} borderWidth="1px" borderRadius="xl" borderColor="gray">Obtener más información del mundo laboral de tu interés para saber si es realmente tu pasión.</Text>
-              <Text textAlign="center" p={2} borderWidth="1px" borderRadius="xl" borderColor="gray">Generar red de contactos.</Text>
+            <Flex flexDirection="column" gap={1}>
+              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Obtener la experiencia laboral previa que necesitas para tu futuro.</Text>
+              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Obtener información del mundo laboral de tu interés para saber si es realmente tu pasión.</Text>
+              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Generar red de contactos.</Text>
             </Flex>
           </Box>
           <Box>
             <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" textAlign="center" color="secondary" marginBottom={3}>
               Habilidades
             </Heading>
-            <Flex flexDirection="column" gap={3}>
-              <Text textAlign="center" p={2} borderWidth="1px" borderRadius="xl" borderColor="gray">
-                Capacidad de abstracción de conceptos pudiendo llevar lo aprendido en la práctica en el aula de clase.
+            <Flex flexDirection="column" gap={1}>
+              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">
+                Capacidad de abstracción de conceptos pudiendo llevar lo aprendido en la práctica a clase.
               </Text>
-              <Text textAlign="center" p={2} borderWidth="1px" borderRadius="xl" borderColor="gray">Capacidad de análisis.</Text>
-              <Text textAlign="center" p={2} borderWidth="1px" borderRadius="xl" borderColor="gray">Aprender la forma de comunicación apropiada para el entorno laboral</Text>
+              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Capacidad de análisis.</Text>
+              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Aprender la forma de comunicación apropiada para el entorno laboral</Text>
             </Flex>
           </Box>
         </Flex>
@@ -58,7 +58,7 @@ function PracticasPracticantes() {
       <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
         En caso de que tengas preguntas puedes contactarte con nosotros
         {' '}
-        <Link fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
+        <Link fontWeight="bold" textColor="primaryDark" href="mailto:somosefect@gmail.com">
           somosefect@gmail.com
         </Link>
       </Heading>

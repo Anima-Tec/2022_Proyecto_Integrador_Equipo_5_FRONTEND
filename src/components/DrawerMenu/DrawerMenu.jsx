@@ -27,8 +27,8 @@ function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
-  // const userRole = 'guest';
-  const userRole = 'student';
+  const userRole = 'guest';
+  // const userRole = 'student';
   // const userRole = 'company';
 
   const studentName = 'Juan Perez';
@@ -57,7 +57,7 @@ function DrawerMenu() {
               <DrawerBody mt={12}>
                 <ItemDrawerMenu onClick={onClose} name="Inicio" route={ROUTES.home} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
-                <ItemDrawerMenu onClick={onClose} name="Prácticas" route={ROUTES.infoPracticas} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
+                <ItemDrawerMenu onClick={onClose} name="Prácticas" route={ROUTES.infoPracticas} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Practicantes" route={ROUTES.infoPracticantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Empresas" route={ROUTES.infoEmpresas} icon={<Logo.Empresas />} iconSelected={<Logo.EmpresasSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="¿Quiénes somos?" route={ROUTES.quienesomos} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
