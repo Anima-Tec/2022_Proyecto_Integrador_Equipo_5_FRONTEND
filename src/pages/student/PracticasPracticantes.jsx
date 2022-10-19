@@ -23,7 +23,7 @@ function PracticasPracticantes() {
             Las prácticas son una oportunidad para estudiantes con un promedio de 7 o más de cualquier centro educativo que tengan entre 15 y 25 años y no hayan tenido experiencia laboral previa, puedan aplicar los conocimientos que tienen dentro del mundo del trabajo o también aprender sobre el área de su interes.
           </Text>
         </Box>
-        <Flex gap={8} display={{ base: 'block', lg: 'flex' }}>
+        <Flex gap={8} display={{ base: 'block', md: 'flex' }}>
           <Box marginBottom={{ base: '32px', lg: '0px' }}>
             <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" textAlign="center" color="secondary" marginBottom={3}>
               Beneficios
