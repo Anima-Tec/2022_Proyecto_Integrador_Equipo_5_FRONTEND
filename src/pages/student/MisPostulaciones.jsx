@@ -50,7 +50,7 @@ function MisPostulaciones() {
         <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" margin="auto" marginTop={4}>
           Todavía no te has postulado a ninguna de las
           {' '}
-          <Link fontWeight="bold" textColor="primaryDark" href={ROUTES.oportunidadesPracticas}>
+          <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.oportunidadesPracticas}>
             Oportunidades de Práctica.
           </Link>
         </Heading>
@@ -60,14 +60,14 @@ function MisPostulaciones() {
         <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={4}>
           Conocé mejor
           {' '}
-          <Link fontWeight="bold" textColor="primaryDark" href={ROUTES.practicasPracticantes}>
+          <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.practicasPracticantes}>
             Nuestra Propuesta para Estudiantes
           </Link>
         </Heading>
         <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={2}>
           También podés contactarte con nosotros por correo electrónico a
           {' '}
-          <Link fontWeight="bold" textColor="primaryDark" href="mailto:somosefect@gmail.com">
+          <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
             somosefect@gmail.com
           </Link>
         </Heading>
@@ -80,7 +80,7 @@ function MisPostulaciones() {
         <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="900px" margin="auto" marginTop={8}>
           A continuación se muestran las
           {' '}
-          <Link fontWeight="bold" textColor="primaryDark" href={ROUTES.oportunidadesPracticas}>
+          <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.oportunidadesPracticas}>
             Oportunidades de Práctica
           </Link>
           {' '}

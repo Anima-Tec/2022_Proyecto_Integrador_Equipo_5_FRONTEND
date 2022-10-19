@@ -72,7 +72,7 @@ function EstadoInscripcion() {
           <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={4}>
             Deberás completar la capacitación para poder acceder a las ofertas de prácticas.
             {' '}
-            <Link fontWeight="bold" textColor="primaryDark" href={ROUTES.recursos}>
+            <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.recursos}>
               Realizar capacitación
             </Link>
           </Heading>
@@ -81,7 +81,7 @@ function EstadoInscripcion() {
           <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={4}>
             Ya puedes postularte a
             {' '}
-            <Link fontWeight="bold" textColor="primaryDark" href={ROUTES.oportunidadesPracticas}>
+            <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.oportunidadesPracticas}>
               Oportunidades de Prácticas
             </Link>
           </Heading>
@@ -94,7 +94,7 @@ function EstadoInscripcion() {
               <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
                 En caso de que se trate de un error, contactese con nosotros por correo electrónico a
                 {' '}
-                <Link fontWeight="bold" textColor="primaryDark" href="mailto:somosefect@gmail.com">
+                <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
                   somosefect@gmail.com
                 </Link>
               </Heading>
@@ -103,7 +103,7 @@ function EstadoInscripcion() {
             <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
               En caso de que tengas preguntas puedes contactarte con nosotros
               {' '}
-              <Link fontWeight="bold" textColor="primaryDark" href="mailto:somosefect@gmail.com">
+              <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
                 somosefect@gmail.com
               </Link>
             </Heading>
@@ -112,7 +112,7 @@ function EstadoInscripcion() {
             <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
               En caso de que tengas preguntas puedes contactarte con nosotros
               {' '}
-              <Link fontWeight="bold" textColor="primaryDark" href="mailto:somosefect@gmail.com">
+              <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
                 somosefect@gmail.com
               </Link>
             </Heading>
@@ -121,7 +121,7 @@ function EstadoInscripcion() {
             <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
               En caso de que tengas preguntas puedes contactarte con nosotros
               {' '}
-              <Link fontWeight="bold" textColor="primaryDark" href="mailto:somosefect@gmail.com">
+              <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
                 somosefect@gmail.com
               </Link>
             </Heading>

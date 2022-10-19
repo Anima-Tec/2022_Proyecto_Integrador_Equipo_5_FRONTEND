@@ -58,7 +58,7 @@ function PracticasPracticantes() {
       <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
         En caso de que tengas preguntas puedes contactarte con nosotros
         {' '}
-        <Link fontWeight="bold" textColor="primaryDark" href="mailto:somosefect@gmail.com">
+        <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
           somosefect@gmail.com
         </Link>
       </Heading>

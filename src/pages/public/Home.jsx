@@ -41,7 +41,7 @@ function Home() {
       <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={12}>
         ¿Sabes que hacemos para resolver esta problemática? <br /> Averigualo donde hablamos sobre
         {' '}
-        <Link fontWeight="bold" textColor="primaryDark" href={ROUTES.nuestrapropuesta}>
+        <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.nuestrapropuesta}>
           Nuestra Propuesta
         </Link>
       </Heading>
@@ -49,7 +49,7 @@ function Home() {
       <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={24}>
         Si quieres conocernos o tienes dudas puedes revisar la sección
         {' '}
-        <Link fontWeight="bold" textColor="primaryDark" href={ROUTES.quienesomos}>
+        <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.quienesomos}>
           ¿Quiénes somos?
         </Link>
       </Heading>
