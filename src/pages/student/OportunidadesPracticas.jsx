@@ -3,7 +3,7 @@
 
 import React from 'react';
 import {
-  Box, Heading, SimpleGrid,
+  Box, Heading, SimpleGrid, Text,
 } from '@chakra-ui/react';
 import CardJobOffer from '../../components/Cards/CardOportunity';
 
@@ -45,33 +45,32 @@ function OportunidadesPracticas() {
   ];
 
   return (
-    <>
+    <Box>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Oportunidades de Práctica</Heading>
+      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" textAlign="center" margin="12px auto 0 auto">
+        Según tus intereses
+      </Heading>
+      <Text textAlign="center" margin="24px auto" maxWidth="800px">
+        Te recomendamos que previo a postularte, te tomes el tiempo de investigar el perfil de las empresas y conocer más sobre ellas. Esto va ayudar que tengas mayor información de tus opciones y te ayude a tomar una mejor decisión.
+      </Text>
 
-      <Box>
+      <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
 
-        <Box margin="32px auto 24px auto">
-          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" marginX="auto" textAlign="center">Según tus intereses</Heading>
-        </Box>
+        {jobOfferData.map((jobOffer) => (
+          <CardJobOffer
+            nameJobOffer={jobOffer.name_jobOffer}
+            description={jobOffer.description}
+            modality={jobOffer.modality}
+            quotas={jobOffer.quotas}
+            workArea={jobOffer.workArea}
+            nameCompany={jobOffer.company.name_company}
+            photo={jobOffer.company.photo}
+          />
+        ))}
 
-        <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
+      </SimpleGrid>
 
-          {jobOfferData.map((jobOffer) => (
-            <CardJobOffer
-              nameJobOffer={jobOffer.name_jobOffer}
-              description={jobOffer.description}
-              modality={jobOffer.modality}
-              quotas={jobOffer.quotas}
-              workArea={jobOffer.workArea}
-              nameCompany={jobOffer.company.name_company}
-              photo={jobOffer.company.photo}
-            />
-          ))}
-
-        </SimpleGrid>
-
-      </Box>
-    </>
+    </Box>
   );
 }
 

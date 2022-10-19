@@ -7,7 +7,14 @@ import { Heading } from '@chakra-ui/react';
 function PracticasEmpresas() {
   return (
 
-    <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Prácticas como Empresa </Heading>
+    <>
+      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">
+        Información sobre las Prácticas
+      </Heading>
+      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" textAlign="center" marginX="auto" marginTop={3}>
+        Para Empresas
+      </Heading>
+    </>
 
   );
 }
