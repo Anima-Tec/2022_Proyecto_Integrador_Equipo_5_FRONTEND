@@ -60,7 +60,7 @@ function DrawerMenu() {
                 <ItemDrawerMenu onClick={onClose} name="Prácticas" route={ROUTES.infoPracticas} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Practicantes" route={ROUTES.infoPracticantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Empresas" route={ROUTES.infoEmpresas} icon={<Logo.Empresas />} iconSelected={<Logo.EmpresasSelected />} />
-                <ItemDrawerMenu onClick={onClose} name="¿Quiénes somos?" route={ROUTES.quienesomos} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
+                <ItemDrawerMenu onClick={onClose} name="Sobre el Equipo" route={ROUTES.sobreEquipo} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
                 <Box position="fixed" bottom="24px" left="24px" right="24px">
                   <PrimaryButton onClick={() => [navigate(ROUTES.register), onClose()]}>Registrarse</PrimaryButton>
@@ -115,19 +115,6 @@ function DrawerMenu() {
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">
                   <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">Cerrar sesión</Heading></SecondaryButton>
                 </Flex>
-              </DrawerBody>
-            )
-          }
-          {
-            userRole === 'admin' && (
-              <DrawerBody mt={6} onClick={onClose}>
-                <ItemDrawerMenu name="Inicio" route={ROUTES.home} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
-                <ItemDrawerMenu name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
-                <ItemDrawerMenu name="Practicantes" route={ROUTES.practicantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
-                <ItemDrawerMenu name="Empresas" route={ROUTES.empresas} icon={<Logo.Empresas />} iconSelected={<Logo.EmpresasSelected />} />
-                <ItemDrawerMenu name="¿Quiénes somos?" route={ROUTES.quienesomos} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
-                <ItemDrawerMenu name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
-                <PrimaryButton my="40" onClick={() => navigate(ROUTES.login)}>Iniciar sesión</PrimaryButton>
               </DrawerBody>
             )
           }

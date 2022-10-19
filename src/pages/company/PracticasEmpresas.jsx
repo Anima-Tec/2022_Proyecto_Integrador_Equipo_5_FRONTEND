@@ -11,7 +11,7 @@ function PracticasEmpresas() {
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">
         Información sobre las Prácticas
       </Heading>
-      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" textAlign="center" marginX="auto" marginTop={3}>
+      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" textAlign="center" marginX="auto" marginTop={3}>
         Para Empresas
       </Heading>
     </>

@@ -12,7 +12,7 @@ function PracticasPracticantes() {
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">
         Información sobre las Prácticas
       </Heading>
-      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" textAlign="center" margin="12px auto 30px auto">
+      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" textAlign="center" margin="12px auto 30px auto">
         Para Estudiantes
       </Heading>
 

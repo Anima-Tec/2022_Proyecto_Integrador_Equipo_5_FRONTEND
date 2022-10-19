@@ -47,7 +47,7 @@ function OportunidadesPracticas() {
   return (
     <Box>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Oportunidades de Práctica</Heading>
-      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" textAlign="center" margin="12px auto 0 auto">
+      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" textAlign="center" margin="12px auto 0 auto">
         Según tus intereses
       </Heading>
       <Text textAlign="center" margin="24px auto" maxWidth="800px">

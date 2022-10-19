@@ -10,7 +10,7 @@ import InfoEmpresas from '../pages/public/InfoEmpresas';
 import NuestraPropuesta from '../pages/public/NuestraPropuesta';
 import NotFound from '../pages/NotFound';
 import InfoPracticantes from '../pages/public/InfoPracticantes';
-import QuienesSomos from '../pages/public/QuienesSomos';
+import SobreEquipo from '../pages/public/SobreEquipo';
 import PracticasEmpresas from '../pages/company/PracticasEmpresas';
 import Practicantes from '../pages/company/Practicantes';
 import MisPublicaciones from '../pages/company/MisPublicaciones';
@@ -40,7 +40,7 @@ export default function AppRoutes() {
       <Route path={ROUTES.infoPracticas} element={<Practicas />} />
       <Route path={ROUTES.infoPracticantes} element={<InfoPracticantes />} />
       <Route path={ROUTES.infoEmpresas} element={<InfoEmpresas />} />
-      <Route path={ROUTES.quienesomos} element={<QuienesSomos />} />
+      <Route path={ROUTES.sobreEquipo} element={<SobreEquipo />} />
       <Route path={ROUTES.apoyanos} element={<Apoyanos />} />
 
       {/* private pages */}

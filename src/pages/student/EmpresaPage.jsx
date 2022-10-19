@@ -105,7 +105,7 @@ function EmpresaPage() {
       <Divider h="3px" marginTop={5} color="gray" opacity="0.2" />
 
       <Box margin="32px auto 24px auto">
-        <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">
+        <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold">
           Oportunidades de Práctica en
           {' '}
           {company[0].name}

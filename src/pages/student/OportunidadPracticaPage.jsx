@@ -94,7 +94,7 @@ function OportunidadPracticaPage() {
             <a href={ROUTES.empresaPage}>
               <Center gap={3}>
                 <Image src={oportunity.company.photo} borderRadius="full" boxSize={8} />
-                <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold">{oportunity.company.name_company}</Heading>
+                <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold">{oportunity.company.name_company}</Heading>
               </Center>
             </a>
           </Flex>

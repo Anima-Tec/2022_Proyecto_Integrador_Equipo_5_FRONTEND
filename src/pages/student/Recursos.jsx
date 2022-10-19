@@ -64,7 +64,7 @@ function Recursos() {
 
       <Divider my="40px" borderColor="gray" />
 
-      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" textAlign="center" margin="20px auto">Sección: ¿Cómo respondo a...?</Heading>
+      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" textAlign="center" margin="20px auto">Sección: ¿Cómo respondo a...?</Heading>
 
       <Box marginBottom={8}>
         <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">"¿Por qué debo contratarte?"</Heading>

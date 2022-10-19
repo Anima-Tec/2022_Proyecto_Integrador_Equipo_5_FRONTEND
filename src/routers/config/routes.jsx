@@ -10,7 +10,7 @@ const ROUTES = {
   infoPracticas: '/info-practicas',
   infoPracticantes: '/info-practicantes',
   infoEmpresas: '/info-empresas',
-  quienesomos: '/quienes-somos',
+  sobreEquipo: '/sobre-equipo',
   apoyanos: '/apoyanos',
 
   // private pages
