@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import {
   AspectRatio, Box, Divider, Heading, Highlight, Text,
@@ -19,7 +20,7 @@ function Recursos() {
       <Divider m="30px 0 40px 0" borderColor="gray" />
 
       <Box marginBottom={8}>
-        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Cómo elegir un trabajo?</Heading>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Que trabajo es el ideal para mi?</Heading>
         <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/EALRYl3WldA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </AspectRatio>
@@ -28,27 +29,68 @@ function Recursos() {
       <Divider my="40px" borderColor="gray" />
 
       <Box marginBottom={8}>
-        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Cómo elegir un trabajo?</Heading>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Cómo me preparo para una entrevista de trabajo?</Heading>
         <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/EALRYl3WldA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/5al8cq6Isdk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </AspectRatio>
       </Box>
 
       <Divider my="40px" borderColor="gray" />
 
       <Box marginBottom={8}>
-        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Cómo elegir un trabajo?</Heading>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Cómo organizar tareas en el trabajo?</Heading>
         <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/EALRYl3WldA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EMY4IB45Wjo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </AspectRatio>
       </Box>
 
       <Divider my="40px" borderColor="gray" />
 
       <Box marginBottom={8}>
-        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Cómo elegir un trabajo?</Heading>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">¿Qué comportamiento debo tener en el trabajo?</Heading>
         <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/EALRYl3WldA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/j3PQ0xJ6V4g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </AspectRatio>
+      </Box>
+
+      <Divider my="40px" borderColor="gray" />
+
+      <Box marginBottom={8}>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">5 Cosas que NO debes hacer en una entrevista de trabajo</Heading>
+        <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/l-m4pLDq4Qg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </AspectRatio>
+      </Box>
+
+      <Divider my="40px" borderColor="gray" />
+
+      <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="bold" textAlign="center" margin="20px auto">Sección: ¿Cómo respondo a...?</Heading>
+
+      <Box marginBottom={8}>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">"¿Por qué debo contratarte?"</Heading>
+        <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/GmV32eDJkro" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </AspectRatio>
+      </Box>
+
+      <Box marginBottom={8}>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">"Háblame de ti"</Heading>
+        <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XtCOSpIC4gA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </AspectRatio>
+      </Box>
+
+      <Box marginBottom={8}>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">Y si no tengo experiencia ¿qué respondo?</Heading>
+        <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oeWe3AJ932w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </AspectRatio>
+      </Box>
+
+      <Box marginBottom={8}>
+        <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={6} textAlign="center">"¿Cuál es tu debilidad?"</Heading>
+        <AspectRatio maxW="560px" ratio={16 / 9} marginX="auto">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/D6LIcP-Nr5U" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </AspectRatio>
       </Box>
 
