@@ -3,7 +3,7 @@ import {
   Box, Center, Flex, Heading, Highlight, Link, Text,
 } from '@chakra-ui/react';
 import ROUTES from '../../routers/config/routes';
-import * as Logo from '../../assets/index';
+import * as Logo from '../../assets/icons/index';
 
 function NuestraPropuesta() {
   return (

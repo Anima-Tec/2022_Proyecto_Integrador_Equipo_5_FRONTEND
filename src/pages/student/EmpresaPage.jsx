@@ -5,7 +5,7 @@ import React from 'react';
 import {
   Badge, Box, Center, Divider, Flex, Heading, Image, SimpleGrid, Text,
 } from '@chakra-ui/react';
-import * as Logo from '../../assets/index';
+import * as Logo from '../../assets/icons/index';
 import CardJobOffer from '../../components/Cards/CardOportunity';
 
 function EmpresaPage() {

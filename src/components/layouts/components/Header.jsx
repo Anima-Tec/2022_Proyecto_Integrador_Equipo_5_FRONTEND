@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Box } from '@chakra-ui/react';
 import DrawerMenu from '../../DrawerMenu/DrawerMenu';
-import { ReactComponent as LogoEfect } from '../../../assets/logo-efect.svg';
+import * as Logo from '../../../assets/icons/index';
 import ROUTES from '../../../routers/config/routes';
 
 function Header() {
@@ -12,7 +12,7 @@ function Header() {
       </Box>
       <Flex position="relative" justifyContent="center" zIndex="0">
         <a href={ROUTES.home}>
-          <LogoEfect />
+          <Logo.LogoEfect />
         </a>
       </Flex>
     </Box>

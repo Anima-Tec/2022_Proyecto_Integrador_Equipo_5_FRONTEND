@@ -6,7 +6,7 @@ import {
   Badge, Box, Center, Flex, Heading, Image, Text,
 } from '@chakra-ui/react';
 import ROUTES from '../../routers/config/routes';
-import * as Logo from '../../assets/index';
+import * as Logo from '../../assets/icons/index';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 
 function OportunidadPracticaPage() {

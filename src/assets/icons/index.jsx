@@ -34,3 +34,4 @@ export { ReactComponent as RecursosSelected } from './icon-book-selected.svg';
 export { ReactComponent as Drawer } from './icon-drawer.svg';
 export { ReactComponent as Date } from './icon-date.svg';
 export { ReactComponent as Computer } from './icon-computer.svg';
+export { ReactComponent as LogoEfect } from './logo-efect.svg';

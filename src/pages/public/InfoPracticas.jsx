@@ -26,18 +26,18 @@ function InfoPracticas() {
         </Box>
 
         <Box marginTop={10}>
-          <Heading as="h3" fontFamily="Poppins" fontSize="2xl" fontWeight="bold" marginBottom={3} color="primary" textAlign="left" marginX="auto">¿Cómo se concreta la práctica?</Heading>
-          <Text textAlign="left" marginX="auto" marginTop={3}>
+          <Heading as="h3" fontFamily="Poppins" fontSize="2xl" fontWeight="bold" marginBottom={3} color="primary" textAlign="center" marginX="auto">¿Cómo se concreta la práctica?</Heading>
+          <Text textAlign="center" marginX="auto" marginTop={4}>
             <Highlight query={['contrato de prácticas']} styles={{ fontWeight: 'bold', color: 'secondary' }}>
               La práctica se concreta en un contrato de prácticas entre el estudiante y la empresa. Es un documento que se firma por ambas partes y que contiene los términos y condiciones de la práctica.
             </Highlight>
           </Text>
-          <Text textAlign="left" marginX="auto" marginTop={3}>
+          <Text textAlign="center" marginX="auto" marginTop={4}>
             <Highlight query={['validar la información', 'plataforma']} styles={{ fontWeight: 'bold', color: 'secondary' }}>
               EFECT se compromete a validar la información que se presenta en la plataforma y a verificar que el estudiante cumpla con los requisitos para participar en la práctica, como también determinar si la empresa es apta para recibir a un estudiante.
             </Highlight>
           </Text>
-          <Text textAlign="center" marginX="auto" marginTop={3} p={2} borderWidth="2px" borderRadius="xl" borderColor="black" fontWeight="bold">
+          <Text textAlign="center" marginX="auto" marginTop={4} p={2} borderWidth="2px" borderRadius="xl" borderColor="black" fontWeight="bold">
             <Highlight query={['no participa']} styles={{ fontWeight: 'bold', color: 'secondary' }}>
               En la versión actual de la plataforma, EFECT no participa en el proceso de selección ni supervisa el desarrollo de la práctica. La empresa es la responsable de dichas tareas, siendo EFECT un intermediario entre el estudiante y la empresa quien solo los conecta.
             </Highlight>

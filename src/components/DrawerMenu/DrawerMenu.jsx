@@ -17,7 +17,7 @@ import {
 
 import ROUTES from '../../routers/config/routes';
 
-import * as Logo from '../../assets/index';
+import * as Logo from '../../assets/icons/index';
 
 import PrimaryButton from '../Buttons/PrimaryButton';
 import SecondaryButton from '../Buttons/SecondaryButton';

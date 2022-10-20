@@ -4,7 +4,7 @@ import ProtoTypes from 'prop-types';
 import {
   Badge, Box, Center, Flex, Image,
 } from '@chakra-ui/react';
-import * as Logo from '../assets/index';
+import * as Logo from '../assets/icons/index';
 import ROUTES from '../routers/config/routes';
 
 function ItemCompany({
