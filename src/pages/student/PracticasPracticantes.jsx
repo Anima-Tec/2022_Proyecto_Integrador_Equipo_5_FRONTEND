@@ -20,7 +20,7 @@ function PracticasPracticantes() {
         <Box marginBottom={10}>
           <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={3} color="primary" textAlign="center" marginX="auto">¿Qué son las Prácticas?</Heading>
           <Text textAlign="center" marginX="auto">
-            Las prácticas son una oportunidad para estudiantes con un promedio de 7 o más de cualquier centro educativo que tengan entre 15 y 25 años y no hayan tenido experiencia laboral previa, puedan aplicar los conocimientos que tienen dentro del mundo del trabajo o también aprender sobre el área de su interes a través de una pasantía en una empresa comprometida con el desarrollo de talento joven.
+            Las prácticas son una oportunidad para estudiantes con un promedio de 8 o más de cualquier centro educativo que tengan entre 15 y 25 años y no hayan tenido experiencia laboral previa, puedan aplicar los conocimientos que tienen dentro del mundo del trabajo o también aprender sobre el área de su interes a través de una pasantía en una empresa comprometida con el desarrollo de talento joven.
           </Text>
         </Box>
         <Flex gap={8} display={{ base: 'block', md: 'flex' }} justifyContent="center">
@@ -51,7 +51,7 @@ function PracticasPracticantes() {
           <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={3} color="primary" textAlign="center" marginX="auto">¿Qué debes esperar de la empresa?</Heading>
           <Text textAlign="center" marginX="auto">
             La empresa te brindará las herramientas y el apoyo necesario para que este proceso sea provechoso.
-            Tendrás un tutor asignado por la empresa que te guiará en el proceso de aprendizaje y te ayudará a resolver cualquier duda que tengas.
+            Tendrás un tutor asignado por parte de la empresa que te guiará en el proceso de aprendizaje y te ayudará a resolver cualquier duda que tengas.
           </Text>
         </Box>
       </Box>

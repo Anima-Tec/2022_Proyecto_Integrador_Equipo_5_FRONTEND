@@ -14,7 +14,7 @@ function InfoPracticas() {
         <Box marginBottom={8}>
           <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={3} color="secondary" textAlign="left" marginX="auto">¿Qué son las Prácticas?</Heading>
           <Text textAlign="left" marginX="auto">
-            Las prácticas son una oportunidad para estudiantes con un promedio de 7 o más de cualquier centro educativo que tengan entre 15 y 25 años y no hayan tenido experiencia laboral previa, puedan aplicar los conocimientos que tienen dentro del mundo del trabajo o también aprender sobre el área de su interés a través de una pasantía en una empresa comprometida con el desarrollo de talento joven.
+            Las prácticas son una oportunidad para estudiantes con un promedio de 8 o más de cualquier centro educativo que tengan entre 15 y 25 años y no hayan tenido experiencia laboral previa, puedan aplicar los conocimientos que tienen dentro del mundo del trabajo o también aprender sobre el área de su interés a través de una pasantía en una empresa comprometida con el desarrollo de talento joven.
           </Text>
         </Box>
 

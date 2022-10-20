@@ -110,6 +110,7 @@ const theme = extendTheme({
           textAlign: 'center',
         },
         h2: {
+          // <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold">TEXTO</Heading>
           lineHeight: 'shorter',
           letterSpacing: 'wide',
           textAlign: 'left',
