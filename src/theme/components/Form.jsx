@@ -1,8 +1,13 @@
+import { formAnatomy } from '@chakra-ui/anatomy';
+
 const activeLabelStyles = {
-  transform: 'scale(0.85) translateY(-24px)',
+  transform: 'scale(0.85) translateY(-24px) translateX(-10px)',
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  parts: formAnatomy.keys,
+  baseStyle: {},
   variants: {
     floating: {
       container: {
@@ -11,7 +16,7 @@ export default {
             ...activeLabelStyles,
           },
         },
-        'input:not(:placeholder-shown) + label, .chakra-select__wrapper + label, textarea:not(:placeholder-shown) ~ label': {
+        'input:not(:placeholder-shown) + label, .chakra-select__wrapper + label': {
           ...activeLabelStyles,
         },
         label: {
@@ -20,11 +25,9 @@ export default {
           zIndex: 2,
           position: 'absolute',
           backgroundColor: 'bgColor',
-          pointerEvents: 'none',
           mx: 3,
           px: 1,
           my: 2,
-          transformOrigin: 'left top',
         },
       },
     },

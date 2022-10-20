@@ -1,122 +1,43 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import {
   Button,
-  Center,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Heading,
-  Input,
-  VStack,
+  Heading, VStack,
 } from '@chakra-ui/react';
+import LoginSchema from '../../lib/schemas/auth/login.schema';
+import Form from '../../components/Form';
+import useLogin from '../../hooks/auth/mutations/useLogin';
+import InputField from '../../components/InputField/InputField';
 
-function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+export default function Login() {
+  const { mutateAsync } = useLogin();
 
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-
-  const [loader, setLoader] = useState(false);
-
-  useEffect(() => {
-    if (email) {
-      setEmailError('');
-    }
-    if (password) {
-      setPasswordError('');
-    }
-  }, [email, password]);
-
-  const handleLogin = () => {
-    if (!email) {
-      setEmailError('Correo requerido');
-    } else if (!email.includes('@') || !email.includes('.')) {
-      setEmailError('Correo inválido');
-    } else {
-      setEmailError('');
-    }
-
-    if (!password) {
-      setPasswordError('Contraseña requerida');
-    } else if (password.length < 8) {
-      setPasswordError('La contraseña debe tener al menos 8 caracteres');
-    } else {
-      setPasswordError('');
-      setLoader(true);
-      // llamar a la api
+  const handleSubmit = async (data) => {
+    try {
+      await mutateAsync(data);
+    } catch (err) {
+      console.log(err);
     }
   };
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      handleLogin();
-    }
-  });
-
   return (
-    <>
+    <VStack spacing={8} height="100%" width="100%">
+      <Heading
+        as="h1"
+        size="xl"
+        fontWeight="extrabold"
+        textAlign="center"
+      >
+        Login
+      </Heading>
 
-      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Inicio de sesión </Heading>
+      <Form schema={LoginSchema} onSubmit={(data) => handleSubmit(data)}>
+        <InputField label="Email" name="email" />
+        <InputField label="Password" name="password" />
+        <Button type="submit">Sign in</Button>
+      </Form>
 
-      <VStack mt="30px">
-        <Center flexDirection="column">
-          <FormControl id="email" mx="auto">
-            <FormLabel color="gray" w="70vw">
-              Correo
-            </FormLabel>
-            <Input
-              variant="flushed"
-              focusBorderColor="secondary"
-              type="email"
-              fontWeight="normal"
-              w="80vw"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <FormHelperText color="secondaryDark" w="70vw">
-              {emailError}
-            </FormHelperText>
-          </FormControl>
-          <FormControl id="password" my="30px">
-            <FormLabel color="gray" w="70vw">
-              Contraseña
-            </FormLabel>
-            <Input
-              variant="flushed"
-              focusBorderColor="secondary"
-              type="password"
-              w="80vw"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <FormHelperText color="secondaryDark" w="70vw">
-              {passwordError}
-            </FormHelperText>
-          </FormControl>
-        </Center>
-        {/* {loader ? ( */}
-        <Button
-          isLoading={loader}
-          loadingText="Enviando"
-          // variant="outline"
-          spinnerPlacement="start"
-          bg="primary"
-          type="submit"
-          onClick={() => handleLogin()}
-        />
-        {/* ) : (
-          <Button
-            bg="primary"
-            type="submit"
-            onClick={() => handleLogin()}
-          >
-            Enviar
-          </Button> */}
-        {/* )} */}
-      </VStack>
-    </>
+      {/* add redirect to register Student */}
+    </VStack>
   );
 }
-
-export default Login;
