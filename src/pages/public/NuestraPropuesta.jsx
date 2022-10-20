@@ -8,7 +8,7 @@ import * as Logo from '../../assets/index';
 function NuestraPropuesta() {
   return (
     <>
-      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" marginBottom={14}>Nuestra Propuesta</Heading>
+      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" marginBottom={10}>Nuestra Propuesta</Heading>
 
       <Box marginBottom={10}>
         <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginBottom={2} textAlign="center" color="secondary">¿Qué problema resolvemos?</Heading>
