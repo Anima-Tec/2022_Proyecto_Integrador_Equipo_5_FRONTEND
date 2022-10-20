@@ -26,6 +26,8 @@ import EmpresaPage from '../pages/student/EmpresaPage';
 
 import Perfil from '../pages/Perfil';
 import InfoPracticas from '../pages/public/InfoPracticas';
+import HomeStudent from '../pages/student/HomeStudent';
+import HomeCompany from '../pages/company/HomeCompany';
 
 export default function AppRoutes() {
   return (
@@ -47,6 +49,7 @@ export default function AppRoutes() {
       <Route path={ROUTES.perfil} element={<Perfil />} />
 
       {/* student pages */}
+      <Route path={ROUTES.homeStudent} element={<HomeStudent />} />
       <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />
       <Route path={ROUTES.misPostulaciones} element={<MisPostulaciones />} />
       <Route path={ROUTES.oportunidadesPracticas} element={<OportunidadesPracticas />} />
@@ -58,6 +61,7 @@ export default function AppRoutes() {
       <Route path={ROUTES.empresaPage} element={<EmpresaPage />} />
 
       {/* company pages */}
+      <Route path={ROUTES.homeCompany} element={<HomeCompany />} />
       <Route path={ROUTES.misPublicaciones} element={<MisPublicaciones />} />
       <Route path={ROUTES.practicantes} element={<Practicantes />} />
       <Route path={ROUTES.practicasEmpresas} element={<PracticasEmpresas />} />

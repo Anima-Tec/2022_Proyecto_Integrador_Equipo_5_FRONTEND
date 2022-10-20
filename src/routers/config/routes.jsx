@@ -17,6 +17,7 @@ const ROUTES = {
   perfil: '/perfil',
 
   // student pages
+  homeStudent: '/home-student',
   estadoInscripcion: '/estado-inscripcion',
   misPostulaciones: '/mis-postulaciones',
   oportunidadesPracticas: '/oportunidades-practicas',
@@ -28,6 +29,7 @@ const ROUTES = {
   empresaPage: '/empresa/:id',
 
   // company pages
+  homeCompany: '/home-company',
   misPublicaciones: '/mis-publicaciones',
   practicantes: '/practicantes',
   practicasEmpresas: '/practicas-empresas',

@@ -35,7 +35,7 @@ function InfoEmpresas() {
           </Text>
         </Box>
         <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={12}>
-          ¿Quieres ser parte? Contactate con nosotros para participar de la propuesta.
+          ¿Quieres participar como Empresa? Contactate con nosotros para participar de la propuesta.
           {' '}
           <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
             somosefect@gmail.com

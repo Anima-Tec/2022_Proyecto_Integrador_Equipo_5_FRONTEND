@@ -9,7 +9,7 @@ function ItemDrawerMenu({
   const location = useLocation();
 
   return (
-    <Box mb={5} onClick={onClick}>
+    <Box mb={4} onClick={onClick}>
       <NavLink to={route}>
         <Flex color={((location.pathname === route) ? 'primary' : null)} gap={3} alignItems="flex-end">
           {((location.pathname === route) ? iconSelected : icon)}
