@@ -25,7 +25,7 @@ import Recursos from '../pages/student/Recursos';
 import EmpresaPage from '../pages/student/EmpresaPage';
 
 import Perfil from '../pages/Perfil';
-import Practicas from '../pages/public/Practicas';
+import InfoPracticas from '../pages/public/InfoPracticas';
 
 export default function AppRoutes() {
   return (
@@ -37,7 +37,7 @@ export default function AppRoutes() {
       {/* public pages */}
       <Route path={ROUTES.home} element={<Home />} />
       <Route path={ROUTES.nuestrapropuesta} element={<NuestraPropuesta />} />
-      <Route path={ROUTES.infoPracticas} element={<Practicas />} />
+      <Route path={ROUTES.infoPracticas} element={<InfoPracticas />} />
       <Route path={ROUTES.infoPracticantes} element={<InfoPracticantes />} />
       <Route path={ROUTES.infoEmpresas} element={<InfoEmpresas />} />
       <Route path={ROUTES.sobreEquipo} element={<SobreEquipo />} />

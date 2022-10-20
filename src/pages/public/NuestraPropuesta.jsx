@@ -18,7 +18,7 @@ function NuestraPropuesta() {
           </Highlight>
         </Text>
         <Text maxW="900px" textAlign="center" marginX="auto" marginTop={2}>
-          Otra de las problemáticas que resolvemos es la poca participación jóven en los equipos de trabajo de las empresas.
+          Otra de las problemáticas que resolvemos es la poca participación joven en los equipos de trabajo de las empresas.
         </Text>
       </Box>
 
@@ -40,7 +40,7 @@ function NuestraPropuesta() {
             </Flex>
             <Text textAlign="center" marginX="auto">
               <Highlight query={['primera experiencia laboral', 'prácticas profesionales']} styles={{ fontWeight: 'bold', color: 'white' }}>
-                Brindar una primera experiencia laboral a estudiantes de 15 a 25 años, a través de la creación de un programa de prácticas profesionales, que les permita adquirir conocimientos y habilidades en el ámbito laboral, a través de la participación de tareas reales en empresas.
+                Brindar una primera experiencia laboral a estudiantes de 15 a 25 años, a través de la creación de un programa de prácticas profesionales, que les permita adquirir conocimientos y habilidades en el ámbito laboral, a través de la participación de tareas reales en empresas. Además cuando se registra un estudiante cuenta con una capacitación para realizar entrevistas de trabajo.
               </Highlight>
             </Text>
           </Box>
@@ -57,7 +57,7 @@ function NuestraPropuesta() {
             </Flex>
             <Text textAlign="center" marginX="auto">
               <Highlight query={['documentación correspondiente', 'capacitación']} styles={{ fontWeight: 'bold', color: 'white' }}>
-                A su vez, la inserción de estudiantes en empresas es un gran beneficio para ellas, por eso EFECT en este programa de prácticas se encarga de llevar a cabo la documentación correspondiente de los estudiantes menores de edad para comenzar en el ámbito del trabajo, además de la capacitación de los mismos para realizar entrevistas de trabajo.
+                A su vez, la inserción de estudiantes en empresas es un gran beneficio para ellas, por eso EFECT en este programa de prácticas se encarga de llevar a cabo la documentación correspondiente de los estudiantes menores de edad para comenzar en el ámbito del trabajo. Otro beneficio que tiene la empresa es capacitar desde cero a los estudiantes en el área que se les asigne.
               </Highlight>
             </Text>
           </Box>

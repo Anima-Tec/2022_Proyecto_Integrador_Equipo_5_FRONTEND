@@ -13,7 +13,7 @@ function CardOportunity({
     // minChildWidth="400px" display={{ base: 'none', lg: 'grid' }}
     <Box>
       <a href={ROUTES.oportunidadPractica}>
-        <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="md" p={{ base: 4, md: '18px' }} h="100%">
+        <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p={{ base: 4, md: '18px' }} h="100%">
 
           <Flex display={{ base: 'block', lg: 'flex' }}>
             <Center gap="10px" justifyContent="space-between" w="100%" alignItems="center">

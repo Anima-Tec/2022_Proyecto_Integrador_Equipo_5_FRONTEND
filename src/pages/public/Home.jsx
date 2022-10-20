@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Box, Flex, Heading, Highlight, Link, Text,
+  Box, Center, Flex, Heading, Highlight, Link, Text,
 } from '@chakra-ui/react';
 import ROUTES from '../../routers/config/routes';
 
@@ -10,23 +10,25 @@ function Home() {
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" color="primary">Somos EFECT</Heading>
       <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" textAlign="center" marginTop={3} marginBottom={14}>El Futuro Es Con Trabajo</Heading>
 
-      <Flex display={{ base: 'block', md: 'flex' }} justifyContent="center" gap={12} marginBottom={8}>
-        <Box marginBottom={{ base: '32px', lg: 'px' }}>
-          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginBottom={2} textAlign="center" color="secondary">¿Qué es Efect?</Heading>
-          <Text maxW="500px" textAlign="center" marginX="auto">
-            <Highlight query={['conecta', 'estudiantes', 'empresas']} styles={{ fontWeight: 'bold', color: 'white' }}>
-              EFECT es una plataforma que conecta a estudiantes con interés en participar del ámbito laboral con empresas disponibles a formar profesionalmente a ese estudiante.
-            </Highlight>
-          </Text>
-        </Box>
-        <Box>
-          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginBottom={2} textAlign="center" color="secondary">¿Qué problema resolvemos?</Heading>
-          <Text maxW="500px" textAlign="center" marginX="auto">
-            <Highlight query={['desempleo juvenil', 'oportunidades laborales']} styles={{ fontWeight: 'bold', color: 'white' }}>
-              Una de las principales causas del desempleo juvenil es la falta de experiencia laboral. Este es el problema principal al que apuntamos, aumentamos las oportunidades laborales para estudiantes logrando que tengan la primera experiencia laboral antes del egreso del sistema educativo.
-            </Highlight>
-          </Text>
-        </Box>
+      <Flex display={{ base: 'block', md: 'flex' }} justifyContent="center" marginBottom={8}>
+        <Center display={{ base: 'block', md: 'flex' }} gap={12}>
+          <Flex flexDirection="column" justifyContent="center" marginBottom={{ base: '32px', md: '0px' }} p={4} borderWidth="2px" borderRadius="xl" borderColor="black" height="100%">
+            <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginBottom={2} textAlign="center" color="secondary">¿Qué es Efect?</Heading>
+            <Text maxW="500px" textAlign="center" marginX="auto">
+              <Highlight query={['conecta', 'estudiantes', 'empresas']} styles={{ fontWeight: 'bold', color: 'white' }}>
+                EFECT es una plataforma que conecta a estudiantes con interés en participar del ámbito laboral con empresas disponibles a formar profesionalmente a ese estudiante.
+              </Highlight>
+            </Text>
+          </Flex>
+          <Box p={4} borderWidth="2px" borderRadius="xl" borderColor="black" height="100%">
+            <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginBottom={2} textAlign="center" color="secondary">¿Qué problema resolvemos?</Heading>
+            <Text maxW="500px" textAlign="center" marginX="auto">
+              <Highlight query={['desempleo juvenil', 'oportunidades laborales']} styles={{ fontWeight: 'bold', color: 'white' }}>
+                Una de las principales causas del desempleo juvenil es la falta de experiencia laboral. Este es el problema principal al que apuntamos, aumentamos las oportunidades laborales para estudiantes logrando que tengan la primera experiencia laboral antes del egreso del sistema educativo.
+              </Highlight>
+            </Text>
+          </Box>
+        </Center>
       </Flex>
 
       <Box>
