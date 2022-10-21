@@ -6,6 +6,8 @@ import Avril from '../../assets/our-photos/Avril.jpeg';
 import Camila from '../../assets/our-photos/Camila.jpg';
 import Veronica from '../../assets/our-photos/Veronica.jpeg';
 import Nicolas from '../../assets/our-photos/Nicolas.jpeg';
+import Agustin from '../../assets/our-photos/Agustin.jpeg';
+import Iliana from '../../assets/our-photos/Iliana.jpeg';
 
 import Default from '../../assets/our-photos/Default.webp';
 
@@ -82,7 +84,7 @@ function SobreEquipo() {
 
           <WrapItem>
             <Center gap={2} flexDirection="column">
-              <Image src={Default} borderRadius="full" boxSize="100px" />
+              <Image src={Agustin} borderRadius="full" boxSize="100px" />
               <Center flexDirection="column">
                 <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Agustin Barreto</Heading>
                 <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Administración</Heading>
@@ -92,7 +94,7 @@ function SobreEquipo() {
 
           <WrapItem>
             <Center gap={2} flexDirection="column">
-              <Image src={Default} borderRadius="full" boxSize="100px" />
+              <Image src={Iliana} borderRadius="full" boxSize="100px" />
               <Center flexDirection="column">
                 <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Iliana Pais</Heading>
                 <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Administración</Heading>
