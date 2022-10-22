@@ -1,11 +1,11 @@
 import React from 'react';
 import { UnorderedList, ListItem } from '@chakra-ui/react';
-import PrimaryModal from './ModalBase';
+import ModalBase from './ModalBase';
 
 function ModalRequisitos() {
   return (
 
-    <PrimaryModal
+    <ModalBase
       buttonText="Ver requisitos"
       buttonBgColor="primary"
       buttonBgColorHover="primaryDark"

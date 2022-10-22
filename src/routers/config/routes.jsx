@@ -17,21 +17,19 @@ const ROUTES = {
   perfil: '/perfil',
 
   // student pages
-  homeStudent: '/home-student',
   estadoInscripcion: '/estado-inscripcion',
   misPostulaciones: '/mis-postulaciones',
   oportunidadesPracticas: '/oportunidades-practicas',
   oportunidadPractica: '/oportunidad-practica/:id',
   empresas: '/empresas',
+  empresaPage: '/empresa/:id',
   practicasPracticantes: '/practicas-practicantes',
   recursos: '/recursos',
 
-  empresaPage: '/empresa/:id',
-
   // company pages
-  homeCompany: '/home-company',
   misPublicaciones: '/mis-publicaciones',
   practicantes: '/practicantes',
+  studentPage: '/student/:id',
   practicasEmpresas: '/practicas-empresas',
 };
 

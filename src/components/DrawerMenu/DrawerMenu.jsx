@@ -27,9 +27,9 @@ function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
-  // const userRole = 'guest';
+  const userRole = 'guest';
   // const userRole = 'student';
-  const userRole = 'company';
+  // const userRole = 'company';
 
   const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';
@@ -83,7 +83,6 @@ function DrawerMenu() {
 
                 <Divider my="15px" borderColor="gray" />
 
-                <ItemDrawerMenu name="Inicio" route={ROUTES.homeStudent} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu name="Estado de Inscripción" route={ROUTES.estadoInscripcion} icon={<Logo.EstadoInscripcion />} iconSelected={<Logo.EstadoInscripcionSelected />} />
                 <ItemDrawerMenu name="Mis Postulaciones" route={ROUTES.misPostulaciones} icon={<Logo.MisPostulaciones />} iconSelected={<Logo.MisPostulacionesSelected />} />
                 <ItemDrawerMenu name="Oportunidades" route={ROUTES.oportunidadesPracticas} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
@@ -95,7 +94,6 @@ function DrawerMenu() {
 
                 <Heading as="h5" fontFamily="Poppins" fontSize="sm" fontWeight="bold" marginBottom={3}>Otras páginas...</Heading>
                 <ItemDrawerMenu onClick={onClose} name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
-                <ItemDrawerMenu onClick={onClose} name="Prácticas" route={ROUTES.infoPracticas} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Sobre el Equipo" route={ROUTES.sobreEquipo} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
 
@@ -119,7 +117,6 @@ function DrawerMenu() {
 
                 <Divider my="20px" borderColor="gray" />
 
-                <ItemDrawerMenu name="Inicio" route={ROUTES.homeCompany} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu name="Mis Publicaciones" route={ROUTES.misPublicaciones} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
                 <ItemDrawerMenu name="Practicantes" route={ROUTES.practicantes} icon={<Logo.Practicantes />} iconSelected={<Logo.PracticantesSelected />} />
                 <ItemDrawerMenu name="Prácticas" route={ROUTES.practicasEmpresas} icon={<Logo.Empresas />} iconSelected={<Logo.HomeSelected />} />
@@ -128,7 +125,6 @@ function DrawerMenu() {
 
                 <Heading as="h5" fontFamily="Poppins" fontSize="sm" fontWeight="bold" marginBottom={3}>Otras páginas...</Heading>
                 <ItemDrawerMenu onClick={onClose} name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
-                <ItemDrawerMenu onClick={onClose} name="Prácticas" route={ROUTES.infoPracticas} icon={<Logo.OportunidadesPracticas />} iconSelected={<Logo.OportunidadesPracticasSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Sobre el Equipo" route={ROUTES.sobreEquipo} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
 

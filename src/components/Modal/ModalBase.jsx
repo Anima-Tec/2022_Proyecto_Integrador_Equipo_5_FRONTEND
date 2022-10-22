@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types'; // ES6
 
-function PrimaryModal({
+function ModalBase({
   title, buttonText, buttonBgColor, buttonBgColorHover, content,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -38,7 +38,7 @@ function PrimaryModal({
   );
 }
 
-PrimaryModal.propTypes = {
+ModalBase.propTypes = {
   buttonText: PropTypes.string.isRequired,
   buttonBgColor: PropTypes.string.isRequired,
   buttonBgColorHover: PropTypes.string.isRequired,
@@ -48,4 +48,4 @@ PrimaryModal.propTypes = {
     PropTypes.node]).isRequired,
 };
 
-export default PrimaryModal;
+export default ModalBase;
