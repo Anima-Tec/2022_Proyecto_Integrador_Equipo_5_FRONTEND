@@ -31,7 +31,10 @@ function InfoEmpresas() {
         <Box marginTop={10}>
           <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={3} color="secondary" textAlign="left" marginX="auto">¿Qué deben esperar del practicante?</Heading>
           <Text textAlign="left" marginX="auto">
-            Los practicantes son estudiantes. El espacio de las prácitcas es una instancia más de aprendizaje para ellos. De todas formas, en este marco es responsable de cumplir en tiempo y forma con las tareas que se le asignen y a desarrollar un tipo de conducta que sea acorde con el ambiente de la empresa. Además, el estudiante debe cumplir con los horarios establecidos.
+            Los practicantes son estudiantes. El espacio de las prácitcas es una instancia más de aprendizaje para ellos. De todas formas, en este marco es responsable de cumplir en tiempo y forma con las tareas que se le asignen y a desarrollar un tipo de conducta que sea acorde con el ambiente de la empresa. Además, el estudiante debe cumplir con horarios establecidos.
+          </Text>
+          <Text textAlign="left" marginX="auto" marginTop={4}>
+            Todo esto se desarrolla a través de la tutoría que se le brinda al estudiante. La tutoría es un proceso de acompañamiento que se realiza a través de reuniones diarias o semanales con el estudiante y el tutor de la empresa. El tutor es el encargado de guiar al estudiante en el desarrollo de sus tareas y de evaluar su desempeño.
           </Text>
         </Box>
         <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={12}>

@@ -29,9 +29,9 @@ function PracticasPracticantes() {
               Beneficios
             </Heading>
             <Flex flexDirection="column" gap={1}>
-              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Obtener la experiencia laboral previa que necesitas para tu futuro.</Text>
-              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Obtener información del mundo laboral de tu interés para saber si es realmente tu pasión.</Text>
-              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Generar red de contactos.</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Obtener la experiencia laboral previa que necesitas para tu futuro.</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Obtener información del mundo laboral de tu interés para saber si es realmente tu pasión.</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Generar red de contactos.</Text>
             </Flex>
           </Box>
           <Box>
@@ -39,11 +39,11 @@ function PracticasPracticantes() {
               Habilidades
             </Heading>
             <Flex flexDirection="column" gap={1}>
-              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">
                 Capacidad de abstracción de conceptos pudiendo llevar lo aprendido en la práctica a clase.
               </Text>
-              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Capacidad de análisis.</Text>
-              <Text textAlign="center" p={2} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Aprender la forma de comunicación apropiada para el entorno laboral</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Capacidad de análisis.</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="300px">Aprender la forma de comunicación apropiada para el entorno laboral</Text>
             </Flex>
           </Box>
         </Flex>
