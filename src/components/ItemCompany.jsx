@@ -7,7 +7,7 @@ import {
 import * as Logo from '../assets/icons/index';
 import ROUTES from '../routers/config/routes';
 
-function ItemCompany({
+export default function ItemCompany({
   name, photo, employees, year_foundation, name_work_area,
 }) {
   return (
@@ -64,5 +64,3 @@ ItemCompany.propTypes = {
   year_foundation: ProtoTypes.number.isRequired,
   name_work_area: ProtoTypes.arrayOf(ProtoTypes.string).isRequired,
 };
-
-export default ItemCompany;

@@ -3,7 +3,7 @@ import {
   Box, Heading, Highlight, Link, Text,
 } from '@chakra-ui/react';
 
-function InfoPracticas() {
+export default function InfoPracticas() {
   return (
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" marginBottom={10}>
@@ -55,5 +55,3 @@ function InfoPracticas() {
 
   );
 }
-
-export default InfoPracticas;

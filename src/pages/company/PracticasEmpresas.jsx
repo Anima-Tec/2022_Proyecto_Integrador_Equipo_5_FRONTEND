@@ -6,7 +6,7 @@ import {
   Box, Flex, Heading, Link, Text,
 } from '@chakra-ui/react';
 
-function PracticasEmpresas() {
+export default function PracticasEmpresas() {
   return (
 
     <>
@@ -57,5 +57,3 @@ function PracticasEmpresas() {
 
   );
 }
-
-export default PracticasEmpresas;

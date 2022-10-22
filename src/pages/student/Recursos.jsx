@@ -4,7 +4,7 @@ import {
   AspectRatio, Box, Divider, Heading, Highlight, Text,
 } from '@chakra-ui/react';
 
-function Recursos() {
+export default function Recursos() {
   return (
 
     <>
@@ -100,5 +100,3 @@ function Recursos() {
 
   );
 }
-
-export default Recursos;

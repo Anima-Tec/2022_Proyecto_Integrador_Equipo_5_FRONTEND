@@ -7,7 +7,7 @@ import { Heading, Link, SimpleGrid } from '@chakra-ui/react';
 import ROUTES from '../../routers/config/routes';
 import CardOportunity from '../../components/Cards/CardOportunity';
 
-function MisPostulaciones() {
+export default function MisPostulaciones() {
   const student = {
     first_name: 'Juan',
     last_name: 'Perez',
@@ -108,5 +108,3 @@ function MisPostulaciones() {
 
   );
 }
-
-export default MisPostulaciones;

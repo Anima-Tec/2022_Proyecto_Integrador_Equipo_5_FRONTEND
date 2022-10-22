@@ -28,6 +28,7 @@ const ROUTES = {
 
   // company pages
   misPublicaciones: '/mis-publicaciones',
+  miPublicacion: '/mi-publicacion/:id',
   practicantes: '/practicantes',
   studentPage: '/student/:id',
   practicasEmpresas: '/practicas-empresas',

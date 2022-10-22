@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routers/config/routes';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 
-function InfoPracticantes() {
+export default function InfoPracticantes() {
   const navigate = useNavigate();
   return (
 
@@ -56,5 +56,3 @@ function InfoPracticantes() {
     </>
   );
 }
-
-export default InfoPracticantes;

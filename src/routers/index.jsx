@@ -26,6 +26,7 @@ import EmpresaPage from '../pages/student/EmpresaPage';
 
 import Perfil from '../pages/Perfil';
 import InfoPracticas from '../pages/public/InfoPracticas';
+import MiPublicacion from '../pages/company/MiPublicacion';
 
 export default function AppRoutes() {
   return (
@@ -59,6 +60,7 @@ export default function AppRoutes() {
 
       {/* company pages */}
       <Route path={ROUTES.misPublicaciones} element={<MisPublicaciones />} />
+      <Route path={ROUTES.miPublicacion} element={<MiPublicacion />} />
       <Route path={ROUTES.practicantes} element={<Practicantes />} />
       <Route path={ROUTES.practicasEmpresas} element={<PracticasEmpresas />} />
 

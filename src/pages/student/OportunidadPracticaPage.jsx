@@ -9,7 +9,7 @@ import ROUTES from '../../routers/config/routes';
 import * as Logo from '../../assets/icons/index';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
 
-function OportunidadPracticaPage() {
+export default function OportunidadPracticaPage() {
   const oportunity = {
     name_jobOffer: 'Programación',
     description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
@@ -127,5 +127,3 @@ function OportunidadPracticaPage() {
 
   );
 }
-
-export default OportunidadPracticaPage;

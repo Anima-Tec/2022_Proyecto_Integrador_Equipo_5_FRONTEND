@@ -6,7 +6,7 @@ import {
 import * as Logo from '../../assets/icons/index';
 import ROUTES from '../../routers/config/routes';
 
-function CardCompany({
+export default function CardCompany({
   name, photo, employees, yearFoundation, nameWorkArea,
 }) {
   return (
@@ -65,5 +65,3 @@ CardCompany.propTypes = {
   yearFoundation: ProtoTypes.number.isRequired,
   nameWorkArea: ProtoTypes.arrayOf(ProtoTypes.string).isRequired,
 };
-
-export default CardCompany;

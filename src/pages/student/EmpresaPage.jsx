@@ -8,7 +8,7 @@ import {
 import * as Logo from '../../assets/icons/index';
 import CardOportunity from '../../components/Cards/CardOportunity';
 
-function EmpresaPage() {
+export default function EmpresaPage() {
   const company = [
     {
       name: 'Light IT',
@@ -132,5 +132,3 @@ function EmpresaPage() {
     </>
   );
 }
-
-export default EmpresaPage;

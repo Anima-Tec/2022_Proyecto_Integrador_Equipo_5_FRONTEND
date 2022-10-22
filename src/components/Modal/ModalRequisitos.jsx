@@ -3,7 +3,7 @@ import {
   UnorderedList, ListItem, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure,
 } from '@chakra-ui/react';
 
-function ModalRequisitos() {
+export default function ModalRequisitos() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -30,5 +30,3 @@ function ModalRequisitos() {
     </>
   );
 }
-
-export default ModalRequisitos;

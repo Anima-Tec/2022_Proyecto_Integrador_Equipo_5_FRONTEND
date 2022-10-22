@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import CardJobOffer from '../../components/Cards/CardOportunity';
 
-function OportunidadesPracticas() {
+export default function OportunidadesPracticas() {
   const jobOfferData = [
     {
       name_jobOffer: 'Programación',
@@ -73,5 +73,3 @@ function OportunidadesPracticas() {
     </Box>
   );
 }
-
-export default OportunidadesPracticas;

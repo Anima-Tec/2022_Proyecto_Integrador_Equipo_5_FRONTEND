@@ -4,7 +4,7 @@ import {
 } from '@chakra-ui/react';
 import ROUTES from '../../routers/config/routes';
 
-function Home() {
+export default function Home() {
   return (
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" color="primary">Somos EFECT</Heading>
@@ -58,5 +58,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

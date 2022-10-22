@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider, Flex, Text } from '@chakra-ui/react';
 
-function Footer() {
+export default function Footer() {
   return (
     <>
       <Divider h="3px" marginTop="25%" color="gray" opacity="0.2" />
@@ -16,5 +16,3 @@ function Footer() {
     </>
   );
 }
-
-export default Footer;

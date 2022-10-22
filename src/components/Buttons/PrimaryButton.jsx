@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@chakra-ui/react';
 import PropTypes from 'prop-types'; // ES6
 
-function PrimaryButton({
+export default function PrimaryButton({
   children, onClick, bg, fontColor, hover, cursor, w,
 }) {
   return (
@@ -19,8 +19,6 @@ function PrimaryButton({
     </Button>
   );
 }
-
-export default PrimaryButton;
 
 PrimaryButton.propTypes = {
   children: PropTypes.oneOfType([

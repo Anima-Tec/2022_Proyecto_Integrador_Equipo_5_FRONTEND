@@ -10,7 +10,7 @@ import ROUTES from '../../routers/config/routes';
 import CardOportunity from '../../components/Cards/CardOportunity';
 import ModalNewOpotunity from '../../components/Modal/ModalNewOpotunity';
 
-function MisPublicaciones() {
+export default function MisPublicaciones() {
   const myOportunities = [
     {
       id: 1,
@@ -108,5 +108,3 @@ function MisPublicaciones() {
 
   );
 }
-
-export default MisPublicaciones;

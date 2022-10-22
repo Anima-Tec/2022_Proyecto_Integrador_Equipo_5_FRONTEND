@@ -3,7 +3,7 @@ import {
   Box, Heading, Highlight, Link, Text,
 } from '@chakra-ui/react';
 
-function InfoEmpresas() {
+export default function InfoEmpresas() {
   return (
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Empresas</Heading>
@@ -49,5 +49,3 @@ function InfoEmpresas() {
 
   );
 }
-
-export default InfoEmpresas;

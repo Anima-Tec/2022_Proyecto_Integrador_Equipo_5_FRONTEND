@@ -3,7 +3,7 @@ import ProtoTypes from 'prop-types';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { NavLink, useLocation } from 'react-router-dom';
 
-function ItemDrawerMenu({
+export default function ItemDrawerMenu({
   name, route, icon, iconSelected, onClick,
 }) {
   const location = useLocation();
@@ -32,5 +32,3 @@ ItemDrawerMenu.propTypes = {
 ItemDrawerMenu.defaultProps = {
   onClick: () => {},
 };
-
-export default ItemDrawerMenu;

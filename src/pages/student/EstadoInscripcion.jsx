@@ -9,7 +9,7 @@ import {
 import ModalRequisitos from '../../components/Modal/ModalRequisitos';
 import ROUTES from '../../routers/config/routes';
 
-function EstadoInscripcion() {
+export default function EstadoInscripcion() {
   const student = {
     first_name: 'Juan',
     last_name: 'Perez',
@@ -138,5 +138,3 @@ function EstadoInscripcion() {
 
   );
 }
-
-export default EstadoInscripcion;

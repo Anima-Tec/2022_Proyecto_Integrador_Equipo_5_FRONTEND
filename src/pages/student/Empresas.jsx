@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import CardCompany from '../../components/Cards/CardCompany';
 
-function Empresas() {
+export default function Empresas() {
   const company = [
     {
       name_company: 'Light IT',
@@ -74,5 +74,3 @@ function Empresas() {
     </>
   );
 }
-
-export default Empresas;

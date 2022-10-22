@@ -6,13 +6,12 @@ import {
 import * as Logo from '../../assets/icons/index';
 import ROUTES from '../../routers/config/routes';
 
-function CardOportunity({
+export default function CardOportunity({
   nameJobOffer, description, modality, quotas, workArea, nameCompany, photo,
 }) {
   return (
-    // minChildWidth="400px" display={{ base: 'none', lg: 'grid' }}
     <Box>
-      <a href={ROUTES.oportunidadPractica}>
+      <a href={ROUTES.miPublicacion}>
         <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p={{ base: 4, md: '18px' }} h="100%">
 
           <Flex display={{ base: 'block', lg: 'flex' }}>
@@ -99,5 +98,3 @@ CardOportunity.defaultProps = {
   nameCompany: '',
   photo: '',
 };
-
-export default CardOportunity;

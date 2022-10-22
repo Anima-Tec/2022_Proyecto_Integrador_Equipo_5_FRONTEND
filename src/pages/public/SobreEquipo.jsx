@@ -12,7 +12,7 @@ import Emiliano from '../../assets/our-photos/Emiliano.jpeg';
 
 import Default from '../../assets/our-photos/Default.webp';
 
-function SobreEquipo() {
+export default function SobreEquipo() {
   const team = [
     {
       name: 'Verónica Morgades',
@@ -121,5 +121,3 @@ function SobreEquipo() {
     </Box>
   );
 }
-
-export default SobreEquipo;

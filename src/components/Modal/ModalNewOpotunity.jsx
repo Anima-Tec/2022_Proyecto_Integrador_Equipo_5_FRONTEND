@@ -18,7 +18,7 @@ import InputField from '../Fields/InputField';
 import TextareaField from '../Fields/TextareaField';
 import SelectField from '../Fields/SelectField';
 
-function ModalNewOpotunity() {
+export default function ModalNewOpotunity() {
   // const { mutateAsync } = useLogin();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -69,5 +69,3 @@ function ModalNewOpotunity() {
     </>
   );
 }
-
-export default ModalNewOpotunity;

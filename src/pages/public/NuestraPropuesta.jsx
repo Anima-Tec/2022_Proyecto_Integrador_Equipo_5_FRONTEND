@@ -5,7 +5,7 @@ import {
 import ROUTES from '../../routers/config/routes';
 import * as Logo from '../../assets/icons/index';
 
-function NuestraPropuesta() {
+export default function NuestraPropuesta() {
   return (
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" marginBottom={10}>Nuestra Propuesta</Heading>
@@ -76,5 +76,3 @@ function NuestraPropuesta() {
     </>
   );
 }
-
-export default NuestraPropuesta;

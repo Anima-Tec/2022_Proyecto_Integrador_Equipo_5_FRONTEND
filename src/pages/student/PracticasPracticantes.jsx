@@ -6,7 +6,7 @@ import {
   Box, Center, Flex, Heading, Link, Text,
 } from '@chakra-ui/react';
 
-function PracticasPracticantes() {
+export default function PracticasPracticantes() {
   return (
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">
@@ -67,5 +67,3 @@ function PracticasPracticantes() {
     </>
   );
 }
-
-export default PracticasPracticantes;

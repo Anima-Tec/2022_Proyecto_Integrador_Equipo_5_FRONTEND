@@ -3,7 +3,7 @@ import {
   Box, Heading, Link, Text,
 } from '@chakra-ui/react';
 
-function Apoyanos() {
+export default function Apoyanos() {
   return (
     <Box maxWidth="900px" marginX="auto">
 
@@ -36,5 +36,3 @@ function Apoyanos() {
     </Box>
   );
 }
-
-export default Apoyanos;

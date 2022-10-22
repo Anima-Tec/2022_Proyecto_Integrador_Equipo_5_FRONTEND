@@ -23,13 +23,13 @@ import PrimaryButton from '../Buttons/PrimaryButton';
 import SecondaryButton from '../Buttons/SecondaryButton';
 import ItemDrawerMenu from './ItemDrawerMenu';
 
-function DrawerMenu() {
+export default function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
   // const userRole = 'guest';
-  const userRole = 'student';
-  // const userRole = 'company';
+  // const userRole = 'student';
+  const userRole = 'company';
 
   const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';
@@ -140,5 +140,3 @@ function DrawerMenu() {
     </>
   );
 }
-
-export default DrawerMenu;
