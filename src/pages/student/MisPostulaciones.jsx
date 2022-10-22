@@ -43,7 +43,7 @@ function MisPostulaciones() {
   return (
 
     <>
-      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Mis Postulaciones </Heading>
+      <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Mis Postulaciones</Heading>
 
       {student.apply.length === 0 && (
       <>

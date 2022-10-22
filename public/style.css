@@ -1,0 +1,12 @@
+.css-1ca8kc6 > option {
+  background: #18181B !important;
+}
+
+input, select, textarea {
+  border: 1px solid #666666 !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px #666666 !important;
+}

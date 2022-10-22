@@ -6,7 +6,7 @@ import {
   Badge, Box, Center, Divider, Flex, Heading, Image, SimpleGrid, Text,
 } from '@chakra-ui/react';
 import * as Logo from '../../assets/icons/index';
-import CardJobOffer from '../../components/Cards/CardOportunity';
+import CardOportunity from '../../components/Cards/CardOportunity';
 
 function EmpresaPage() {
   const company = [
@@ -111,17 +111,19 @@ function EmpresaPage() {
           {company[0].name}
         </Heading>
 
-        <SimpleGrid marginTop={5} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
+        <SimpleGrid marginTop={6} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
 
           {company.map((companyData) => (
-            <CardJobOffer
-              key={companyData.jobOffer[0].name_jobOffer}
-              nameJobOffer={companyData.jobOffer[0].name_jobOffer}
-              description={companyData.jobOffer[0].description}
-              modality={companyData.jobOffer[0].modality}
-              quotas={companyData.jobOffer[0].quotas}
-              workArea={companyData.jobOffer[0].workArea}
-            />
+            companyData.jobOffer.map((jobOfferData) => (
+              <CardOportunity
+                key={jobOfferData.name_jobOffer}
+                nameJobOffer={jobOfferData.name_jobOffer}
+                description={jobOfferData.description}
+                modality={jobOfferData.modality}
+                quotas={jobOfferData.quotas}
+                workArea={jobOfferData.workArea}
+              />
+            ))
           ))}
 
         </SimpleGrid>

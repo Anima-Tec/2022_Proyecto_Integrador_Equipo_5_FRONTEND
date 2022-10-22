@@ -1,41 +1,46 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useState } from 'react';
 import {
+  Box,
   Button,
   Heading, VStack,
 } from '@chakra-ui/react';
 import LoginSchema from '../../lib/schemas/auth/login.schema';
 import Form from '../../components/Form';
 import useLogin from '../../hooks/auth/mutations/useLogin';
-import InputField from '../../components/InputField/InputField';
+import InputField from '../../components/Fields/InputField';
 
 export default function Login() {
   const { mutateAsync } = useLogin();
+  const [loader, setLoader] = useState(false);
 
   const handleSubmit = async (data) => {
     try {
       await mutateAsync(data);
+      setLoader(true);
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <VStack spacing={8} height="100%" width="100%">
+    <VStack spacing={10} height="100%" width="100%" justifyContent="center">
       <Heading
         as="h1"
         size="xl"
         fontWeight="extrabold"
         textAlign="center"
       >
-        Login
+        Inicio de sesión
       </Heading>
 
-      <Form schema={LoginSchema} onSubmit={(data) => handleSubmit(data)}>
-        <InputField label="Email" name="email" />
-        <InputField label="Password" name="password" />
-        <Button type="submit">Sign in</Button>
-      </Form>
+      <Box w={{ sm: '100%', md: '50%', lg: '35%' }}>
+        <Form schema={LoginSchema} onSubmit={(data) => handleSubmit(data)}>
+          <InputField label="Correo electrónico" name="email" />
+          <InputField label="Contraseña" name="password" />
+          <Button bgColor="primary" variant="solid" isLoading={loader} type="submit">Enviar</Button>
+        </Form>
+      </Box>
 
       {/* add redirect to register Student */}
     </VStack>

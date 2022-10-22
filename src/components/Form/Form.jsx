@@ -17,7 +17,7 @@ export default function Form({
   return (
     <FormProvider {...methods}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <VStack spacing={4}>
+        <VStack spacing={6} display="flex" justifyContent="center">
           {children}
         </VStack>
       </form>

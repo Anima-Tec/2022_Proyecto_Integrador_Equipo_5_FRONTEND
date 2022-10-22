@@ -27,9 +27,9 @@ function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
-  const userRole = 'guest';
+  // const userRole = 'guest';
   // const userRole = 'student';
-  // const userRole = 'company';
+  const userRole = 'company';
 
   const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';
@@ -92,7 +92,7 @@ function DrawerMenu() {
 
                 <Divider my="15px" borderColor="gray" />
 
-                <Heading as="h5" fontFamily="Poppins" fontSize="sm" fontWeight="bold" marginBottom={3}>Otras páginas...</Heading>
+                <Heading as="h5" fontFamily="Poppins" fontSize="sm" fontWeight="bold" marginBottom={3}>Acerca de</Heading>
                 <ItemDrawerMenu onClick={onClose} name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Sobre el Equipo" route={ROUTES.sobreEquipo} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
@@ -123,7 +123,7 @@ function DrawerMenu() {
 
                 <Divider my="20px" borderColor="gray" />
 
-                <Heading as="h5" fontFamily="Poppins" fontSize="sm" fontWeight="bold" marginBottom={3}>Otras páginas...</Heading>
+                <Heading as="h5" fontFamily="Poppins" fontSize="sm" fontWeight="bold" marginBottom={3}>Acerca de</Heading>
                 <ItemDrawerMenu onClick={onClose} name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Sobre el Equipo" route={ROUTES.sobreEquipo} icon={<Logo.People />} iconSelected={<Logo.PeopleSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
