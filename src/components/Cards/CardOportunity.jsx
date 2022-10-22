@@ -16,9 +16,9 @@ function CardOportunity({
         <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p={{ base: 4, md: '18px' }} h="100%">
 
           <Flex display={{ base: 'block', lg: 'flex' }}>
-            <Center gap="10px" justifyContent="space-between" w="100%" alignItems="center">
+            <Center gap="10px" justifyContent="space-between" w="100%" alignItems="flex-start">
 
-              <Box>
+              <Box marginY="auto">
                 {(nameCompany && photo) && (
                 <Flex marginBottom={2}>
                   <Center gap={3}>

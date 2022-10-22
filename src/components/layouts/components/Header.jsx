@@ -6,7 +6,7 @@ import ROUTES from '../../../routers/config/routes';
 
 function Header() {
   return (
-    <Box position="sticky" paddingTop="20px" paddingBottom="16px" bg="bgColor" top="0" marginBottom="20px">
+    <Box position="sticky" paddingTop="20px" paddingBottom="16px" bg="bgColor" top="0" marginBottom="20px" id="header">
       <Box position="absolute" my="5px" zIndex="1">
         <DrawerMenu />
       </Box>

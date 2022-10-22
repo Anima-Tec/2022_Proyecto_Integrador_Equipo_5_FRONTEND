@@ -8,16 +8,61 @@ import Veronica from '../../assets/our-photos/Veronica.jpeg';
 import Nicolas from '../../assets/our-photos/Nicolas.jpeg';
 import Agustin from '../../assets/our-photos/Agustin.jpeg';
 import Iliana from '../../assets/our-photos/Iliana.jpeg';
+import Emiliano from '../../assets/our-photos/Emiliano.jpeg';
 
 import Default from '../../assets/our-photos/Default.webp';
 
 function SobreEquipo() {
+  const team = [
+    {
+      name: 'Verónica Morgades',
+      orientation: 'Tecnología',
+      photo: Veronica,
+    },
+    {
+      name: 'Camila Pérez',
+      orientation: 'Tecnología',
+      photo: Camila,
+    },
+    {
+      name: 'Emiliano Hernández',
+      orientation: 'Tecnología',
+      photo: Emiliano,
+    },
+    {
+      name: 'Nicolás Barreto',
+      orientation: 'Tecnología',
+      photo: Nicolas,
+    },
+    {
+      name: 'Avril Cornacchione',
+      orientation: 'Administración',
+      photo: Avril,
+    },
+    {
+      name: 'Agustín Barreto',
+      orientation: 'Administración',
+      photo: Agustin,
+    },
+    {
+      name: 'Iliana Pais',
+      orientation: 'Administración',
+      photo: Iliana,
+    },
+    {
+      name: 'Franco Picarelli',
+      orientation: 'Administración',
+      photo: Default,
+    },
+
+  ];
+
   return (
 
     <Box maxWidth="1000px" marginX="auto">
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" marginBottom={10}>Sobre el Equipo</Heading>
 
-      <Box marginBottom={10}>
+      <Box marginBottom={14}>
         <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginBottom={2} textAlign="center" color="secondary">
           Nosotros somos...
         </Heading>
@@ -30,87 +75,24 @@ function SobreEquipo() {
           . 4 de nosotros estudia tecnología y 4 administración, nos encontramos en 6to año y estamos unidos por ser parte del mismo grupo para desarrollar el proyecto final del curso.
         </Text>
 
-        <Wrap spacing="40px" justify="center" marginTop={6} marginX="auto">
+        <Wrap spacing="40px" justify="center" alignItems="center" marginTop={12} marginX="auto" maxWidth="800px">
 
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Veronica} borderRadius="full" boxSize="100px" />
+          {team.map((member) => (
+            <WrapItem key={member.name} w="150px" justifyContent="center">
               <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Verónica Morgades</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Tecnología</Heading>
+                <Image
+                  src={member.photo}
+                  borderRadius="full"
+                  boxSize="120px"
+                  objectFit="cover"
+                  alt={member.name}
+                />
+                <Heading as="h3" fontFamily="Poppins" fontSize="lg" fontWeight="bold" marginTop={2} textAlign="center">{member.name}</Heading>
+                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>{member.orientation}</Heading>
               </Center>
-            </Center>
-          </WrapItem>
+            </WrapItem>
+          ))}
 
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Default} borderRadius="full" boxSize="100px" />
-              <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Emiliano Hernández</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Tecnología</Heading>
-              </Center>
-            </Center>
-          </WrapItem>
-
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Camila} borderRadius="full" boxSize="100px" />
-              <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Camila Pérez</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Tecnología</Heading>
-              </Center>
-            </Center>
-          </WrapItem>
-
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Nicolas} borderRadius="full" boxSize="100px" />
-              <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Nicolás Barreto</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Tecnología</Heading>
-              </Center>
-            </Center>
-          </WrapItem>
-
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Avril} borderRadius="full" boxSize="100px" />
-              <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Avril Cornacchione</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Administración</Heading>
-              </Center>
-            </Center>
-          </WrapItem>
-
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Agustin} borderRadius="full" boxSize="100px" />
-              <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Agustin Barreto</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Administración</Heading>
-              </Center>
-            </Center>
-          </WrapItem>
-
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Iliana} borderRadius="full" boxSize="100px" />
-              <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Iliana Pais</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Administración</Heading>
-              </Center>
-            </Center>
-          </WrapItem>
-
-          <WrapItem>
-            <Center gap={2} flexDirection="column">
-              <Image src={Default} borderRadius="full" boxSize="100px" />
-              <Center flexDirection="column">
-                <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">Franco Picarelli</Heading>
-                <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={1}>Administración</Heading>
-              </Center>
-            </Center>
-          </WrapItem>
         </Wrap>
       </Box>
 

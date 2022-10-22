@@ -1,3 +1,5 @@
+// styles of options in select
+
 .css-1ca8kc6 > option {
   background: #18181B !important;
 }
@@ -10,3 +12,15 @@ input:focus, select:focus, textarea:focus {
   outline: none !important;
   box-shadow: 0 0 10px #666666 !important;
 }
+
+
+// position of header in resources (fix problem with html youtube video)
+#videos {
+  position: absolute !important;; 
+  z-index: 2 !important;
+}
+
+#header {
+  z-index: 1 !important;
+}
+

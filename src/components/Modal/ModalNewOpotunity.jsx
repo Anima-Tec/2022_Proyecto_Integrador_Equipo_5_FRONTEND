@@ -48,7 +48,6 @@ function ModalNewOpotunity() {
               <SelectField
                 label="Modalidad"
                 name="modality"
-                placeholder="Selecciona una modalidad"
                 colorScheme="bgColor"
                 options={[
                   { value: 'Presencial', label: 'Presencial' },

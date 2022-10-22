@@ -100,6 +100,7 @@ const theme = extendTheme({
   styles: {
     global: () => ({
       'html, body': {
+        colorScheme: 'dark',
         fontFamily: 'Poppins',
         bg: 'bgColor',
         color: 'white',

@@ -30,9 +30,9 @@ function PracticasEmpresas() {
               Beneficios
             </Heading>
             <Flex flexDirection="column" gap={1}>
-              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="450px">Capacitar a un joven desde cero.</Text>
-              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="450px">Poder incentivar a un estudiante a profesionalizarse en tu rubro.</Text>
-              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" maxW="450px">Incluir talento joven a tu equipo.</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" w={{ sm: '100%', md: '450px' }}>Capacitar a un joven desde cero.</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" w={{ sm: '100%', md: '450px' }}>Poder incentivar a un estudiante a profesionalizarse en tu rubro.</Text>
+              <Text textAlign="center" p={3} borderWidth="2px" borderRadius="xl" borderColor="black" w={{ sm: '100%', md: '450px' }}>Incluir talento joven a tu equipo.</Text>
             </Flex>
           </Box>
         </Flex>

@@ -13,9 +13,9 @@ function EstadoInscripcion() {
   const student = {
     first_name: 'Juan',
     last_name: 'Perez',
-    status: 'rejected',
+    // status: 'rejected',
     // status: 'pending',
-    // status: 'onboarding',
+    status: 'onboarding',
     // status: 'approved',
   };
 
@@ -36,13 +36,18 @@ function EstadoInscripcion() {
               </Highlight>
             )}
             {student.status === 'onboarding' && (
-            <Highlight query="aprobada" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
-              Su cuenta fue aprobada. Te encuentras en la etapa de capacitación.
-            </Highlight>
+            <>
+              <Highlight query="aprobada" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
+                Su cuenta fue aprobada, felicitaciones.
+              </Highlight>
+              <Highlight query="capacitación" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
+                Te encuentras en la etapa de capacitación.
+              </Highlight>
+            </>
             )}
             {student.status === 'approved' && (
               <Highlight query="aprobada" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
-                Su cuenta fue aprobada. Felicitaciones.
+                Su cuenta fue aprobada, felicitaciones.
               </Highlight>
             )}
           </Heading>
@@ -70,10 +75,10 @@ function EstadoInscripcion() {
           )}
           {student.status === 'onboarding' && (
           <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={4}>
-            Deberás completar la capacitación para poder acceder a las ofertas de prácticas.
+            Deberás completar la etapa de capacitación para poder postularte a Oportunidades de Práctica.
             {' '}
             <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.recursos}>
-              Realizar capacitación
+              Ver capacitación
             </Link>
           </Heading>
           )}
