@@ -27,21 +27,28 @@ export const AuthContext = createContext(initialState);
 
 export function AuthProvider({ children }) {
   const [{ user, token, isAuthenticated }, setState] = useState(loadState);
+  const [storedAccessToken, setStoredAccessToken] = useState(token);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const storedAccessToken = localStorage.getItem('accessToken');
+    const accessToken = localStorage.getItem('accessToken');
+    if (accessToken) {
+      setStoredAccessToken(accessToken);
+    }
+
     if (!storedAccessToken) {
       setState(initialState);
       navigate('/login');
-    } else {
-      AuthService.getCurrentUser(storedAccessToken).then((response) => {
-        setState({
-          user: response.data,
-        });
-      });
     }
+
+    AuthService.getCurrentUser(storedAccessToken).then((data) => {
+      setState({
+        user: data,
+        token: storedAccessToken,
+        isAuthenticated: true,
+      });
+    });
   }, [location.pathname]);
 
   const states = useMemo(() => ({

@@ -27,14 +27,18 @@ import EmpresaPage from '../pages/student/EmpresaPage';
 import Perfil from '../pages/Perfil';
 import InfoPracticas from '../pages/public/InfoPracticas';
 import MiPublicacion from '../pages/company/MiPublicacion';
+import PublicRoutes from './config/PublicRoutes';
+import ProtectedRoutes from './config/ProtectedRoutes';
 
 export default function AppRoutes() {
   return (
     <Routes>
       {/* auth pages */}
-      <Route path={ROUTES.login} element={<Login />} />
-      <Route path={ROUTES.register} element={<Register />} />
 
+      <Route element={<PublicRoutes />}>
+        <Route path={ROUTES.login} element={<Login />} />
+        <Route path={ROUTES.register} element={<Register />} />
+      </Route>
       {/* public pages */}
       <Route path={ROUTES.home} element={<Home />} />
       <Route path={ROUTES.nuestrapropuesta} element={<NuestraPropuesta />} />
@@ -45,24 +49,30 @@ export default function AppRoutes() {
       <Route path={ROUTES.apoyanos} element={<Apoyanos />} />
 
       {/* private pages */}
-      <Route path={ROUTES.perfil} element={<Perfil />} />
 
-      {/* student pages */}
-      <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />
-      <Route path={ROUTES.misPostulaciones} element={<MisPostulaciones />} />
-      <Route path={ROUTES.oportunidadesPracticas} element={<OportunidadesPracticas />} />
-      <Route path={ROUTES.oportunidadPractica} element={<OportunidadPracticaPage />} />
-      <Route path={ROUTES.empresas} element={<Empresas />} />
-      <Route path={ROUTES.practicasPracticantes} element={<PracticasPracticantes />} />
-      <Route path={ROUTES.recursos} element={<Recursos />} />
+      <Route element={<ProtectedRoutes />}>
+        <Route path={ROUTES.perfil} element={<Perfil />} />
 
-      <Route path={ROUTES.empresaPage} element={<EmpresaPage />} />
+        {/* student pages */}
+        <Route element={<ProtectedRoutes roleRequired="Student" />}>
+          <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />
+          <Route path={ROUTES.misPostulaciones} element={<MisPostulaciones />} />
+          <Route path={ROUTES.oportunidadesPracticas} element={<OportunidadesPracticas />} />
+          <Route path={ROUTES.oportunidadPractica} element={<OportunidadPracticaPage />} />
+          <Route path={ROUTES.empresas} element={<Empresas />} />
+          <Route path={ROUTES.practicasPracticantes} element={<PracticasPracticantes />} />
+          <Route path={ROUTES.recursos} element={<Recursos />} />
+          <Route path={ROUTES.empresaPage} element={<EmpresaPage />} />
+        </Route>
+        {/* company pages */}
+        <Route element={<ProtectedRoutes roleRequired="Company" />}>
+          <Route path={ROUTES.misPublicaciones} element={<MisPublicaciones />} />
+          <Route path={ROUTES.miPublicacion} element={<MiPublicacion />} />
+          <Route path={ROUTES.practicantes} element={<Practicantes />} />
+          <Route path={ROUTES.practicasEmpresas} element={<PracticasEmpresas />} />
+        </Route>
 
-      {/* company pages */}
-      <Route path={ROUTES.misPublicaciones} element={<MisPublicaciones />} />
-      <Route path={ROUTES.miPublicacion} element={<MiPublicacion />} />
-      <Route path={ROUTES.practicantes} element={<Practicantes />} />
-      <Route path={ROUTES.practicasEmpresas} element={<PracticasEmpresas />} />
+      </Route>
 
       {/* not found */}
       <Route path="*" element={<NotFound />} />

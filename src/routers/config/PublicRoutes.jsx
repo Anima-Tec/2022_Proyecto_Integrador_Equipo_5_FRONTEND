@@ -1,9 +1,8 @@
-/* // import React from 'react';
-//import { Outlet, Navigate } from 'react-router-dom';
-// import useAuth from '../auth/useAuth';
+import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
+import useAuth from '../../hooks/auth/useAuth';
 
-export default function PublicRoute() {
-  // const auth = useAuth();
-  // return !auth.isLogged() ? <Outlet /> : <Navigate to="/home" />;
-  return true;
-} */
+export default function PublicRoutes() {
+  const auth = useAuth();
+  return !auth.isAuthenticated ? <Outlet /> : <Navigate to="/" />;
+}

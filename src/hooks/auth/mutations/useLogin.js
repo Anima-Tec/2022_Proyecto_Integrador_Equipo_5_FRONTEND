@@ -12,7 +12,7 @@ export default function useLogin() {
   const { mutateAsync } = useMutation(AuthController.login, {
     onSuccess: ({ token }) => {
       localStorage.setItem('accessToken', token);
-      setState({ token });
+      setState({ token, isAuthenticated: true });
       navigate('/');
     },
     onError: ({ response }) => {

@@ -1,16 +1,19 @@
-/* import { Outlet, Navigate } from "react-router-dom";
-import useAuth from "../auth/useAuth";
+/* eslint-disable no-nested-ternary */
+import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
+import propTypes from 'prop-types';
+import useAuth from '../../hooks/auth/useAuth';
 
 type ProtectedRouteType = {
-  roleRequired?: "patient" | "doctor",
+  roleRequired?: "Student" | "Company",
 };
 
-export default function ProtectedRoute(props: ProtectedRouteType) {
+export default function ProtectedRoutes({ roleRequired }: ProtectedRouteType) {
   const auth = useAuth();
 
-  if (props.roleRequired) {
-    return auth.isLogged() ? (
-      props.roleRequired === auth.user.role ? (
+  if (roleRequired) {
+    return auth.isAuthenticated ? (
+      roleRequired === auth.user.role ? (
         <Outlet />
       ) : (
         <Navigate to="/denied" />
@@ -18,7 +21,14 @@ export default function ProtectedRoute(props: ProtectedRouteType) {
     ) : (
       <Navigate to="/login" />
     );
-  } else {
-    return auth.isLogged() ? <Outlet /> : <Navigate to="/login" />;
   }
-} */
+  return auth.isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+}
+
+ProtectedRoutes.propTypes = {
+  roleRequired: propTypes.string,
+};
+
+ProtectedRoutes.defaultProps = {
+  roleRequired: null,
+};

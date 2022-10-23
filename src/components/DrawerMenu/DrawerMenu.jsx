@@ -22,14 +22,13 @@ import * as Logo from '../../assets/icons/index';
 import PrimaryButton from '../Buttons/PrimaryButton';
 import SecondaryButton from '../Buttons/SecondaryButton';
 import ItemDrawerMenu from './ItemDrawerMenu';
+import useAuth from '../../hooks/auth/useAuth';
 
 export default function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { user } = useAuth();
+  console.log(user?.role);
   const navigate = useNavigate();
-
-  // const userRole = 'guest';
-  // const userRole = 'student';
-  const userRole = 'company';
 
   const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';
@@ -53,7 +52,7 @@ export default function DrawerMenu() {
           <DrawerCloseButton m="2" />
 
           {
-            userRole === 'guest' && (
+            user?.role === undefined && (
               <DrawerBody mt={12}>
                 <ItemDrawerMenu onClick={onClose} name="Inicio" route={ROUTES.home} icon={<Logo.Home />} iconSelected={<Logo.HomeSelected />} />
                 <ItemDrawerMenu onClick={onClose} name="Nuestra propuesta" route={ROUTES.nuestrapropuesta} icon={<Logo.Propuesta />} iconSelected={<Logo.PropuestaSelected />} />
@@ -70,7 +69,7 @@ export default function DrawerMenu() {
             )
           }
           {
-            userRole === 'student' && (
+            user?.role === 'Student' && (
               <DrawerBody mt={6} onClick={onClose}>
                 <NavLink to={ROUTES.perfil}>
                   <Flex>
@@ -104,7 +103,7 @@ export default function DrawerMenu() {
             )
           }
           {
-            userRole === 'company' && (
+            user?.role === 'Company' && (
               <DrawerBody mt={6} onClick={onClose}>
                 <NavLink to={ROUTES.perfil}>
                   <Flex>
