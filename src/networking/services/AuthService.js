@@ -7,7 +7,9 @@ export default class AuthService {
     return response.data;
   }
 
-  static register() {
+  static registerStudent(studentData) {
+    const response = axios.post('http://localhost:4000/api/v1/register', studentData);
+    return response;
   }
 
   static logout() {

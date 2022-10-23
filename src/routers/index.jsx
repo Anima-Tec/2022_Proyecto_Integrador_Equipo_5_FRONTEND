@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ROUTES from './config/routes';
 import Apoyanos from '../pages/public/Apoyanos';
-import Login from '../pages/auth/Login';
-import Register from '../pages/auth/Register';
+import { Login } from '../pages/auth/Login';
+import { Register } from '../pages/auth/Register';
 import Home from '../pages/public/Home';
 
 import InfoEmpresas from '../pages/public/InfoEmpresas';

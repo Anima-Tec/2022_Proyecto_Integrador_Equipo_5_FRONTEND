@@ -6,6 +6,11 @@ class AuthController {
     return response;
   }
 
+  static async registerStudent(studentData) {
+    const response = await AuthService.registerStudent(studentData);
+    return response;
+  }
+
   static async getCurrentUser() {
     const response = await AuthService.getCurrentUser();
     return response;

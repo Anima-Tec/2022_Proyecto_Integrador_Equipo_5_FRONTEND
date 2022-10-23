@@ -31,14 +31,16 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const storedAccessToken = localStorage.getItem('accessToken');
-    AuthService.getCurrentUser(storedAccessToken).then((response) => {
-      setState({
-        user: response.data,
+    if (user) {
+      AuthService.getCurrentUser(storedAccessToken).then((response) => {
+        setState({
+          user: response.data,
+        });
+        /*  Acá se implementara el refresh token */
+      }).catch(() => {
+        setState(initialState);
       });
-      /*  Acá se implementara el refresh token */
-    }).catch(() => {
-      setState(initialState);
-    });
+    }
   }, [location.pathname]);
 
   const states = useMemo(() => ({

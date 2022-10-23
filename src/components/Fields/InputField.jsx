@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  FormControl, FormErrorMessage, FormLabel, Input,
+  FormControl, FormErrorMessage, FormHelperText, FormLabel, Input,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 
 export default function InputField({
-  label, name, type, ...rest
+  label, name, helper, ...rest
 }) {
   const {
     register,
@@ -18,9 +18,9 @@ export default function InputField({
         {...register(`${name}`)}
         {...rest}
         autoComplete="off"
-        type={type}
       />
       <FormLabel>{label}</FormLabel>
+      {helper && <FormHelperText>{helper}</FormHelperText>}
       <FormErrorMessage>
         {errors[name] && errors[name].message}
       </FormErrorMessage>
@@ -31,5 +31,9 @@ export default function InputField({
 InputField.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  helper: PropTypes.string,
+};
+
+InputField.defaultProps = {
+  helper: '',
 };

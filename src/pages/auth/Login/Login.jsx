@@ -5,10 +5,10 @@ import {
   Button,
   Heading, VStack,
 } from '@chakra-ui/react';
-import LoginSchema from '../../lib/schemas/auth/login.schema';
-import Form from '../../components/Form';
-import useLogin from '../../hooks/auth/mutations/useLogin';
-import InputField from '../../components/Fields/InputField';
+import LoginSchema from '../../../lib/schemas/auth/login.schema';
+import Form from '../../../components/Form';
+import useLogin from '../../../hooks/auth/mutations/useLogin';
+import InputField from '../../../components/Fields/InputField';
 
 export default function Login() {
   const { mutateAsync } = useLogin();

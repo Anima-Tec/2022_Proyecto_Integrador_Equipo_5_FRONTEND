@@ -13,9 +13,7 @@ export default function useLogin() {
     onSuccess: ({ token }) => {
       localStorage.setItem('accessToken', token);
       setState({ token });
-      setTimeout(() => {
-        navigate('/');
-      }, 1000);
+      navigate('/');
     },
     onError: ({ response }) => {
       if (response?.data) {
