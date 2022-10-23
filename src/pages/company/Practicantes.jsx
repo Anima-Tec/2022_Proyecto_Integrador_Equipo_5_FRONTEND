@@ -42,6 +42,7 @@ export default function Practicantes() {
 
           {students.map((student) => (
             <CardStudent
+              key={student.name}
               name={student.name}
               photo={student.photo}
               interests={student.interests}

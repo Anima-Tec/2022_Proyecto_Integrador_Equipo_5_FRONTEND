@@ -22,7 +22,10 @@ export default function SelectField({
         defaultValue={defaultValue}
       >
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option
+            key={option.value}
+            value={option.value}
+          >
             {option.label}
           </option>
         ))}

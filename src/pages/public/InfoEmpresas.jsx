@@ -37,7 +37,7 @@ export default function InfoEmpresas() {
             Todo esto se desarrolla a través de la tutoría que se le brinda al estudiante. La tutoría es un proceso de acompañamiento que se realiza a través de reuniones diarias o semanales con el estudiante y el tutor de la empresa. El tutor es el encargado de guiar al estudiante en el desarrollo de sus tareas y de evaluar su desempeño.
           </Text>
         </Box>
-        <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={12}>
+        <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={14}>
           ¿Quieres participar como Empresa? Contactate con nosotros para participar de la propuesta.
           {' '}
           <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">

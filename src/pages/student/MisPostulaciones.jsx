@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { Heading, Link, SimpleGrid } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routers/config/routes';
 import CardOportunity from '../../components/Cards/CardOportunity';
 
@@ -39,6 +40,8 @@ export default function MisPostulaciones() {
       },
     ],
   };
+
+  const navigate = useNavigate();
 
   return (
 
@@ -90,6 +93,7 @@ export default function MisPostulaciones() {
         <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }} marginTop={6}>
           {student.apply.map((jobOffer) => (
             <CardOportunity
+              key={jobOffer.id}
               nameJobOffer={jobOffer.name_jobOffer}
               description={jobOffer.description}
               modality={jobOffer.modality}
@@ -97,6 +101,7 @@ export default function MisPostulaciones() {
               workArea={jobOffer.workArea}
               nameCompany={jobOffer.company.name_company}
               photo={jobOffer.company.photo}
+              onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
             />
           ))}
 

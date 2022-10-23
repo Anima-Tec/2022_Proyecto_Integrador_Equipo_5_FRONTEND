@@ -5,7 +5,9 @@ import React from 'react';
 import {
   Box, Heading, SimpleGrid, Text,
 } from '@chakra-ui/react';
-import CardJobOffer from '../../components/Cards/CardOportunity';
+import { useNavigate } from 'react-router-dom';
+import CardOportunity from '../../components/Cards/CardOportunity';
+import ROUTES from '../../routers/config/routes';
 
 export default function OportunidadesPracticas() {
   const jobOfferData = [
@@ -44,6 +46,8 @@ export default function OportunidadesPracticas() {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <Box>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Oportunidades de Práctica</Heading>
@@ -57,7 +61,8 @@ export default function OportunidadesPracticas() {
       <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
 
         {jobOfferData.map((jobOffer) => (
-          <CardJobOffer
+          <CardOportunity
+            key={jobOffer.name_jobOffer}
             nameJobOffer={jobOffer.name_jobOffer}
             description={jobOffer.description}
             modality={jobOffer.modality}
@@ -65,6 +70,7 @@ export default function OportunidadesPracticas() {
             workArea={jobOffer.workArea}
             nameCompany={jobOffer.company.name_company}
             photo={jobOffer.company.photo}
+            onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
           />
         ))}
 

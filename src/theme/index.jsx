@@ -100,7 +100,6 @@ const theme = extendTheme({
   styles: {
     global: () => ({
       'html, body': {
-        colorScheme: 'dark',
         fontFamily: 'Poppins',
         bg: 'bgColor',
         color: 'white',
@@ -155,6 +154,9 @@ const theme = extendTheme({
       },
       FormLabel: {
         color: 'white',
+      },
+      option: {
+        color: 'black',
       },
     }),
   },

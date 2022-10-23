@@ -40,6 +40,7 @@ export default function EstadoInscripcion() {
               <Highlight query="aprobada" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
                 Su cuenta fue aprobada, felicitaciones.
               </Highlight>
+              <br />
               <Highlight query="capacitación" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
                 Te encuentras en la etapa de capacitación.
               </Highlight>
@@ -96,7 +97,7 @@ export default function EstadoInscripcion() {
           {/* bundle.js:59480 Warning: validateDOMNesting(...): <h4> cannot appear as a child of <h4>. */}
           <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
             {student.status === 'rejected' && (
-              <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
+              <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={14}>
                 En caso de que se trate de un error, contactese con nosotros por correo electrónico a
                 {' '}
                 <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
@@ -105,7 +106,7 @@ export default function EstadoInscripcion() {
               </Heading>
             )}
             {student.status === 'pending' && (
-            <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
+            <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={14}>
               En caso de que tengas preguntas puedes contactarte con nosotros
               {' '}
               <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
@@ -114,7 +115,7 @@ export default function EstadoInscripcion() {
             </Heading>
             )}
             {student.status === 'onboarding' && (
-            <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
+            <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={14}>
               En caso de que tengas preguntas puedes contactarte con nosotros
               {' '}
               <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">
@@ -123,7 +124,7 @@ export default function EstadoInscripcion() {
             </Heading>
             )}
             {student.status === 'approved' && (
-            <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
+            <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={14}>
               En caso de que tengas preguntas puedes contactarte con nosotros
               {' '}
               <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">

@@ -57,7 +57,7 @@ export default function PracticasPracticantes() {
           </Text>
         </Box>
       </Box>
-      <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
+      <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={14}>
         En caso de que tengas preguntas puedes contactarte con nosotros
         {' '}
         <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">

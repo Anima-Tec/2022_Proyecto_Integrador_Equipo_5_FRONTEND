@@ -17,8 +17,8 @@ export default function PracticasEmpresas() {
         Para Empresas
       </Heading>
 
-      <Box maxWidth="900px" marginX="auto">
-        <Box marginBottom={10}>
+      <Box maxWidth="900px" marginX="auto" marginTop={8}>
+        <Box marginBottom={6}>
           <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold" marginBottom={3} color="primary" textAlign="center" marginX="auto">¿Qué son las Prácticas?</Heading>
           <Text textAlign="center" marginX="auto">
             Las prácticas son una oportunidad para estudiantes y empresas. La propuesta es que los estudiantes puedan aplicar los conocimientos que tienen dentro del mundo del trabajo o también aprender sobre el área de su interes a través de una pasantía en una empresa comprometida con el desarrollo de talento joven.
@@ -46,7 +46,7 @@ export default function PracticasEmpresas() {
           </Text>
         </Box>
       </Box>
-      <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={12}>
+      <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" maxWidth="700px" margin="auto" marginTop={14}>
         En caso de que tengas preguntas puedes contactarte con nosotros
         {' '}
         <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">

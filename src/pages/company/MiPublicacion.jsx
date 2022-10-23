@@ -128,6 +128,7 @@ export default function MiPublicacion() {
           <SimpleGrid marginTop={6} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
             {oportunity.apply.map((student) => (
               <CardStudent
+                key={student.name}
                 name={student.name}
                 photo={student.photo}
                 interests={student.interests}
@@ -151,7 +152,16 @@ export default function MiPublicacion() {
             </Flex>
             <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap" marginBottom={3}>
               {oportunity.apply[0].interests.map((interest) => (
-                <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" key={interest} display="flex" alignContent="center" justifyContent="center">
+                <Badge
+                  key={interest}
+                  color="black"
+                  borderRadius="full"
+                  p="4px 6px 2px 6px"
+                  bg="secondaryDark"
+                  display="flex"
+                  alignContent="center"
+                  justifyContent="center"
+                >
                   {interest}
                 </Badge>
               ))}

@@ -6,6 +6,7 @@ import React from 'react';
 import {
   Flex, Heading, Link, SimpleGrid,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routers/config/routes';
 import CardOportunity from '../../components/Cards/CardOportunity';
 import ModalNewOpotunity from '../../components/Modal/ModalNewOpotunity';
@@ -29,6 +30,8 @@ export default function MisPublicaciones() {
       workArea: 'Tecnología',
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
 
@@ -97,6 +100,7 @@ export default function MisPublicaciones() {
               modality={companyData.modality}
               quotas={companyData.quotas}
               workArea={companyData.workArea}
+              onClick={() => [navigate(ROUTES.miPublicacion)]}
             />
           ))}
 

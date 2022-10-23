@@ -59,7 +59,7 @@ export default function AppRoutes() {
           <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />
           <Route path={ROUTES.misPostulaciones} element={<MisPostulaciones />} />
           <Route path={ROUTES.oportunidadesPracticas} element={<OportunidadesPracticas />} />
-          <Route path={ROUTES.oportunidadPractica} element={<OportunidadPracticaPage />} />
+          <Route path={ROUTES.oportunidadPracticaPage} element={<OportunidadPracticaPage />} />
           <Route path={ROUTES.empresas} element={<Empresas />} />
           <Route path={ROUTES.practicasPracticantes} element={<PracticasPracticantes />} />
           <Route path={ROUTES.recursos} element={<Recursos />} />

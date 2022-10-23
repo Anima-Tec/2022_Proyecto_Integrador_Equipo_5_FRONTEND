@@ -20,7 +20,7 @@ const ROUTES = {
   estadoInscripcion: '/estado-inscripcion',
   misPostulaciones: '/mis-postulaciones',
   oportunidadesPracticas: '/oportunidades-practicas',
-  oportunidadPractica: '/oportunidad-practica/:id',
+  oportunidadPracticaPage: '/oportunidad-practica/:id',
   empresas: '/empresas',
   empresaPage: '/empresa/:id',
   practicasPracticantes: '/practicas-practicantes',

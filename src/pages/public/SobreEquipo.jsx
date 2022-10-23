@@ -111,7 +111,7 @@ export default function SobreEquipo() {
         </Text>
       </Box>
 
-      <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={6}>
+      <Heading as="h3" fontFamily="Raleway" fontSize="xl" fontWeight="bold" textAlign="center" margin="auto" marginTop={14}>
         Para saber más sobre nosotros o si tienes dudas puedes contactarnos a través de
         {' '}
         <Link textDecoration="underline" fontWeight="bold" textColor="primary" href="mailto:somosefect@gmail.com">

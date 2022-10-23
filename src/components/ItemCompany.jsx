@@ -45,7 +45,16 @@ export default function ItemCompany({
         <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap">
 
           {name_work_area.map((interest) => (
-            <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" key={interest} display="flex" alignContent="center" justifyContent="center">
+            <Badge
+              key={interest}
+              color="black"
+              borderRadius="full"
+              p="4px 6px 2px 6px"
+              bg="secondaryDark"
+              display="flex"
+              alignContent="center"
+              justifyContent="center"
+            >
               {interest}
             </Badge>
           ))}
