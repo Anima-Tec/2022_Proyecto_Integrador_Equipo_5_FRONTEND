@@ -26,15 +26,24 @@ import useAuth from '../../hooks/auth/useAuth';
 
 export default function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { user } = useAuth();
+  const { user, setState } = useAuth();
   console.log(user?.role);
   const navigate = useNavigate();
 
-  const studentName = 'Juan Perez';
   const studentPhoto = 'https://bit.ly/dan-abramov';
 
   const companyName = 'Light IT';
   const companyPhoto = 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O';
+
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    setState({
+      user: null,
+      token: null,
+      isAuthenticated: false,
+    });
+    navigate('/');
+  };
 
   return (
     <>
@@ -75,7 +84,7 @@ export default function DrawerMenu() {
                   <Flex>
                     <Center gap={3}>
                       <Image src={studentPhoto} borderRadius="full" boxSize="40px" />
-                      <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{studentName}</Heading>
+                      <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{user.firstName}</Heading>
                     </Center>
                   </Flex>
                 </NavLink>
@@ -97,7 +106,7 @@ export default function DrawerMenu() {
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
 
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">
-                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">Cerrar sesión</Heading></SecondaryButton>
+                  <SecondaryButton onClick={() => handleLogout()} mt="20px"><Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">Cerrar sesión</Heading></SecondaryButton>
                 </Flex>
               </DrawerBody>
             )
@@ -128,7 +137,7 @@ export default function DrawerMenu() {
                 <ItemDrawerMenu onClick={onClose} name="Apoya la Propuesta" route={ROUTES.apoyanos} icon={<Logo.Apoyanos />} iconSelected={<Logo.ApoyanosSelected />} />
 
                 <Flex alignItems="end" position="fixed" bottom="24px" left="24px" right="24px">
-                  <SecondaryButton onClick={() => navigate(ROUTES.home)} mt="20px"><Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">Cerrar sesión</Heading></SecondaryButton>
+                  <SecondaryButton onClick={() => handleLogout()} mt="20px"><Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="bold">Cerrar sesión</Heading></SecondaryButton>
                 </Flex>
               </DrawerBody>
             )

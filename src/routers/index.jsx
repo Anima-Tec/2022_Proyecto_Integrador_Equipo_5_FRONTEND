@@ -33,12 +33,6 @@ import ProtectedRoutes from './config/ProtectedRoutes';
 export default function AppRoutes() {
   return (
     <Routes>
-      {/* auth pages */}
-
-      <Route element={<PublicRoutes />}>
-        <Route path={ROUTES.login} element={<Login />} />
-        <Route path={ROUTES.register} element={<Register />} />
-      </Route>
       {/* public pages */}
       <Route path={ROUTES.home} element={<Home />} />
       <Route path={ROUTES.nuestrapropuesta} element={<NuestraPropuesta />} />
@@ -47,6 +41,13 @@ export default function AppRoutes() {
       <Route path={ROUTES.infoEmpresas} element={<InfoEmpresas />} />
       <Route path={ROUTES.sobreEquipo} element={<SobreEquipo />} />
       <Route path={ROUTES.apoyanos} element={<Apoyanos />} />
+
+      {/* auth pages */}
+
+      <Route element={<PublicRoutes />}>
+        <Route path={ROUTES.login} element={<Login />} />
+        <Route path={ROUTES.register} element={<Register />} />
+      </Route>
 
       {/* private pages */}
 

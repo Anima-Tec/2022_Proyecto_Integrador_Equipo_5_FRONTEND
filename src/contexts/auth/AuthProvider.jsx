@@ -4,8 +4,7 @@ import React, {
 } from 'react';
 
 import PropTypes from 'prop-types';
-import { useLocation, useNavigate } from 'react-router-dom';
-import AuthService from '../../networking/services/AuthService';
+import { useLocation } from 'react-router-dom';
 
 export const initialState = {
   user: null,
@@ -27,28 +26,10 @@ export const AuthContext = createContext(initialState);
 
 export function AuthProvider({ children }) {
   const [{ user, token, isAuthenticated }, setState] = useState(loadState);
-  const [storedAccessToken, setStoredAccessToken] = useState(token);
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
-    const accessToken = localStorage.getItem('accessToken');
-    if (accessToken) {
-      setStoredAccessToken(accessToken);
-    }
-
-    if (!storedAccessToken) {
-      setState(initialState);
-      navigate('/login');
-    }
-
-    AuthService.getCurrentUser(storedAccessToken).then((data) => {
-      setState({
-        user: data,
-        token: storedAccessToken,
-        isAuthenticated: true,
-      });
-    });
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const states = useMemo(() => ({

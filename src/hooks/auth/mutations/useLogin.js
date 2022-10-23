@@ -2,6 +2,7 @@ import { useToast } from '@chakra-ui/react';
 import { useMutation } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import AuthController from '../../../networking/controllers/AuthController';
+import AuthService from '../../../networking/services/AuthService';
 import useAuth from '../useAuth';
 
 export default function useLogin() {
@@ -12,7 +13,13 @@ export default function useLogin() {
   const { mutateAsync } = useMutation(AuthController.login, {
     onSuccess: ({ token }) => {
       localStorage.setItem('accessToken', token);
-      setState({ token, isAuthenticated: true });
+      AuthService.getCurrentUser(token).then((user) => {
+        setState({
+          user,
+          token,
+          isAuthenticated: true,
+        });
+      });
       navigate('/');
     },
     onError: ({ response }) => {
