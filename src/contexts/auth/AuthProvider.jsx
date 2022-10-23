@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 
 import PropTypes from 'prop-types';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import AuthService from '../../networking/services/AuthService';
 
 export const initialState = {
@@ -28,17 +28,18 @@ export const AuthContext = createContext(initialState);
 export function AuthProvider({ children }) {
   const [{ user, token, isAuthenticated }, setState] = useState(loadState);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedAccessToken = localStorage.getItem('accessToken');
-    if (user) {
+    if (!storedAccessToken) {
+      setState(initialState);
+      navigate('/login');
+    } else {
       AuthService.getCurrentUser(storedAccessToken).then((response) => {
         setState({
           user: response.data,
         });
-        /*  Acá se implementara el refresh token */
-      }).catch(() => {
-        setState(initialState);
       });
     }
   }, [location.pathname]);
