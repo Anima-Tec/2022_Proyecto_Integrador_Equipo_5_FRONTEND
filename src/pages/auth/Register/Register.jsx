@@ -3,7 +3,7 @@ import { Button, Heading, VStack } from '@chakra-ui/react';
 import Form from '../../../components/Form';
 import RegisterStudentSchema from '../../../lib/schemas/auth/registerStudent.schema';
 import useRegisterStudent from '../../../hooks/auth/mutations/useRegisterStudent';
-import InputField from '../../../components/InputField/InputField';
+import InputField from '../../../components/Fields/InputField';
 
 function Register() {
   const { mutateAsync } = useRegisterStudent();
