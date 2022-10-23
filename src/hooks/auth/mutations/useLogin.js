@@ -20,6 +20,12 @@ export default function useLogin() {
           isAuthenticated: true,
         });
       });
+      toast({
+        title: 'Has ingresado con exito.',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      });
       navigate('/');
     },
     onError: ({ response }) => {

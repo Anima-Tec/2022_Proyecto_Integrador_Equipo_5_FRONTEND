@@ -5,7 +5,7 @@ const colors = {
     secondary: '#E39774',
     secondaryDark: '#BE7858',
     bgColor: '#18181B',
-    gray: '#666666',
+    gray: '#939393',
   },
 };
 

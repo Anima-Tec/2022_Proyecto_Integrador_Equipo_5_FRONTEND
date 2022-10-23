@@ -13,6 +13,7 @@ import {
   Image,
   Divider,
   Heading,
+  useToast,
 } from '@chakra-ui/react';
 
 import ROUTES from '../../routers/config/routes';
@@ -29,6 +30,7 @@ export default function DrawerMenu() {
   const { user, setState } = useAuth();
   console.log(user?.role);
   const navigate = useNavigate();
+  const toast = useToast();
 
   const studentPhoto = 'https://bit.ly/dan-abramov';
 
@@ -41,6 +43,12 @@ export default function DrawerMenu() {
       user: null,
       token: null,
       isAuthenticated: false,
+    });
+    toast({
+      title: 'Sesión cerrada',
+      status: 'warning',
+      duration: 2000,
+      isClosable: true,
     });
     navigate('/');
   };

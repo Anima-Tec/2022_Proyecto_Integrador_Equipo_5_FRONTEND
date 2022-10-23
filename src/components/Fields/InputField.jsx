@@ -19,8 +19,8 @@ export default function InputField({
         {...rest}
         autoComplete="off"
       />
-      <FormLabel>{label}</FormLabel>
-      {helper && <FormHelperText>{helper}</FormHelperText>}
+      <FormLabel color="gray" fontWeight="extrabold">{label}</FormLabel>
+      {helper && <FormHelperText fontSize="xs" color="gray" fontWeight="bold">{helper}</FormHelperText>}
       <FormErrorMessage>
         {errors[name] && errors[name].message}
       </FormErrorMessage>
