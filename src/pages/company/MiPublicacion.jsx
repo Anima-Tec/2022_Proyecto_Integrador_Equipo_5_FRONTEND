@@ -23,9 +23,9 @@ export default function MiPublicacion() {
       {
         name: 'Juan Pérez',
         photo: 'https://bit.ly/dan-abramov',
-        description: 'Soy estudiante de Ingeniería de Sistemas y me interesa la programación',
-        birthDate: '2001-01-01',
+        birthDate: '01/01/2001',
         highSchool: 'Liceo N°1',
+        description: 'Soy estudiante de Ingeniería de Sistemas y me interesa la programación',
         email: 'juanperez@gmail.com',
         phone: '987654321',
         interests: ['Ingeniería', 'Tecnología'],
@@ -139,23 +139,62 @@ export default function MiPublicacion() {
         </Box>
       </Box>
 
-      <Modal onClose={onClose} isOpen={isOpen} isCentered bg="bgColor">
+      <Modal onClose={onClose} isOpen={isOpen} isCentered bg="bgColor" size="md">
         <ModalOverlay />
         <ModalContent w={{ base: '90%', md: '100%' }}>
-          <ModalHeader paddingTop={8} bg="bgColor">
+          <ModalHeader paddingTop={10} bg="bgColor" paddingBottom={0}>
             <Flex>
               <Center gap={3}>
                 <Image src={oportunity.apply[0].photo} borderRadius="full" boxSize={10} />
                 <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{oportunity.apply[0].name}</Heading>
               </Center>
             </Flex>
+            <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap" marginBottom={3}>
+              {oportunity.apply[0].interests.map((interest) => (
+                <Badge color="black" borderRadius="full" p="4px 6px 2px 6px" bg="secondaryDark" key={interest} display="flex" alignContent="center" justifyContent="center">
+                  {interest}
+                </Badge>
+              ))}
+            </Flex>
           </ModalHeader>
           <ModalCloseButton />
 
-          <ModalBody bg="bgColor">
-            <Text>
-              Info de Juan
-            </Text>
+          <ModalBody bg="bgColor" paddingTop={0}>
+            <Flex>
+              <Center gap={2}>
+                <Logo.Date width="15px" />
+                <Text>{oportunity.apply[0].birthDate}</Text>
+              </Center>
+            </Flex>
+
+            <Flex>
+              <Center gap={2}>
+                <Logo.Practicantes width="15px" />
+                <Text>{oportunity.apply[0].highSchool}</Text>
+              </Center>
+            </Flex>
+
+            <Box marginY={3}>
+              <Heading as="h5" fontFamily="Poppins" fontSize="sm" fontWeight="bold" marginBottom={2}>Descripción</Heading>
+              <Text>
+                {oportunity.apply[0].description}
+              </Text>
+            </Box>
+
+            <Flex>
+              <Center gap={2}>
+                <Logo.Phone width="15px" />
+                <Text>{oportunity.apply[0].phone}</Text>
+              </Center>
+            </Flex>
+
+            <Flex>
+              <Center gap={2}>
+                <Logo.Email width="15px" />
+                <Text>{oportunity.apply[0].email}</Text>
+              </Center>
+            </Flex>
+
           </ModalBody>
 
           <ModalFooter bg="bgColor" paddingY={6}>

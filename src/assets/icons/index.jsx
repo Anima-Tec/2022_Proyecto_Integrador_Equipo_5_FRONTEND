@@ -35,3 +35,5 @@ export { ReactComponent as Drawer } from './icon-drawer.svg';
 export { ReactComponent as Date } from './icon-date.svg';
 export { ReactComponent as Computer } from './icon-computer.svg';
 export { ReactComponent as LogoEfect } from './logo-efect.svg';
+export { ReactComponent as Phone } from './icon-phone.svg';
+export { ReactComponent as Email } from './icon-email.svg';
