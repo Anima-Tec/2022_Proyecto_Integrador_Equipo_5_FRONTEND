@@ -12,29 +12,20 @@ import ROUTES from '../../routers/config/routes';
 
 export default function EmpresaPage() {
   const company = {
-    name: 'Light IT',
-    description: 'Light-it es una empresa de desarrollo de software. Nuestros experimentados equipos de desarrollo elaboran soluciones de software de alta calidad que se adhieren a los principales estándares de calidad.',
-    photo: 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O',
-    employees: 20,
-    dir_street: 'Av. Siempre Viva',
-    dir_number: '742',
-    year_foundation: 2010,
-    name_work_area: ['Administración', 'Tecnología'],
+    name: 'Google',
+    description: 'Somos la página web más popular del mundo y el motor de búsqueda más utilizado a nivel mundial. Otras de nuestras empresas incluyen análisis de búsquedas en Internet, computación en nube, tecnologías de publicidad, aplicaciones web, navegador y desarrollo de sistemas operativos, principalmente para dispositivos móviles, como es el caso de Android.',
+    photo: 'https://cdn-icons-png.flaticon.com/512/300/300221.png',
+    employees: '60k',
+    year_foundation: 1998,
+    name_work_area: ['Tecnología', 'Finanzas'],
     oportunity: [
       {
-        name_oportunity: 'Programación',
-        description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-        modality: 'Mixta',
-        quotas: 2,
+        name_oportunity: 'Desarrollo de software',
+        description: 'Buscamos estudiantes con gran interés por desarrollar su capacidad de analisis',
+        modality: 'Virtual',
+        quotas: 3,
         workArea: 'Tecnología',
       },
-      // {
-      //   name_oportunity: 'Programación',
-      //   description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-      //   modality: 'Mixta',
-      //   quotas: 2,
-      //   workArea: 'Tecnología',
-      // },
     ],
   };
 

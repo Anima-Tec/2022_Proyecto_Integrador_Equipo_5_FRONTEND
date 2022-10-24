@@ -12,36 +12,36 @@ import ROUTES from '../../routers/config/routes';
 export default function OportunidadesPracticas() {
   const jobOfferData = [
     {
-      name_jobOffer: 'Programación',
-      description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-      modality: 'Mixta',
-      quotas: 2,
-      workArea: 'Tecnología',
-      company: {
-        name_company: 'Light IT',
-        photo: 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O',
-      },
-    },
-    {
-      name_jobOffer: 'Diseño',
-      description: 'Buscamos estudiantes con interés en diseñar aplicaciones web',
-      modality: 'Virtual',
-      quotas: 2,
-      workArea: 'Diseño',
-      company: {
-        name_company: 'Broken Rubik',
-        photo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEqNk6wgflnZw/company-logo_200_200/0/1633538025560?e=2147483647&v=beta&t=WXbQkyAe0rEzOjJoqlpGPyUm68qVs7PcDiDy1DdO_A0',
-      },
-    },
-    {
-      name_jobOffer: 'Marketing',
-      description: 'Buscamos estudiantes con interés en desarrollar campañas de publicidad',
+      name_jobOffer: 'Facturación',
+      description: 'Buscamos estudiantes con interés en aprender sobre facturación dentro de empresas',
       modality: 'Presencial',
       quotas: 2,
-      workArea: 'Gastronomía',
+      workArea: 'Administración',
       company: {
         name_company: 'Coca Cola',
         photo: 'https://tentulogo.com/wp-content/uploads/2017/06/cocacola-logo.jpg',
+      },
+    },
+    {
+      name_jobOffer: 'Campaña de publicidad',
+      description: 'Se busca estudiante con intereses en crear material para difundir en una campaña de publicidad',
+      modality: 'Mixta',
+      quotas: 1,
+      workArea: 'Marketing',
+      company: {
+        name_company: 'Apple',
+        photo: 'https://icones.pro/wp-content/uploads/2021/04/icone-apple-symbole-logo-noir.png',
+      },
+    },
+    {
+      name_jobOffer: 'Desarrollo de software',
+      description: 'Buscamos estudiantes con gran interés por desarrollar su capacidad de analisis',
+      modality: 'Virtual',
+      quotas: 3,
+      workArea: 'Tecnología',
+      company: {
+        name_company: 'Google',
+        photo: 'https://cdn-icons-png.flaticon.com/512/300/300221.png',
       },
     },
   ];

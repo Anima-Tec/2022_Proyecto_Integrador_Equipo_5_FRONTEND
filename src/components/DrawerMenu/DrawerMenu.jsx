@@ -32,10 +32,10 @@ export default function DrawerMenu() {
   const navigate = useNavigate();
   const toast = useToast();
 
-  const studentPhoto = 'https://bit.ly/dan-abramov';
+  const studentPhoto = 'https://www.tuasesordemoda.com/wp-content/uploads/2021/12/rostro-mujer-cuadrado.jpg';
 
-  const companyName = 'Light IT';
-  const companyPhoto = 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O';
+  const companyName = 'Google';
+  const companyPhoto = 'https://cdn-icons-png.flaticon.com/512/300/300221.png';
 
   const handleLogout = () => {
     localStorage.removeItem('accessToken');

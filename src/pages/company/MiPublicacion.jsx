@@ -10,35 +10,21 @@ import CardStudent from '../../components/Cards/CardStudent';
 
 export default function MiPublicacion() {
   const oportunity = {
-    name_jobOffer: 'Programación',
-    description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-    modality: 'Mixta',
-    quotas: 2,
+    name_jobOffer: 'Desarrollo de software',
+    description: 'Buscamos estudiantes con gran interés por desarrollar su capacidad de analisis',
+    modality: 'Virtual',
+    quotas: 3,
     workArea: 'Tecnología',
-    company: {
-      name_company: 'Light IT',
-      photo: 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O',
-    },
     apply: [
       {
-        name: 'Juan Pérez',
-        photo: 'https://bit.ly/dan-abramov',
+        name: 'Ana López',
+        photo: 'https://www.tuasesordemoda.com/wp-content/uploads/2021/12/rostro-mujer-cuadrado.jpg',
         birthDate: '01/01/2001',
         highSchool: 'Liceo N°1',
-        description: 'Soy estudiante de Ingeniería de Sistemas y me interesa la programación',
-        email: 'juanperez@gmail.com',
+        description: 'Soy una persona muy responsable y comprometida con mis estudios. Me gusta estar aprendiendo todo el tiempo y me gusta mucho la tecnología.',
+        email: 'analopez@gmail.com',
         phone: '987654321',
-        interests: ['Ingeniería', 'Tecnología'],
-      },
-      {
-        name: 'Ana López',
-        photo: 'https://bit.ly/dan-abramov',
-        interests: ['Tecnología', 'Cubos de rubik'],
-      },
-      {
-        name: 'Pedro García',
-        photo: 'https://bit.ly/dan-abramov',
-        interests: ['Comida', 'Marketing'],
+        interests: ['Tecnología', 'Marketing'],
       },
     ],
   };

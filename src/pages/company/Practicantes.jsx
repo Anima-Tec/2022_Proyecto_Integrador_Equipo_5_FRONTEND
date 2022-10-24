@@ -18,13 +18,13 @@ export default function Practicantes() {
     },
     {
       name: 'Ana López',
-      photo: 'https://bit.ly/dan-abramov',
-      interests: ['Tecnología', 'Cubos de rubik'],
+      photo: 'https://www.tuasesordemoda.com/wp-content/uploads/2021/12/rostro-mujer-cuadrado.jpg',
+      interests: ['Tecnología', 'Finanzas'],
     },
     {
       name: 'Pedro García',
-      photo: 'https://bit.ly/dan-abramov',
-      interests: ['Comida', 'Marketing'],
+      photo: 'https://modaellos.com//wp-content/uploads/2019/01/cortes-de-pelo-hombres-segun-forma-cara-2020-cara-triangular.jpg',
+      interests: ['Gastronomía', 'Marketing'],
     },
   ];
 

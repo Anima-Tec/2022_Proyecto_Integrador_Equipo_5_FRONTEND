@@ -9,14 +9,14 @@ export default function CardStudent({
 }) {
   return (
     <Box w="100%" onClick={onClick} cursor="pointer">
-      <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p="18px" h="100%">
+      <Flex flexDirection="column" justifyContent="center" borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p="18px" h="150px">
 
         <Flex>
           <Center gap={3} justifyContent="space-between" w="100%" alignItems="flex-start">
 
             <Flex>
               <Center gap={3}>
-                <Image src={photo} borderRadius="full" boxSize={10} />
+                <Image src={photo} borderRadius="full" boxSize={16} />
                 <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{name}</Heading>
               </Center>
             </Flex>
@@ -43,7 +43,7 @@ export default function CardStudent({
 
         </Flex>
 
-      </Box>
+      </Flex>
     </Box>
   );
 }

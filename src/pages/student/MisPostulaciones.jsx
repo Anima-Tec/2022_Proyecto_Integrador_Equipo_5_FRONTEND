@@ -18,26 +18,14 @@ export default function MisPostulaciones() {
     apply: [
       {
         id: 1,
-        name_jobOffer: 'Diseño',
-        description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-        modality: 'Mixta',
-        quotas: 2,
+        name_jobOffer: 'Desarrollo de software',
+        description: 'Buscamos estudiantes con gran interés por desarrollar su capacidad de analisis',
+        modality: 'Virtual',
+        quotas: 3,
         workArea: 'Tecnología',
         company: {
-          name_company: 'Broken Rubik',
-          photo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEqNk6wgflnZw/company-logo_200_200/0/1633538025560?e=2147483647&v=beta&t=WXbQkyAe0rEzOjJoqlpGPyUm68qVs7PcDiDy1DdO_A0',
-        },
-      },
-      {
-        id: 2,
-        name_jobOffer: 'Programación',
-        description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-        modality: 'Mixta',
-        quotas: 2,
-        workArea: 'Tecnología',
-        company: {
-          name_company: 'Broken Rubik',
-          photo: 'https://media-exp1.licdn.com/dms/image/C4D0BAQEqNk6wgflnZw/company-logo_200_200/0/1633538025560?e=2147483647&v=beta&t=WXbQkyAe0rEzOjJoqlpGPyUm68qVs7PcDiDy1DdO_A0',
+          name_company: 'Google',
+          photo: 'https://cdn-icons-png.flaticon.com/512/300/300221.png',
         },
       },
     ],

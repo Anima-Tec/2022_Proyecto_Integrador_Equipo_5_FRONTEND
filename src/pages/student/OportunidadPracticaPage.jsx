@@ -12,14 +12,14 @@ import ModalApply from '../../components/Modal/ModalApply';
 
 export default function OportunidadPracticaPage() {
   const oportunity = {
-    name_jobOffer: 'Programación',
-    description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-    modality: 'Mixta',
-    quotas: 2,
+    name_jobOffer: 'Desarrollo de software',
+    description: 'Buscamos estudiantes con gran interés por desarrollar su capacidad de analisis',
+    modality: 'Virtual',
+    quotas: 3,
     workArea: 'Tecnología',
     company: {
-      name_company: 'Light IT',
-      photo: 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O',
+      name_company: 'Google',
+      photo: 'https://cdn-icons-png.flaticon.com/512/300/300221.png',
     },
   };
 

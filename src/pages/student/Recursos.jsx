@@ -5,17 +5,34 @@ import {
 } from '@chakra-ui/react';
 
 export default function Recursos() {
+  const student = {
+    // status: 'rejected',
+    // status: 'pending',
+
+    // solo se muestra esta seccion a partir de 'onboarding'
+
+    status: 'onboarding',
+    // status: 'approved',
+  };
+
   return (
 
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold" marginBottom={8}>Recursos</Heading>
       <Text marginX="auto" textAlign="center" maxWidth="700px">A continuación te recomendamos una serie de videos de ayuda para prepararte para tu primera experiencia laboral 🥳</Text>
-      <Text marginX="auto" textAlign="center" marginY={4} maxWidth="700px">
-        <Highlight query="entrevista de trabajo" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
-          Además, en unas semanas se contactará contigo vía mail un profesional del rubro laboral con quien tendrás una simulación de una entrevista de trabajo.
-        </Highlight>
-      </Text>
-      <Text marginX="auto" textAlign="center" maxWidth="700px">Será una instancia más de preparación para ti, recibirás una devolución con aspectos de mejora para cuando tengas la entevista real.</Text>
+
+      {student.status === 'onboarding' && (
+        <>
+          <Text marginX="auto" textAlign="center" marginY={4} maxWidth="700px">
+            <Highlight query="entrevista de trabajo" styles={{ fontWeight: 'bold', textColor: 'secondary' }}>
+              Además, en unas semanas se contactará contigo vía mail un profesional del rubro laboral con quien tendrás una simulación de una entrevista de trabajo.
+            </Highlight>
+          </Text>
+          <Text marginX="auto" textAlign="center" maxWidth="700px">
+            Será una instancia más de preparación para ti, recibirás una devolución con aspectos de mejora para cuando tengas la entevista real.
+          </Text>
+        </>
+      )}
 
       <Divider m="30px 0 40px 0" borderColor="gray" />
 

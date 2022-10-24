@@ -23,6 +23,7 @@ export default function Login() {
       setLoader(true);
       await mutateAsync(data);
     } catch (err) {
+      setLoader(false);
       console.log(err);
     }
   };
