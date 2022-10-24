@@ -3,7 +3,7 @@
 
 import React from 'react';
 import {
-  Box, Heading, SimpleGrid, Text,
+  Box, Heading, Text, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import CardOportunity from '../../components/Cards/CardOportunity';
@@ -58,23 +58,23 @@ export default function OportunidadesPracticas() {
         Te recomendamos que previo a postularte, te tomes el tiempo de investigar el perfil de las empresas y conocer más sobre ellas. Esto va ayudar que tengas mayor información de tus opciones y te ayude a tomar una mejor decisión.
       </Text>
 
-      <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
-
+      <Wrap marginTop={6} spacing={4} justify="center">
         {jobOfferData.map((jobOffer) => (
-          <CardOportunity
-            key={jobOffer.name_jobOffer}
-            nameJobOffer={jobOffer.name_jobOffer}
-            description={jobOffer.description}
-            modality={jobOffer.modality}
-            quotas={jobOffer.quotas}
-            workArea={jobOffer.workArea}
-            nameCompany={jobOffer.company.name_company}
-            photo={jobOffer.company.photo}
-            onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
-          />
+          <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent="center">
+            <CardOportunity
+              key={jobOffer.name_jobOffer}
+              nameJobOffer={jobOffer.name_jobOffer}
+              description={jobOffer.description}
+              modality={jobOffer.modality}
+              quotas={jobOffer.quotas}
+              workArea={jobOffer.workArea}
+              nameCompany={jobOffer.company.name_company}
+              photo={jobOffer.company.photo}
+              onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
+            />
+          </WrapItem>
         ))}
-
-      </SimpleGrid>
+      </Wrap>
 
     </Box>
   );

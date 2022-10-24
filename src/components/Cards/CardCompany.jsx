@@ -10,7 +10,7 @@ export default function CardCompany({
   name, photo, employees, yearFoundation, nameWorkArea,
 }) {
   return (
-    <Box maxWidth="550px">
+    <Box w="100%">
       <a href={ROUTES.empresaPage}>
         <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p="18px" h="100%">
 

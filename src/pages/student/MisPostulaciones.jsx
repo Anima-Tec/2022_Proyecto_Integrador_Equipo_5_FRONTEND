@@ -3,7 +3,9 @@
 // -------------------------------------------------------------------------------------------------
 
 import React from 'react';
-import { Heading, Link, SimpleGrid } from '@chakra-ui/react';
+import {
+  Heading, Link, Wrap, WrapItem,
+} from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routers/config/routes';
 import CardOportunity from '../../components/Cards/CardOportunity';
@@ -90,22 +92,24 @@ export default function MisPostulaciones() {
           a las que te postulaste.
         </Heading>
 
-        <SimpleGrid spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }} marginTop={6}>
+        <Wrap marginTop={6} spacing={4} justify="center">
           {student.apply.map((jobOffer) => (
-            <CardOportunity
-              key={jobOffer.id}
-              nameJobOffer={jobOffer.name_jobOffer}
-              description={jobOffer.description}
-              modality={jobOffer.modality}
-              quotas={jobOffer.quotas}
-              workArea={jobOffer.workArea}
-              nameCompany={jobOffer.company.name_company}
-              photo={jobOffer.company.photo}
-              onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
-            />
+            <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent="center">
+              <CardOportunity
+                key={jobOffer.id}
+                nameJobOffer={jobOffer.name_jobOffer}
+                description={jobOffer.description}
+                modality={jobOffer.modality}
+                quotas={jobOffer.quotas}
+                workArea={jobOffer.workArea}
+                nameCompany={jobOffer.company.name_company}
+                photo={jobOffer.company.photo}
+                onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
+              />
+            </WrapItem>
           ))}
+        </Wrap>
 
-        </SimpleGrid>
       </>
       )}
 

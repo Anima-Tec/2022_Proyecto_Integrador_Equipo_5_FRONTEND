@@ -3,7 +3,7 @@
 
 import React from 'react';
 import {
-  Badge, Box, Center, Divider, Flex, Heading, SimpleGrid, Text, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Button, useDisclosure, Image,
+  Badge, Box, Center, Divider, Flex, Heading, Text, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Button, useDisclosure, Image, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import * as Logo from '../../assets/icons/index';
 import CardStudent from '../../components/Cards/CardStudent';
@@ -122,20 +122,22 @@ export default function MiPublicacion() {
         <Box marginTop="24px">
 
           <Box marginBottom={2}>
-            <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold">Postulados</Heading>
+            <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" textAlign={{ sm: 'center', md: 'left' }}>Postulados</Heading>
           </Box>
 
-          <SimpleGrid marginTop={6} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
+          <Wrap marginTop={6} spacing={4}>
             {oportunity.apply.map((student) => (
-              <CardStudent
-                key={student.name}
-                name={student.name}
-                photo={student.photo}
-                interests={student.interests}
-                onClick={onOpen}
-              />
+              <WrapItem w={{ sm: '100%', md: '40%', lg: '40%' }} justifyContent={{ sm: 'center', md: 'flex-start' }}>
+                <CardStudent
+                  key={student.name}
+                  name={student.name}
+                  photo={student.photo}
+                  interests={student.interests}
+                  onClick={onOpen}
+                />
+              </WrapItem>
             ))}
-          </SimpleGrid>
+          </Wrap>
 
         </Box>
       </Box>

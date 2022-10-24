@@ -10,7 +10,7 @@ export default function CardOportunity({
 }) {
   return (
 
-    <Box maxW="550px" onClick={onClick} cursor="pointer" borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p={{ base: 4, md: '18px' }} h="100%">
+    <Box w="100%" onClick={onClick} cursor="pointer" borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p={{ base: 4, md: '18px' }} h="100%">
 
       <Flex display={{ base: 'block', lg: 'flex' }}>
         <Center gap="10px" justifyContent="space-between" w="100%" alignItems="flex-start">

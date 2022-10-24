@@ -15,13 +15,11 @@ export default function TextareaField({
   return (
     <FormControl variant="floating" isInvalid={errors[name]} w="100%">
       <Textarea
-        w="100%"
         {...register(`${name}`)}
         {...rest}
         autoComplete="off"
-        type={type}
       />
-      <FormLabel>{label}</FormLabel>
+      <FormLabel color="gray" fontWeight="extrabold">{label}</FormLabel>
       <FormErrorMessage>
         {errors[name] && errors[name].message}
       </FormErrorMessage>

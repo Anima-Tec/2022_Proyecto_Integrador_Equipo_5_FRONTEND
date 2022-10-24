@@ -8,7 +8,7 @@ export default function CardStudent({
   name, photo, interests, onClick,
 }) {
   return (
-    <Box maxWidth="550px" onClick={onClick} cursor="pointer">
+    <Box w="100%" onClick={onClick} cursor="pointer">
       <Box borderWidth="1px" borderRadius="xl" overflow="hidden" borderColor="gray" boxShadow="dark-lg" p="18px" h="100%">
 
         <Flex>

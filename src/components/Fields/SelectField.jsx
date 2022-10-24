@@ -15,7 +15,6 @@ export default function SelectField({
   return (
     <FormControl variant="floating" isInvalid={errors[name]} w="100%">
       <Select
-        w="100%"
         {...register(`${name}`)}
         {...rest}
         autoComplete="off"
@@ -30,7 +29,7 @@ export default function SelectField({
           </option>
         ))}
       </Select>
-      <FormLabel>{label}</FormLabel>
+      <FormLabel color="gray" fontWeight="extrabold">{label}</FormLabel>
       <FormErrorMessage>
         {errors[name] && errors[name].message}
       </FormErrorMessage>

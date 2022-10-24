@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
 // listado de las oportunidades de practica publicadas por la empresa dueña del perfil
 // -------------------------------------------------------------------------------------------------
 
 import React from 'react';
 import {
-  Flex, Heading, Link, SimpleGrid,
+  Flex, Heading, Link, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routers/config/routes';
@@ -16,6 +15,14 @@ export default function MisPublicaciones() {
     {
       id: 1,
       name_oportunity: 'Diseño',
+      description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
+      modality: 'Mixta',
+      quotas: 2,
+      workArea: 'Tecnología',
+    },
+    {
+      id: 2,
+      name_oportunity: 'Programación',
       description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
       modality: 'Mixta',
       quotas: 2,
@@ -90,21 +97,21 @@ export default function MisPublicaciones() {
           que publicaste.
         </Heading>
 
-        <SimpleGrid marginTop={6} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
-
+        <Wrap marginTop={6} spacing={4} justify="center">
           {myOportunities.map((companyData) => (
-            <CardOportunity
-              key={companyData.name_oportunity}
-              nameOportunity={companyData.name_oportunity}
-              description={companyData.description}
-              modality={companyData.modality}
-              quotas={companyData.quotas}
-              workArea={companyData.workArea}
-              onClick={() => [navigate(ROUTES.miPublicacion)]}
-            />
+            <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent="center">
+              <CardOportunity
+                key={companyData.name_oportunity}
+                nameOportunity={companyData.name_oportunity}
+                description={companyData.description}
+                modality={companyData.modality}
+                quotas={companyData.quotas}
+                workArea={companyData.workArea}
+                onClick={() => [navigate(ROUTES.miPublicacion)]}
+              />
+            </WrapItem>
           ))}
-
-        </SimpleGrid>
+        </Wrap>
       </>
       )}
 

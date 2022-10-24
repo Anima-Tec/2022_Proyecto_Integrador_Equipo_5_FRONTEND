@@ -3,7 +3,7 @@
 
 import React from 'react';
 import {
-  Box, Heading, SimpleGrid,
+  Box, Heading, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import CardCompany from '../../components/Cards/CardCompany';
 
@@ -55,20 +55,20 @@ export default function Empresas() {
           <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginX="auto" textAlign="center">Según tus intereses</Heading>
         </Box>
 
-        <SimpleGrid spacing={8} minChildWidth="240px">
-
+        <Wrap marginTop={6} spacing={4} justify="center">
           {company.map((companys) => (
-            <CardCompany
-              key={companys.name_company}
-              name={companys.name_company}
-              photo={companys.photo}
-              employees={companys.employees}
-              yearFoundation={companys.year_foundation}
-              nameWorkArea={companys.name_work_area}
-            />
+            <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent="center">
+              <CardCompany
+                key={companys.name_company}
+                name={companys.name_company}
+                photo={companys.photo}
+                employees={companys.employees}
+                yearFoundation={companys.year_foundation}
+                nameWorkArea={companys.name_work_area}
+              />
+            </WrapItem>
           ))}
-
-        </SimpleGrid>
+        </Wrap>
       </Box>
 
     </>

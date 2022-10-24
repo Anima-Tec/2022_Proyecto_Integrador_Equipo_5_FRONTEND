@@ -3,11 +3,12 @@
 
 import React from 'react';
 import {
-  Badge, Box, Center, Flex, Heading, Image, Text,
+  Badge, Box, Center, Flex, Heading, Image, Link, Text,
 } from '@chakra-ui/react';
 import ROUTES from '../../routers/config/routes';
 import * as Logo from '../../assets/icons/index';
 import PrimaryButton from '../../components/Buttons/PrimaryButton';
+import ModalApply from '../../components/Modal/ModalApply';
 
 export default function OportunidadPracticaPage() {
   const oportunity = {
@@ -111,16 +112,34 @@ export default function OportunidadPracticaPage() {
 
       {/* <Box w="0.5px" bg="gray" margin="0 80px" /> */}
 
-      <Box marginTop="40px" w={{ base: '100%', md: '25%' }}>
+      <Box marginTop="40px">
         {apply === 'false' && (
-          <PrimaryButton>
-            Postularme
-          </PrimaryButton>
+          <>
+            <ModalApply />
+            <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={2} textAlign={{ sm: 'center', md: 'left' }}>
+              Antes de postularte te recomendamos leer sobre que tratan las
+              {' '}
+              <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.practicasPracticantes}>
+                Prácticas
+              </Link>
+            </Heading>
+          </>
         )}
         {apply === 'true' && (
-          <PrimaryButton bg="gray" hover="gray" cursor="default">
-            Ya te has postulado
-          </PrimaryButton>
+          <>
+            <PrimaryButton p={6} w={{ sm: '100%', md: '50%', lg: '25%' }} bg="gray" hover="gray" cursor="default">
+              Ya te has postulado
+            </PrimaryButton>
+            <Heading as="h5" fontFamily="Poppins" fontSize="md" fontWeight="bold" marginTop={2} maxWidth="600px" textAlign={{ sm: 'center', md: 'left' }}>
+              ¡Revisa los
+              {' '}
+              <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.recursos}>
+                Recursos
+              </Link>
+              {' '}
+              sobre como preprarte para la entrevista antes que te contacte la empresa!
+            </Heading>
+          </>
         )}
       </Box>
     </Box>

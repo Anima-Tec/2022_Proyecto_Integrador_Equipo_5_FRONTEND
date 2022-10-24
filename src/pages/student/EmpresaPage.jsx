@@ -3,7 +3,7 @@
 
 import React from 'react';
 import {
-  Badge, Box, Center, Divider, Flex, Heading, Image, SimpleGrid, Text,
+  Badge, Box, Center, Divider, Flex, Heading, Image, Text, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import * as Logo from '../../assets/icons/index';
@@ -28,6 +28,13 @@ export default function EmpresaPage() {
         quotas: 2,
         workArea: 'Tecnología',
       },
+      // {
+      //   name_oportunity: 'Programación',
+      //   description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
+      //   modality: 'Mixta',
+      //   quotas: 2,
+      //   workArea: 'Tecnología',
+      // },
     ],
   };
 
@@ -97,27 +104,27 @@ export default function EmpresaPage() {
       <Divider h="3px" marginTop={5} color="gray" opacity="0.2" />
 
       <Box margin="32px auto 24px auto">
-        <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold">
+        <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" textAlign={{ sm: 'center', md: 'left' }}>
           Oportunidades de Práctica en
           {' '}
           {company.name}
         </Heading>
 
-        <SimpleGrid align-items="center" marginTop={3} spacing={6} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
-
+        <Wrap marginTop={6} spacing={4}>
           {company.oportunity.map((oportunityData) => (
-            <CardOportunity
-              key={oportunityData.name_oportunity}
-              nameOportunity={oportunityData.name_oportunity}
-              description={oportunityData.description}
-              modality={oportunityData.modality}
-              quotas={oportunityData.quotas}
-              workArea={oportunityData.workArea}
-              onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
-            />
+            <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent={{ sm: 'center', md: 'flex-start' }}>
+              <CardOportunity
+                key={oportunityData.name_oportunity}
+                nameOportunity={oportunityData.name_oportunity}
+                description={oportunityData.description}
+                modality={oportunityData.modality}
+                quotas={oportunityData.quotas}
+                workArea={oportunityData.workArea}
+                onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
+              />
+            </WrapItem>
           ))}
-
-        </SimpleGrid>
+        </Wrap>
       </Box>
 
     </>

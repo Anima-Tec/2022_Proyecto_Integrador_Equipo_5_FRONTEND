@@ -46,7 +46,7 @@ function Register() {
             {/* <Button _hover={{ bg: 'secondaryDark' }} bg="secondary" >Soy una Empresa</Button> */}
           </Flex>
 
-          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginTop={8}>
+          <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginTop={8} textAlign="center">
             Completa este formulario para inscribirte como
             {' '}
             <Link textDecoration="underline" fontWeight="bold" textColor="primary" href={ROUTES.infoPracticantes}>
@@ -84,7 +84,6 @@ function Register() {
           {
           // - Highschool (input type: text)
           // - Boletin (input type: upload file)
-          // - CV (input type: upload file)
         }
 
           <Button bgColor="primary" variant="solid" isLoading={loader} w="160px" type="submit">¡Registrarme!</Button>

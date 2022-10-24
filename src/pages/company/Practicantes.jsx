@@ -3,7 +3,7 @@
 
 import React from 'react';
 import {
-  Box, Heading, SimpleGrid, useDisclosure, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Button,
+  Box, Heading, useDisclosure, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Button, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import CardStudent from '../../components/Cards/CardStudent';
@@ -38,19 +38,20 @@ export default function Practicantes() {
           <Heading as="h2" fontFamily="Raleway" fontSize="2xl" fontWeight="extraBold" marginX="auto" textAlign="center">Aprobados en la plataforma</Heading>
         </Box>
 
-        <SimpleGrid spacing={8} minChildWidth={{ base: '270px', sm: '270px', md: '320px' }}>
-
+        <Wrap marginTop={6} spacing={4} justify="center">
           {students.map((student) => (
-            <CardStudent
-              key={student.name}
-              name={student.name}
-              photo={student.photo}
-              interests={student.interests}
-              onClick={onOpen}
-            />
+            <WrapItem w={{ sm: '100%', md: '40%', lg: '40%' }} justifyContent="center">
+              <CardStudent
+                key={student.name}
+                name={student.name}
+                photo={student.photo}
+                interests={student.interests}
+                onClick={onOpen}
+              />
+            </WrapItem>
           ))}
+        </Wrap>
 
-        </SimpleGrid>
       </Box>
 
       <Modal onClose={onClose} isOpen={isOpen} isCentered bg="bgColor">
