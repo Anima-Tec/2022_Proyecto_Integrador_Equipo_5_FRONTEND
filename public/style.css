@@ -21,6 +21,11 @@ input:focus, select:focus, textarea:focus {
 }
 
 #header {
-  z-index: 1 !important;
+  z-index: 3 !important;
 }
 
+// position of header in register (fix problem with label in register page)
+.css-1inm43r label {
+  position: absolute !important;
+  z-index: 1 !important;
+}
