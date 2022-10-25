@@ -1,6 +1,4 @@
-const API_ROUTES = {
-  EXAMPLE: '/example',
+export default {
+  URL_BASE: 'http://localhost:4000/api/v1',
   USER: (id) => `/user/${id}`,
 };
-
-export default API_ROUTES;

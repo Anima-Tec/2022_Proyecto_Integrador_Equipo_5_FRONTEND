@@ -5,6 +5,7 @@ import React, {
 
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
+import AuthService from '../../networking/services/AuthService';
 
 export const initialState = {
   user: null,
@@ -30,6 +31,16 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const accessToken = localStorage.getItem('accessToken');
+    AuthService.getCurrentUser(accessToken).then((response) => {
+      if (response.data) {
+        setState({
+          user: response.data,
+          token: accessToken,
+          isAuthenticated: true,
+        });
+      }
+    });
   }, [location.pathname]);
 
   const states = useMemo(() => ({

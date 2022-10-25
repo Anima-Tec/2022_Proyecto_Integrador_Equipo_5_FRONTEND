@@ -6,20 +6,21 @@ import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 
 export default function SelectField({
-  label, name, defaultValue, options, ...rest
+  label, name, options, ...rest
 }) {
   const {
     register,
     formState: { errors },
   } = useFormContext();
   return (
-    <FormControl variant="floating" isInvalid={errors[name]} w="100%">
+    <FormControl variant="floating" isInvalid={errors[name]} w="100%" {...rest}>
       <Select
         {...register(`${name}`)}
-        {...rest}
         autoComplete="off"
-        defaultValue={defaultValue}
+        defaultValue="default"
+        required
       >
+        <option value="default" disabled>Seleccione una opción</option>
         {options.map((option) => (
           <option
             key={option.value}
@@ -40,6 +41,8 @@ export default function SelectField({
 SelectField.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  defaultValue: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    label: PropTypes.string,
+  })).isRequired,
 };

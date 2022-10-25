@@ -6,7 +6,7 @@ import {
 import * as Logo from '../../assets/icons/index';
 
 export default function CardOportunity({
-  nameOportunity, description, modality, quotas, workArea, nameCompany, photo, onClick,
+  name, description, modality, quotas, workArea, nameCompany, photo, onClick,
 }) {
   return (
 
@@ -25,7 +25,7 @@ export default function CardOportunity({
             </Flex>
             )}
 
-            <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{nameOportunity}</Heading>
+            <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{name}</Heading>
           </Box>
 
           <Flex flexDirection="column" alignItems="flex-end">
@@ -81,7 +81,7 @@ export default function CardOportunity({
 }
 
 CardOportunity.propTypes = {
-  nameOportunity: ProtoTypes.string.isRequired,
+  name: ProtoTypes.string.isRequired,
   description: ProtoTypes.string.isRequired,
   modality: ProtoTypes.string.isRequired,
   quotas: ProtoTypes.number.isRequired,

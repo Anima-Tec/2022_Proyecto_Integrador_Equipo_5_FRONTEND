@@ -44,9 +44,10 @@ export default function CardCompany({
 
           <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap">
 
-            {nameWorkArea.map((interest) => (
+            {console.log(nameWorkArea)}
+            {nameWorkArea.map((workarea) => (
               <Badge
-                key={interest}
+                key={workarea}
                 color="black"
                 borderRadius="full"
                 p="4px 6px 2px 6px"
@@ -55,7 +56,7 @@ export default function CardCompany({
                 alignContent="center"
                 justifyContent="center"
               >
-                {interest}
+                {workarea.workarea.name_work_area}
               </Badge>
             ))}
 
@@ -71,6 +72,10 @@ CardCompany.propTypes = {
   name: ProtoTypes.string.isRequired,
   photo: ProtoTypes.string.isRequired,
   employees: ProtoTypes.number.isRequired,
-  yearFoundation: ProtoTypes.number.isRequired,
-  nameWorkArea: ProtoTypes.arrayOf(ProtoTypes.string).isRequired,
+  yearFoundation: ProtoTypes.string.isRequired,
+  nameWorkArea: ProtoTypes.arrayOf(ProtoTypes.string),
+};
+
+CardCompany.defaultProps = {
+  nameWorkArea: [],
 };

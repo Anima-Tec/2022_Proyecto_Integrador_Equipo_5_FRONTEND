@@ -28,7 +28,6 @@ import Perfil from '../pages/Perfil';
 import InfoPracticas from '../pages/public/InfoPracticas';
 import MiPublicacion from '../pages/company/MiPublicacion';
 import PublicRoutes from './config/PublicRoutes';
-import ProtectedRoutes from './config/ProtectedRoutes';
 
 export default function AppRoutes() {
   return (
@@ -51,29 +50,22 @@ export default function AppRoutes() {
 
       {/* private pages */}
 
-      <Route element={<ProtectedRoutes />}>
-        <Route path={ROUTES.perfil} element={<Perfil />} />
+      <Route path={ROUTES.perfil} element={<Perfil />} />
 
-        {/* student pages */}
-        <Route element={<ProtectedRoutes roleRequired="Student" />}>
-          <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />
-          <Route path={ROUTES.misPostulaciones} element={<MisPostulaciones />} />
-          <Route path={ROUTES.oportunidadesPracticas} element={<OportunidadesPracticas />} />
-          <Route path={ROUTES.oportunidadPracticaPage} element={<OportunidadPracticaPage />} />
-          <Route path={ROUTES.empresas} element={<Empresas />} />
-          <Route path={ROUTES.practicasPracticantes} element={<PracticasPracticantes />} />
-          <Route path={ROUTES.recursos} element={<Recursos />} />
-          <Route path={ROUTES.empresaPage} element={<EmpresaPage />} />
-        </Route>
-        {/* company pages */}
-        <Route element={<ProtectedRoutes roleRequired="Company" />}>
-          <Route path={ROUTES.misPublicaciones} element={<MisPublicaciones />} />
-          <Route path={ROUTES.miPublicacion} element={<MiPublicacion />} />
-          <Route path={ROUTES.practicantes} element={<Practicantes />} />
-          <Route path={ROUTES.practicasEmpresas} element={<PracticasEmpresas />} />
-        </Route>
-
-      </Route>
+      {/* student pages */}
+      <Route path={ROUTES.estadoInscripcion} element={<EstadoInscripcion />} />
+      <Route path={ROUTES.misPostulaciones} element={<MisPostulaciones />} />
+      <Route path={ROUTES.oportunidadesPracticas} element={<OportunidadesPracticas />} />
+      <Route path={ROUTES.oportunidadPractica} element={<OportunidadPracticaPage />} />
+      <Route path={ROUTES.empresas} element={<Empresas />} />
+      <Route path={ROUTES.practicasPracticantes} element={<PracticasPracticantes />} />
+      <Route path={ROUTES.recursos} element={<Recursos />} />
+      <Route path={ROUTES.empresaPage} element={<EmpresaPage />} />
+      {/* company pages */}
+      <Route path={ROUTES.misPublicaciones} element={<MisPublicaciones />} />
+      <Route path={ROUTES.miPublicacion} element={<MiPublicacion />} />
+      <Route path={ROUTES.practicantes} element={<Practicantes />} />
+      <Route path={ROUTES.practicasEmpresas} element={<PracticasEmpresas />} />
 
       {/* not found */}
       <Route path="*" element={<NotFound />} />

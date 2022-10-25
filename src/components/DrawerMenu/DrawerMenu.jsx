@@ -28,14 +28,12 @@ import useAuth from '../../hooks/auth/useAuth';
 export default function DrawerMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { user, setState } = useAuth();
-  console.log(user?.role);
   const navigate = useNavigate();
   const toast = useToast();
 
   const studentPhoto = 'https://www.tuasesordemoda.com/wp-content/uploads/2021/12/rostro-mujer-cuadrado.jpg';
 
-  const companyName = 'Google';
-  const companyPhoto = 'https://cdn-icons-png.flaticon.com/512/300/300221.png';
+  const companyPhoto = 'https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/b312c922ab60b210e9b75c09ec84731f.png?VersionId=HhmnMtgPVc3o1fGY4XZrgaQp0QQiwL_O';
 
   const handleLogout = () => {
     localStorage.removeItem('accessToken');
@@ -126,7 +124,7 @@ export default function DrawerMenu() {
                   <Flex>
                     <Center gap={3}>
                       <Image src={companyPhoto} borderRadius="full" boxSize="40px" />
-                      <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{companyName}</Heading>
+                      <Heading as="h3" fontFamily="Poppins" fontSize="xl" fontWeight="bold">{user?.name}</Heading>
                     </Center>
                   </Flex>
                 </NavLink>

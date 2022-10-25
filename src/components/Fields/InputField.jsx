@@ -13,11 +13,11 @@ export default function InputField({
     formState: { errors },
   } = useFormContext();
   return (
-    <FormControl variant="floating" isInvalid={errors[name]} w="100%">
+    <FormControl variant="floating" isInvalid={errors[name]} w="100%" {...rest}>
       <Input
+        w={{ base: '100%', md: '100%' }}
         {...register(`${name}`)}
         {...rest}
-        autoComplete="off"
       />
       <FormLabel color="gray" fontWeight="extrabold">{label}</FormLabel>
       {helper && <FormHelperText fontSize="xs" color="gray" fontWeight="bold">{helper}</FormHelperText>}

@@ -6,45 +6,18 @@ import {
   Box, Heading, Text, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
+import { useQuery } from 'react-query';
 import CardOportunity from '../../components/Cards/CardOportunity';
 import ROUTES from '../../routers/config/routes';
+import InterestService from '../../networking/services/interest/InterestService';
 
+const photo = 'https://www.tuasesordemoda.com/wp-content/uploads/2021/12/rostro-mujer-cuadrado.jpg';
 export default function OportunidadesPracticas() {
-  const jobOfferData = [
-    {
-      name_jobOffer: 'Facturación',
-      description: 'Buscamos estudiantes con interés en aprender sobre facturación dentro de empresas',
-      modality: 'Presencial',
-      quotas: 2,
-      workArea: 'Administración',
-      company: {
-        name_company: 'Coca Cola',
-        photo: 'https://tentulogo.com/wp-content/uploads/2017/06/cocacola-logo.jpg',
-      },
-    },
-    {
-      name_jobOffer: 'Campaña de publicidad',
-      description: 'Se busca estudiante con intereses en crear material para difundir en una campaña de publicidad',
-      modality: 'Mixta',
-      quotas: 1,
-      workArea: 'Marketing',
-      company: {
-        name_company: 'Apple',
-        photo: 'https://icones.pro/wp-content/uploads/2021/04/icone-apple-symbole-logo-noir.png',
-      },
-    },
-    {
-      name_jobOffer: 'Desarrollo de software',
-      description: 'Buscamos estudiantes con gran interés por desarrollar su capacidad de analisis',
-      modality: 'Virtual',
-      quotas: 3,
-      workArea: 'Tecnología',
-      company: {
-        name_company: 'Google',
-        photo: 'https://cdn-icons-png.flaticon.com/512/300/300221.png',
-      },
-    },
-  ];
+  const {
+    data: InterestJobOffer,
+  } = useQuery(['getInterestJobOffer'], () => InterestService.getJobOfferInterest());
+
+  console.log(InterestJobOffer);
 
   const navigate = useNavigate();
 
@@ -59,17 +32,17 @@ export default function OportunidadesPracticas() {
       </Text>
 
       <Wrap marginTop={6} spacing={4} justify="center">
-        {jobOfferData.map((jobOffer) => (
+        {InterestJobOffer?.map((jobOffer) => (
           <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent="center">
             <CardOportunity
               key={jobOffer.name_jobOffer}
-              nameJobOffer={jobOffer.name_jobOffer}
-              description={jobOffer.description}
-              modality={jobOffer.modality}
-              quotas={jobOffer.quotas}
-              workArea={jobOffer.workArea}
-              nameCompany={jobOffer.company.name_company}
-              photo={jobOffer.company.photo}
+              name={jobOffer.nameJobOffer.name}
+              description={jobOffer.description.description}
+              modality={jobOffer.modality.modality}
+              quotas={jobOffer.quotas.quotas}
+              workArea={jobOffer.nameWorkArea}
+              nameCompany={jobOffer.nameCompany.company.name_company}
+              photo={photo}
               onClick={() => [navigate(ROUTES.oportunidadPracticaPage)]}
             />
           </WrapItem>

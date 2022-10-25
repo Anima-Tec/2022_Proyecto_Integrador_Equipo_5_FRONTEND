@@ -1,51 +1,36 @@
 // listado de las oportunidades de practica publicadas por la empresa dueña del perfil
 // -------------------------------------------------------------------------------------------------
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex, Heading, Link, Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../routers/config/routes';
-import CardOportunity from '../../components/Cards/CardOportunity';
 import ModalNewOpotunity from '../../components/Modal/ModalNewOpotunity';
 
+import CardOportunity from '../../components/Cards/CardOportunity';
+import useGetJobOffers from '../../hooks/jobOfffer/mutations/useGetJobOffers';
+
 export default function MisPublicaciones() {
-  const myOportunities = [
-    {
-      id: 1,
-      name_oportunity: 'Diseño',
-      description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-      modality: 'Mixta',
-      quotas: 2,
-      workArea: 'Tecnología',
-    },
-    {
-      id: 2,
-      name_oportunity: 'Programación',
-      description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-      modality: 'Mixta',
-      quotas: 2,
-      workArea: 'Tecnología',
-    },
-    {
-      id: 2,
-      name_oportunity: 'Programación',
-      description: 'Buscamos estudiantes con interés en desarrollar aplicaciones web',
-      modality: 'Mixta',
-      quotas: 2,
-      workArea: 'Tecnología',
-    },
-  ];
-
+  const [jobOffers, setJobOffers] = useState([]);
+  const { mutateAsync } = useGetJobOffers();
   const navigate = useNavigate();
+  const getJobOffer = async () => {
+    const data = await mutateAsync();
+    setJobOffers(data.jobOffers);
+  };
+  useEffect(() => {
+    getJobOffer();
+  }, []);
 
+  const handleNavigate = (id) => {
+    navigate(`/mi-publicacion/${id}`);
+  };
   return (
-
     <>
       <Heading as="h1" fontFamily="Raleway" fontSize="4xl" fontWeight="extraBold">Mis Publicaciones</Heading>
-
-      {myOportunities.length === 0 && (
+      {jobOffers.length === 0 && (
       <>
         <Heading as="h4" fontFamily="Poppins" fontSize="lg" fontWeight="medium" textAlign="center" margin="auto" marginTop={4}>
           Todavía no has publicado ninguna
@@ -81,7 +66,7 @@ export default function MisPublicaciones() {
 
       )}
 
-      {myOportunities.length > 0 && (
+      {jobOffers.length > 0 && (
       <>
         <Flex marginTop={6} justifyContent="center">
           <ModalNewOpotunity />
@@ -98,16 +83,17 @@ export default function MisPublicaciones() {
         </Heading>
 
         <Wrap marginTop={6} spacing={4} justify="center">
-          {myOportunities.map((companyData) => (
+          {jobOffers.map((jobOffer) => (
             <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent="center">
               <CardOportunity
-                key={companyData.name_oportunity}
-                nameOportunity={companyData.name_oportunity}
-                description={companyData.description}
-                modality={companyData.modality}
-                quotas={companyData.quotas}
-                workArea={companyData.workArea}
-                onClick={() => [navigate(ROUTES.miPublicacion)]}
+                key={jobOffer.id}
+                id={jobOffer.id}
+                name={jobOffer.name}
+                description={jobOffer.description}
+                modality={jobOffer.modality}
+                quotas={jobOffer.quotas}
+                workArea={jobOffer.workArea.nameWorkArea}
+                onClick={() => handleNavigate(jobOffer.id)}
               />
             </WrapItem>
           ))}

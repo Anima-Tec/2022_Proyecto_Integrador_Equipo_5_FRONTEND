@@ -26,7 +26,7 @@ export default function CardStudent({
 
         <Flex alignItems="center" marginTop={3} gap={1.5} flexWrap="wrap">
 
-          {interests.map((interest) => (
+          {interests?.map((interest) => (
             <Badge
               key={interest}
               color="black"
@@ -37,7 +37,7 @@ export default function CardStudent({
               alignContent="center"
               justifyContent="center"
             >
-              {interest}
+              {interest.name}
             </Badge>
           ))}
 
@@ -51,6 +51,10 @@ export default function CardStudent({
 CardStudent.propTypes = {
   name: ProtoTypes.string.isRequired,
   photo: ProtoTypes.string.isRequired,
-  interests: ProtoTypes.arrayOf(ProtoTypes.string).isRequired,
+  interests: ProtoTypes.arrayOf(ProtoTypes.string),
   onClick: ProtoTypes.func.isRequired,
+};
+
+CardStudent.defaultProps = {
+  interests: [],
 };

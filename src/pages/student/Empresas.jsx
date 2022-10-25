@@ -5,39 +5,15 @@ import React from 'react';
 import {
   Box, Heading, Wrap, WrapItem,
 } from '@chakra-ui/react';
+import { useQuery } from 'react-query';
 import CardCompany from '../../components/Cards/CardCompany';
+import InterestService from '../../networking/services/interest/InterestService';
 
+const photo = 'https://www.tuasesordemoda.com/wp-content/uploads/2021/12/rostro-mujer-cuadrado.jpg';
 export default function Empresas() {
-  const company = [
-    {
-      name_company: 'Apple',
-      photo: 'https://icones.pro/wp-content/uploads/2021/04/icone-apple-symbole-logo-noir.png',
-      employees: '150k',
-      year_foundation: 1976,
-      name_work_area: ['Marketing', 'Tecnología'],
-    },
-    {
-      name_company: 'Google',
-      photo: 'https://cdn-icons-png.flaticon.com/512/300/300221.png',
-      employees: '60k',
-      year_foundation: 1998,
-      name_work_area: ['Tecnología', 'Finanzas'],
-    },
-    {
-      name_company: 'Amazon',
-      photo: 'https://w7.pngwing.com/pngs/554/142/png-transparent-amazon-ecommerce-shopping-social-icons-color-icon.png',
-      employees: '950k',
-      year_foundation: 1994,
-      name_work_area: ['Software', 'Marketing'],
-    },
-    {
-      name_company: 'Coca Cola',
-      photo: 'https://tentulogo.com/wp-content/uploads/2017/06/cocacola-logo.jpg',
-      employees: '146k',
-      year_foundation: 1892,
-      name_work_area: ['Administración', 'Marketing'],
-    },
-  ];
+  const {
+    data: InterestCompany,
+  } = useQuery(['getInterestCompany'], () => InterestService.getInterestCompany());
 
   return (
     <>
@@ -48,15 +24,15 @@ export default function Empresas() {
         </Box>
 
         <Wrap marginTop={6} spacing={4} justify="center">
-          {company.map((companys) => (
+          {InterestCompany?.map((company) => (
             <WrapItem w={{ sm: '100%', md: '40%' }} justifyContent="center">
               <CardCompany
-                key={companys.name_company}
-                name={companys.name_company}
-                photo={companys.photo}
-                employees={companys.employees}
-                yearFoundation={companys.year_foundation}
-                nameWorkArea={companys.name_work_area}
+                key={company.idCompany.company.id_company}
+                photo={photo}
+                name={company.nameCompany.company.name_company}
+                employees={company.employees.company.employees}
+                yearFoundation={company.yearFoundation.company.year_foundation}
+                nameWorkArea={company.nameWorkArea.company.work_companyTowork_id_company_work}
               />
             </WrapItem>
           ))}
