@@ -18,6 +18,15 @@ export default function useRegisterStudent() {
       });
       navigate('/login');
     },
+    onError: (error) => {
+      toast({
+        title: 'Error al registrarse.',
+        description: error.response.data.message,
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      });
+    },
   });
 
   return { mutateAsync };
