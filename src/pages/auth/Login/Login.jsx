@@ -43,7 +43,7 @@ export default function Login() {
       <Box w={{ sm: '300px', md: '320px' }}>
         <Form schema={LoginSchema} onSubmit={(data) => handleSubmit(data)}>
           <InputField label="Correo electrónico" name="email" />
-          <InputField label="Contraseña" name="password" />
+          <InputField label="Contraseña" name="password" type="password" />
           <Button bgColor="primary" variant="solid" isLoading={loader} type="submit" w="120px">Enviar</Button>
         </Form>
         <PrimaryButton onClick={() => [navigate(ROUTES.register)]} bg="transparent" fontColor="primary" hover="bg-none" marginTop={4}>

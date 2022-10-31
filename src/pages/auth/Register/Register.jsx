@@ -61,7 +61,7 @@ function Register() {
           <InputField label="Email *" name="email" />
 
           <Flex gap={6} w="100%" display={{ base: 'block', md: 'flex' }}>
-            <InputField label="Password *" name="password" marginBottom={{ base: '24px', md: '0px' }} />
+            <InputField label="Password *" name="password" marginBottom={{ base: '24px', md: '0px' }} type="password" />
             <InputField label="CI *" name="ci" helper="Ingrese su ci sin ni guión ni puntos" type="number" />
           </Flex>
 
